@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.udicity.shams.tourinsuez.R;
@@ -25,6 +27,9 @@ public class HotelFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.hotel_main_fragment, container, false);
+
+        LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.nav_header_layout_id);
+        linearLayout.setBackgroundResource(R.drawable.back);
         ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel();
         ListView listView = (ListView)rootView.findViewById(R.id.hotel_list_view);
         HotelCategoryAdapter categoryAdapter= new HotelCategoryAdapter(getActivity(),hotelCategoryArrayList);

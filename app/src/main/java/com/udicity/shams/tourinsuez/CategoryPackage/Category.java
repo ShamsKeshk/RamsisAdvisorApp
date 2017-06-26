@@ -25,10 +25,7 @@ public class Category {
         mCategoryId = categoryId;
         this.context = context;
     }
-    public Category()
-    {
-
-    }
+    public Category() {}
 
     public void setmCategoryName(String categoryName) {
         mCategoryName = categoryName;

@@ -36,15 +36,15 @@ public class DataSourcer {
     public static ArrayList<HotelCategory> getHotel() {
 
         ArrayList<HotelCategory> hotelCategoryArrayList = new ArrayList<HotelCategory>();
-        hotelCategoryArrayList.add(new HotelCategory("Green House", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_drawer));
+        hotelCategoryArrayList.add(new HotelCategory("Green House", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
 
 
         return hotelCategoryArrayList;
