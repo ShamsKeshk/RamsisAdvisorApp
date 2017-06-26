@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tour In Suez</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="about_suez_category">About Suez</string>
+    <string name="hotel_category">Hotel</string>
+    <string name="restaurant_category">Restaurant</string>
+    <string name="tourism_category">Tourism</string>
+    <string name="events_category">Events</string>
+    <string name="shopping_category">Shopping</string>
+    <string name="store_category">Store</string>
+    <string name="hospital_category">Hospital</string>
+    <string name="help_category">Help</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="restaurant_open">Open</string>
+    <string name="restaurant_close">Close</string>
+</resources>
