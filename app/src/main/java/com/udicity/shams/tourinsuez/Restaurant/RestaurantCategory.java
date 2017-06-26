@@ -83,7 +83,7 @@ public class RestaurantCategory {
     {
         mRestaurantLat = restaurantLat;
     }
-    public float getmRestaurantLat(float restaurantLat)
+    public float getmRestaurantLat()
     {
         return mRestaurantLat;
     }
@@ -91,7 +91,7 @@ public class RestaurantCategory {
     {
         mRestaurantLong = restaurantLong;
     }
-    public float getmRestaurantLong(float restaurantLong)
+    public float getmRestaurantLong()
     {
         return mRestaurantLong;
     }

@@ -11,17 +11,23 @@ import com.udicity.shams.tourinsuez.R;
  */
 
 public class Category {
+    public static int catId;
     Context context;
 
     private String mCategoryName;
     private int mCategoryImageResource;
     private int mCategoryId;
+    private Category currentCategory;
 
     public Category(String categoryName, int categoryImageResource, int categoryId ,Context context) {
         mCategoryName = categoryName;
         mCategoryImageResource = categoryImageResource;
         mCategoryId = categoryId;
         this.context = context;
+    }
+    public Category()
+    {
+
     }
 
     public void setmCategoryName(String categoryName) {
@@ -51,12 +57,15 @@ public class Category {
     public Class getActivityReference() {
         switch (mCategoryId) {
             case 1:
+                catId = mCategoryId;
                 Toast.makeText(context, R.string.about_suez_category,Toast.LENGTH_SHORT).show();
                     return NavigationDrawerActivity.class ;
             case 2:
+                catId = mCategoryId;
                 Toast.makeText(context, R.string.hotel_category,Toast.LENGTH_SHORT).show();
                 return NavigationDrawerActivity.class;
             case 3:
+                catId = mCategoryId;
                 Toast.makeText(context, R.string.restaurant_category,Toast.LENGTH_SHORT).show();
                 return NavigationDrawerActivity.class;
             case 4:

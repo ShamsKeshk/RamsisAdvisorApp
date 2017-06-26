@@ -14,7 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantFragementAdapter;
+import com.udicity.shams.tourinsuez.hotel.HotelFragmentAdapter;
+
+import static android.R.attr.category;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,10 +39,20 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         ViewPager viewPager = (ViewPager)findViewById(R.id.view_pager);
-        RestaurantFragementAdapter restaurantFragementAdapter = new RestaurantFragementAdapter(getSupportFragmentManager(),this);
-        viewPager.setAdapter(restaurantFragementAdapter);
+
+        int id = Category.catId;
+        if(id == 2)
+        {
+            HotelFragmentAdapter hotelFragmentAdapter = new HotelFragmentAdapter(getSupportFragmentManager(),this);
+            viewPager.setAdapter(hotelFragmentAdapter);
+        }else if(id == 3) {
+            RestaurantFragementAdapter restaurantFragementAdapter = new RestaurantFragementAdapter(getSupportFragmentManager(),this);
+            viewPager.setAdapter(restaurantFragementAdapter);
+        }else {
+            return;
+        }
+
     }
 
     @Override
