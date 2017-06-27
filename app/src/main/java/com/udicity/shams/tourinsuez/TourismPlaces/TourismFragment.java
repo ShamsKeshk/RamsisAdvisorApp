@@ -1,4 +1,4 @@
-package com.udicity.shams.tourinsuez.Shopping;
+package com.udicity.shams.tourinsuez.TourismPlaces;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import com.udicity.shams.tourinsuez.R;
 
-public class ShoppingFragment extends Fragment {
+public class TourismFragment extends Fragment {
 
-    public ShoppingFragment() {
+    public TourismFragment() {
         // Required empty public constructor
     }
 
@@ -20,7 +20,6 @@ public class ShoppingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.shopping_fragment, container, false);
+        return inflater.inflate(R.layout.tourism_fragment, container, false);
     }
-
 }
