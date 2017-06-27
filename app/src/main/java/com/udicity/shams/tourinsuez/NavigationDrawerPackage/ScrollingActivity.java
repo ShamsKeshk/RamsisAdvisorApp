@@ -1,4 +1,4 @@
-package com.udicity.shams.tourinsuez;
+package com.udicity.shams.tourinsuez.NavigationDrawerPackage;
 
 /**
  * this is me 
@@ -17,6 +17,8 @@ import android.widget.GridView;
 
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.CategoryPackage.CategoryAdapter;
+import com.udicity.shams.tourinsuez.R;
+import com.udicity.shams.tourinsuez.data.DataSourcer;
 
 import java.util.ArrayList;
 
@@ -38,17 +40,7 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-        final ArrayList<Category> categoryArrayList = new ArrayList<Category>();
-        categoryArrayList.add(new Category("About",R.drawable.icon_info_green_30px,1,this));
-        categoryArrayList.add(new Category("Hotel",R.drawable.icon_hotel_green_30px,2,this));
-        categoryArrayList.add(new Category("Restaurant",R.drawable.icon_restaurant_green_30px,3,this));
-        categoryArrayList.add(new Category("Tourism",R.drawable.icon_tourism_green_30px,4,this));
-        categoryArrayList.add(new Category("Events",R.drawable.icon_event_green_30px,5,this));
-        categoryArrayList.add(new Category("Shopping",R.drawable.icon_shopping_cart_green_30px,6,this));
-        categoryArrayList.add(new Category("Store",R.drawable.icon_store_green_36px,7,this));
-        categoryArrayList.add(new Category("Hospital",R.drawable.icon_local_hospital_green_30px,8,this));
-        categoryArrayList.add(new Category("Help",R.drawable.icon_help_green_30px,9,this));
-
+        final ArrayList<Category> categoryArrayList = DataSourcer.getCategories();
 
         GridView gridView = (GridView)findViewById(R.id.grid_view_categories);
         CategoryAdapter categoryAdapter = new CategoryAdapter(this , categoryArrayList);
@@ -58,14 +50,16 @@ public class ScrollingActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Category currentCategory = categoryArrayList.get(position);
-                sendToIntent(currentCategory.getActivityReference());
+                sendToIntent(currentCategory);
             }
         });
     }
 
-    public void sendToIntent(Class activity)
+    public void sendToIntent(Category category)
     {
-        startActivity(new Intent(ScrollingActivity.this,activity));
+        Intent intent = new Intent(ScrollingActivity.this,NavigationDrawerActivity.class);
+        intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+        startActivity(intent);
     }
 
     @Override

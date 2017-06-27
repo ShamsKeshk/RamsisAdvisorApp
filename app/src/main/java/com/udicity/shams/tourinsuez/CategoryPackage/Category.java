@@ -1,29 +1,19 @@
 package com.udicity.shams.tourinsuez.CategoryPackage;
 
-import android.content.Context;
-import android.widget.Toast;
-
-import com.udicity.shams.tourinsuez.NavigationDrawerActivity;
-import com.udicity.shams.tourinsuez.R;
-
 /**
  * Created by shams on 25/06/17.
  */
 
 public class Category {
-    public static int catId;
-    Context context;
 
     private String mCategoryName;
     private int mCategoryImageResource;
     private int mCategoryId;
-    private Category currentCategory;
 
-    public Category(String categoryName, int categoryImageResource, int categoryId ,Context context) {
+    public Category(String categoryName, int categoryImageResource, int categoryId) {
         mCategoryName = categoryName;
         mCategoryImageResource = categoryImageResource;
         mCategoryId = categoryId;
-        this.context = context;
     }
     public Category() {}
 
@@ -51,40 +41,4 @@ public class Category {
         return mCategoryId;
     }
 
-    public Class getActivityReference() {
-        switch (mCategoryId) {
-            case 1:
-                catId = mCategoryId;
-                Toast.makeText(context, R.string.about_suez_category,Toast.LENGTH_SHORT).show();
-                    return NavigationDrawerActivity.class ;
-            case 2:
-                catId = mCategoryId;
-                Toast.makeText(context, R.string.hotel_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 3:
-                catId = mCategoryId;
-                Toast.makeText(context, R.string.restaurant_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 4:
-                Toast.makeText(context, R.string.tourism_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 5:
-                Toast.makeText(context, R.string.events_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 6:
-                Toast.makeText(context, R.string.shopping_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 7:
-                Toast.makeText(context, R.string.store_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 8:
-                Toast.makeText(context, R.string.hospital_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            case 9:
-                Toast.makeText(context, R.string.help_category,Toast.LENGTH_SHORT).show();
-                return NavigationDrawerActivity.class;
-            default:
-                return null;
-        }
-    }
 }

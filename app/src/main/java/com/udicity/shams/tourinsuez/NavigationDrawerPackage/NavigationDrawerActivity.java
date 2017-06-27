@@ -1,4 +1,4 @@
-package com.udicity.shams.tourinsuez;
+package com.udicity.shams.tourinsuez.NavigationDrawerPackage;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,12 +16,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
+import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantFragementAdapter;
 import com.udicity.shams.tourinsuez.hotel.HotelFragmentAdapter;
 
 import static android.R.attr.category;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +32,8 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String selected_cat = getIntent().getStringExtra("categoryId");
+        int id = Integer.valueOf(selected_cat);
         setContentView(R.layout.navigation_drawer_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,7 +48,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         ViewPager viewPager = (ViewPager)findViewById(R.id.view_pager);
-        int id = Category.catId;
+        //int id = Category.catId;
         if(id == 2)
         {
             HotelFragmentAdapter hotelFragmentAdapter = new HotelFragmentAdapter(getSupportFragmentManager(),this);
@@ -51,8 +56,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
         }else if(id == 3) {
             RestaurantFragementAdapter restaurantFragementAdapter = new RestaurantFragementAdapter(getSupportFragmentManager(),this);
             viewPager.setAdapter(restaurantFragementAdapter);
-        }else {
-            return;
         }
 
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.udicity.shams.tourinsuez.ScrollingActivity"
+    tools:context="com.udicity.shams.tourinsuez.NavigationDrawerPackage.ScrollingActivity"
     tools:showIn="@layout/scrolling_activity"
     android:fillViewport="true">
     <LinearLayout

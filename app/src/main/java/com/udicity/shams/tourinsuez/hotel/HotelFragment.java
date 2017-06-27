@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -28,12 +29,12 @@ public class HotelFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.hotel_main_fragment, container, false);
 
-        LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.nav_header_layout_id);
-        linearLayout.setBackgroundResource(R.drawable.back);
+
         ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel();
         ListView listView = (ListView)rootView.findViewById(R.id.hotel_list_view);
         HotelCategoryAdapter categoryAdapter= new HotelCategoryAdapter(getActivity(),hotelCategoryArrayList);
         listView.setAdapter(categoryAdapter);
+        Toast.makeText(getActivity(),"Hello Hotel" , Toast.LENGTH_SHORT).show();
 
         return rootView;
     }

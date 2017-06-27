@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.udicity.shams.tourinsuez.NavigationDrawerActivity"
+    tools:context="com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity"
     tools:showIn="@layout/navigation_drawer_app_bar">
 
     <android.support.v4.view.ViewPager
