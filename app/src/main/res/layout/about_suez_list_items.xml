@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+
+    <TextView
+        android:id="@+id/topic_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Topic"
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/topic_one_explain_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Explain Your Topic"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/topic_one_image_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        tools:src="@drawable/hotel_drawer"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/topic_two_explain_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Explain Your Topic"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/topic_two_image_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        tools:src="@drawable/hotel_drawer"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
