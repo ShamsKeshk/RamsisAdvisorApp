@@ -20,6 +20,8 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragment;
+import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragmentAdapter;
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantFragementAdapter;
@@ -52,7 +54,11 @@ public class NavigationDrawerActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         ViewPager viewPager = (ViewPager)findViewById(R.id.view_pager);
         //int id = Category.catId;
-        if(id == 2)
+        if (id == 1)
+        {
+            AboutSuezFragmentAdapter aboutSuezFragmentAdapter = new AboutSuezFragmentAdapter(getSupportFragmentManager(),this);
+            viewPager.setAdapter(aboutSuezFragmentAdapter);
+        }else if(id == 2)
         {
             HotelFragmentAdapter hotelFragmentAdapter = new HotelFragmentAdapter(getSupportFragmentManager(),this);
             viewPager.setAdapter(hotelFragmentAdapter);
