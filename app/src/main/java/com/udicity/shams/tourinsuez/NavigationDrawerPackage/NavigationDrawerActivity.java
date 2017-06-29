@@ -23,6 +23,7 @@ import android.widget.RelativeLayout;
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragment;
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragmentAdapter;
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
+import com.udicity.shams.tourinsuez.Help.HelpFragmentAdapter;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantFragementAdapter;
 import com.udicity.shams.tourinsuez.hotel.HotelFragmentAdapter;
@@ -65,6 +66,10 @@ public class NavigationDrawerActivity extends AppCompatActivity
         }else if(id == 3) {
             RestaurantFragementAdapter restaurantFragementAdapter = new RestaurantFragementAdapter(getSupportFragmentManager(),this);
             viewPager.setAdapter(restaurantFragementAdapter);
+        }else if(id == 9)
+        {
+            HelpFragmentAdapter helpFragmentAdapter = new HelpFragmentAdapter(getSupportFragmentManager(),getApplicationContext());
+            viewPager.setAdapter(helpFragmentAdapter);
         }
 
     }

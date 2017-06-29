@@ -30,7 +30,7 @@ public class AboutSuezFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.about_suez_fragment, container, false);
 
 
-        ArrayList<AboutSuezCategory> aboutSuezCategoryArrayList = DataSourcer.getAboutSuez();
+        ArrayList<AboutSuezCategory> aboutSuezCategoryArrayList = DataSourcer.getAboutSuez(getContext());
         ListView listView = (ListView)rootView.findViewById(R.id.about_suez_list_view);
         AboutSuezCategoryAdapter aboutSuezCategoryAdapter = new AboutSuezCategoryAdapter(getActivity(),aboutSuezCategoryArrayList);
         listView.setAdapter(aboutSuezCategoryAdapter);
