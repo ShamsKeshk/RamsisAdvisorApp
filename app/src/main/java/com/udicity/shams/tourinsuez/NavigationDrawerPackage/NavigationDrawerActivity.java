@@ -1,9 +1,8 @@
 package com.udicity.shams.tourinsuez.NavigationDrawerPackage;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,48 +11,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragmentAdapter;
-import com.udicity.shams.tourinsuez.CategoryPackage.Category;
-import com.udicity.shams.tourinsuez.Help.HelpFragmentAdapter;
-import com.udicity.shams.tourinsuez.R;
-import com.udicity.shams.tourinsuez.Restaurant.RestaurantFragmentAdapter;
-import com.udicity.shams.tourinsuez.hotel.HotelFragmentAdapter;
 
-import java.util.ArrayList;
+import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezActivity;
+import com.udicity.shams.tourinsuez.Help.HelpActivity;
+import com.udicity.shams.tourinsuez.Hospital.HospitalActivity;
+import com.udicity.shams.tourinsuez.R;
+import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
+import com.udicity.shams.tourinsuez.Shopping.ShoppingActivity;
+import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    ViewPager aboutSuezViewPager;
-    ViewPager hotelViewPager;
-    ViewPager restViewPager;
-    ViewPager tourismViewPager;
-    ViewPager eventsViewPager;
-    ViewPager shoppingViewPager;
-    ViewPager storeViewPager;
-    ViewPager hospitalViewPager;
-    ViewPager helpViewPager;
-
-    int itemId;
-    private int selectedCategoryId;
-    ViewPager[] viewPagers;
-   // ArrayList<ViewPager> viewPagerArrayList;
+//    ViewPager tourismViewPager;
+//    ViewPager eventsViewPager;
+//
+//    ViewPager storeViewPager;
+//
+//    private int selectedCategoryId;
+//    ViewPager[] viewPagers;
+// ArrayList<ViewPager> viewPagerArrayList;
+//    <include layout="@layout/navigation_drawer_content" />
 
 
 
-    AboutSuezFragmentAdapter aboutSuezFragmentAdapter;
-    HotelFragmentAdapter hotelFragmentAdapter;
-    RestaurantFragmentAdapter restaurantFragmentAdapter;
-    HelpFragmentAdapter helpFragmentAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.navigation_drawer_activity);
+       setContentView(R.layout.navigation_drawer_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -65,64 +51,27 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-      //  constraintLayout.removeView(textView);
-
-        String selected_cat = getIntent().getStringExtra("categoryId");
-        selectedCategoryId = Integer.valueOf(selected_cat);
-
-        aboutSuezViewPager = (ViewPager)findViewById(R.id.about_suez_view_pager);
-        hotelViewPager = (ViewPager)findViewById(R.id.hotel_view_pager);
-        restViewPager = (ViewPager)findViewById(R.id.rest_view_pager);
-        tourismViewPager = (ViewPager)findViewById(R.id.tourism_view_pager);
-        eventsViewPager = (ViewPager)findViewById(R.id.events_view_pager);
-        shoppingViewPager = (ViewPager)findViewById(R.id.shopping_view_pager);
-        storeViewPager = (ViewPager)findViewById(R.id.store_view_pager);
-        hospitalViewPager = (ViewPager)findViewById(R.id.hospital_view_pager);
-        helpViewPager = (ViewPager)findViewById(R.id.help_view_pager);
-
-        viewPagers = new ViewPager[Category.numberOfCategories];
-        viewPagers[0] = aboutSuezViewPager;
-        viewPagers[1] = hotelViewPager;
-        viewPagers[2] = restViewPager;
-        viewPagers[3] = tourismViewPager;
-        viewPagers[4] = eventsViewPager;
-        viewPagers[5] = shoppingViewPager;
-        viewPagers[6] = storeViewPager;
-        viewPagers[7] = hospitalViewPager;
-        viewPagers[8] = helpViewPager;
-
-
-
-
-
-
-        aboutSuezFragmentAdapter = new AboutSuezFragmentAdapter(getSupportFragmentManager(),this);
-        hotelFragmentAdapter = new HotelFragmentAdapter(getSupportFragmentManager(),this);
-        restaurantFragmentAdapter = new RestaurantFragmentAdapter(getSupportFragmentManager(),this);
-        helpFragmentAdapter = new HelpFragmentAdapter(getSupportFragmentManager(),getApplicationContext());
-
-
-        if (selectedCategoryId == 1)
-        {
-            aboutSuezViewPager.setAdapter(aboutSuezFragmentAdapter);
-            visibleViewPager(aboutSuezViewPager);
-        }else if(selectedCategoryId == 2)
-        {
-            hotelViewPager.setAdapter(hotelFragmentAdapter);
-            visibleViewPager(hotelViewPager);
-        }else if(selectedCategoryId == 3) {
-            restViewPager.setAdapter(restaurantFragmentAdapter);
-            visibleViewPager(restViewPager);
-        }else if(selectedCategoryId == 9)
-        {
-            helpViewPager.setAdapter(helpFragmentAdapter);
-            visibleViewPager(helpViewPager);
-                Toast.makeText(getApplicationContext(), "i am help", Toast.LENGTH_SHORT).show();
-        }
-
     }
 
+//        String selected_cat = getIntent().getStringExtra("categoryId");
+//        selectedCategoryId = Integer.valueOf(selected_cat);
+//        tourismViewPager = (ViewPager)findViewById(R.id.tourism_view_pager);
+//        eventsViewPager = (ViewPager)findViewById(R.id.events_view_pager);
+//        storeViewPager = (ViewPager)findViewById(R.id.store_view_pager);
+//        viewPagers = new ViewPager[Category.numberOfCategories];
+//        viewPagers[3] = tourismViewPager;
+//        viewPagers[4] = eventsViewPager;
+//        viewPagers[5] = shoppingViewPager;
+//        viewPagers[6] = storeViewPager;
+//        viewPagers[7] = hospitalViewPager;
+
+
+
+
+
+//        if (selectedCategoryId == 1){
+//         aboutSuezViewPager.setAdapter(aboutSuezFragmentAdapter);
+//         visibleViewPager(aboutSuezViewPager);
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -132,6 +81,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -159,23 +109,33 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-         itemId = item.getItemId();
+        int itemId = item.getItemId();
 
         if (itemId == R.id.about_suez_tab) {
-            // Handle the camera action
-            invisibleAllViewPagers();
-            aboutSuezViewPager.setAdapter(aboutSuezFragmentAdapter);
-            visibleViewPager(aboutSuezViewPager);
+            startActivity(new Intent(this, AboutSuezActivity.class));
+//             Handle the camera action
+//            invisibleAllViewPagers();
+//            aboutSuezViewPager.setAdapter(aboutSuezFragmentAdapter);
+//            visibleViewPager(aboutSuezViewPager);
         } else if (itemId == R.id.hotel_tab) {
-            invisibleAllViewPagers();
-            hotelViewPager.setAdapter(hotelFragmentAdapter);
-            visibleViewPager(hotelViewPager);
-        } else if (itemId == R.id.tourism_tab) {
-
-        } else if (itemId == R.id.nav_share) {
-
-        } else if (itemId == R.id.nav_send) {
-
+            startActivity(new Intent(this, HotelActivity.class));
+//            invisibleAllViewPagers();
+//            hotelViewPager.setAdapter(hotelFragmentAdapter);
+//            visibleViewPager(hotelViewPager);
+        } else if (itemId == R.id.restaurant_tab) {
+            startActivity(new Intent(this, RestaurantActivity.class));
+        }else if (itemId == R.id.tourism_tab) {
+            startActivity(new Intent(this, RestaurantActivity.class));
+        }else if (itemId == R.id.event_tab) {
+            startActivity(new Intent(this, RestaurantActivity.class));
+        }else if (itemId == R.id.shopping_tab) {
+            startActivity(new Intent(this, ShoppingActivity.class));
+        }else if (itemId == R.id.store_tab) {
+            startActivity(new Intent(this, RestaurantActivity.class));
+        }else if (itemId == R.id.hospital_tab) {
+            startActivity(new Intent(this, HospitalActivity.class));
+        } else if (itemId == R.id.help_tab) {
+            startActivity(new Intent(this, HelpActivity.class));
         }
 
 
@@ -184,16 +144,15 @@ public class NavigationDrawerActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public void invisibleAllViewPagers()
-    {
-        for(int i=0;i<viewPagers.length ;i++)
-        {
-            viewPagers[i].setVisibility(View.GONE);
-        }
-
-    }
-    public void visibleViewPager(ViewPager viewPager) {
-        viewPager.setVisibility(View.VISIBLE);
-    }
+//    public void invisibleAllViewPagers()
+//    {
+//        for(int i=0;i<viewPagers.length ;i++)
+//        {
+//            viewPagers[i].setVisibility(View.GONE);
+//        }
+//    }
+//    public void visibleViewPager(ViewPager viewPager) {
+//        viewPager.setVisibility(View.VISIBLE);
+//    }
 
 }

@@ -22,7 +22,13 @@
         <activity
             android:name=".NavigationDrawerPackage.NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AboutSuez.AboutSuezActivity" />
+        <activity android:name=".Help.HelpActivity" />
+        <activity android:name=".hotel.HotelActivity" />
+        <activity android:name=".Restaurant.RestaurantActivity" />
+        <activity android:name=".Hospital.HospitalActivity" />
+        <activity android:name=".Shopping.ShoppingActivity"></activity>
     </application>
 
 </manifest>

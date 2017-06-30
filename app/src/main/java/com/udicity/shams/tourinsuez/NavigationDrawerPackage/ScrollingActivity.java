@@ -15,12 +15,19 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezActivity;
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.CategoryPackage.CategoryAdapter;
+import com.udicity.shams.tourinsuez.Help.HelpActivity;
 import com.udicity.shams.tourinsuez.R;
+import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
+import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 
 import java.util.ArrayList;
+
+import static android.R.attr.category;
+import static android.R.attr.start;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -57,9 +64,28 @@ public class ScrollingActivity extends AppCompatActivity {
 
     public void sendToIntent(Category category)
     {
-        Intent intent = new Intent(ScrollingActivity.this,NavigationDrawerActivity.class);
-        intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
-        startActivity(intent);
+        Intent intent;
+        switch(category.getmCategoryId())
+        {
+            case 1 :
+                intent = new Intent(ScrollingActivity.this,AboutSuezActivity.class);
+                startActivity(intent);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+//                startActivity( new Intent(ScrollingActivity.this,AboutSuezActivity.class));
+                break;
+            case 2 :
+                startActivity( new Intent(ScrollingActivity.this,HotelActivity.class));
+                break;
+            case 3 :
+                startActivity( new Intent(ScrollingActivity.this,RestaurantActivity.class));
+                break;
+            case 9 :
+                startActivity( new Intent(ScrollingActivity.this,HelpActivity.class));
+                break;
+            default:
+                return;
+        }
+
     }
 
     @Override

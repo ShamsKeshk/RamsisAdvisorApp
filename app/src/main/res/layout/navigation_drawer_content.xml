@@ -9,22 +9,15 @@
     tools:context="com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity"
     tools:showIn="@layout/navigation_drawer_app_bar">
 
+    <FrameLayout
+        android:id="@+id/navigation_drawer_content_frame_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/about_suez_view_pager"
-        android:visibility="gone"/>
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/hotel_view_pager"
-        android:visibility="gone"/>
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rest_view_pager"
-        android:visibility="gone"/>
+    </FrameLayout>
+
+
+
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,26 +28,14 @@
         android:layout_height="match_parent"
         android:id="@+id/events_view_pager"
         android:visibility="gone"/>
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/shopping_view_pager"
-        android:visibility="gone"/>
+
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/store_view_pager"
         android:visibility="gone"/>
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/hospital_view_pager"
-        android:visibility="gone"/>
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/help_view_pager"
-        android:visibility="gone"/>
+
+
 
 
 
