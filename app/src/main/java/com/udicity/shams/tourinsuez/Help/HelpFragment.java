@@ -19,9 +19,21 @@ import java.util.ArrayList;
 
 public class HelpFragment extends Fragment {
 
+
     public HelpFragment() {
         // Required empty public constructor
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -89,6 +89,16 @@ public class DataSourcer {
         helpCategoryArrayList.add(new HelpCategory("Fire Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
         helpCategoryArrayList.add(new HelpCategory("Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
         helpCategoryArrayList.add(new HelpCategory("Tourism Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Tourism Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Ambulance","123",R.drawable.icon_help_green_30px,-20.2541,20.254));
+        helpCategoryArrayList.add(new HelpCategory("Fire Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Tourism Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Tourism Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Ambulance","123",R.drawable.icon_help_green_30px,-20.2541,20.254));
+        helpCategoryArrayList.add(new HelpCategory("Fire Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Tourism Police","122",R.drawable.icon_help_green_30px,-33.2541,-87.254));
 
         return helpCategoryArrayList;
     }

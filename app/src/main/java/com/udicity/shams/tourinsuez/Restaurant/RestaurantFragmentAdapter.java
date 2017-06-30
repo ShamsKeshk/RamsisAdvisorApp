@@ -11,11 +11,11 @@ import com.udicity.shams.tourinsuez.R;
  * Created by shams on 26/06/17.
  */
 
-public class RestaurantFragementAdapter extends FragmentPagerAdapter {
+public class RestaurantFragmentAdapter extends FragmentPagerAdapter {
 
     Context mContext;
 
-    public RestaurantFragementAdapter(FragmentManager fragmentManager, Context context)
+    public RestaurantFragmentAdapter(FragmentManager fragmentManager, Context context)
     {
         super(fragmentManager);
         mContext = context;

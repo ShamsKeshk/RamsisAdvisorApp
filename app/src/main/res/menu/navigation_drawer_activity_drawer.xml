@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/about_suez_tab"
+            android:icon="@drawable/icon_info_green_24px"
+            android:title="About Suez" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/hotel_tab"
+            android:icon="@drawable/icon_hotel_green_24px"
+            android:title="Hotel" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/restaurant_tab"
+            android:icon="@drawable/icon_restaurant_green_24px"
+            android:title="Restaurant" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/tourism_tab"
+            android:icon="@drawable/icon_tourism_green_24px"
+            android:title="Tourism" />
+        <item
+            android:id="@+id/event_tab"
+            android:icon="@drawable/icon_event_green_24px"
+            android:title="Events" />
+        <item
+            android:id="@+id/shopping_tab"
+            android:icon="@drawable/icon_shopping_cart_green_24px"
+            android:title="Shopping" />
+        <item
+            android:id="@+id/store_tab"
+            android:icon="@drawable/icon_store_green_24px"
+            android:title="Store" />
+        <item
+            android:id="@+id/hospital_tab"
+            android:icon="@drawable/icon_local_hospital_green_24px"
+            android:title="Hospital" />
+        <item
+            android:id="@+id/help_tab"
+            android:icon="@drawable/icon_help_green_24px"
+            android:title="Help" />
     </group>
 
     <item android:title="Communicate">

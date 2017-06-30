@@ -1,10 +1,12 @@
 package com.udicity.shams.tourinsuez.Help;
 
 import android.content.Context;
+import android.provider.SyncStateContract;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragment;
 import com.udicity.shams.tourinsuez.R;
 
 /**
@@ -14,6 +16,7 @@ import com.udicity.shams.tourinsuez.R;
 public class HelpFragmentAdapter extends FragmentPagerAdapter {
 
     Context mContext;
+
 
     public HelpFragmentAdapter(FragmentManager fm, Context context)
     {

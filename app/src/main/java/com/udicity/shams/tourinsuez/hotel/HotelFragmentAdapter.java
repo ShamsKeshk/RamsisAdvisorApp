@@ -26,7 +26,10 @@ public class HotelFragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new HotelFragment();
-        }else return null;
+        }else if(position == 1)
+        {
+            return new RestaurantMainFragment();
+        }return null;
     }
 
     @Override
@@ -40,6 +43,6 @@ public class HotelFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 1;
+        return 2;
     }
 }

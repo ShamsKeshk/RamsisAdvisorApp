@@ -6,16 +6,21 @@ package com.udicity.shams.tourinsuez.CategoryPackage;
 
 public class Category {
 
+    public static int numberOfCategories = 0;
     private String mCategoryName;
     private int mCategoryImageResource;
     private int mCategoryId;
+
 
     public Category(String categoryName, int categoryImageResource, int categoryId) {
         mCategoryName = categoryName;
         mCategoryImageResource = categoryImageResource;
         mCategoryId = categoryId;
+        numberOfCategories = numberOfCategories + 1;
     }
-    public Category() {}
+    public Category() {
+
+    }
 
     public void setmCategoryName(String categoryName) {
         mCategoryName = categoryName;

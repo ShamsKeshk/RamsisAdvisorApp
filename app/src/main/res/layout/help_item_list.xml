@@ -3,41 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="92dp">
     <ImageView
         android:layout_margin="5dp"
         android:id="@+id/help_provider_image_view"
         android:layout_gravity="center"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_weight="2"
         android:src="@drawable/icon_help_green_30px"/>
     <LinearLayout
         android:layout_margin="5dp"
         android:layout_gravity="start"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_weight="4"
         android:orientation="vertical">
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/help_provider_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Police"
-            android:textSize="22sp"/>
-        <TextView
-            android:id="@+id/help_provider_phone_number_text_view"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp" />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            tools:text="123"/>
+            android:orientation="horizontal"
+            android:layout_marginBottom="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="phone : "/>
+            <TextView
+                android:id="@+id/help_provider_phone_number_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="123"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="24 street 13 Al_Amal , Fysal ,suez"/>
+
 
     </LinearLayout>
     <ImageView
         android:layout_margin="5dp"
         android:id="@+id/help_provider_call_image_view"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_weight="2"
         android:layout_gravity="center"
         android:src="@android:drawable/sym_call_outgoing"/>
