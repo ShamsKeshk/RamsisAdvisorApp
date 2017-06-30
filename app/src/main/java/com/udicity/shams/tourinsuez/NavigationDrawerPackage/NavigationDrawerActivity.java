@@ -13,20 +13,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezActivity;
+import com.udicity.shams.tourinsuez.Events.EventsActivity;
 import com.udicity.shams.tourinsuez.Help.HelpActivity;
 import com.udicity.shams.tourinsuez.Hospital.HospitalActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
 import com.udicity.shams.tourinsuez.Shopping.ShoppingActivity;
+import com.udicity.shams.tourinsuez.TourismPlaces.TourismActivity;
 import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-//    ViewPager tourismViewPager;
-//    ViewPager eventsViewPager;
-//
 //    ViewPager storeViewPager;
-//
+
 //    private int selectedCategoryId;
 //    ViewPager[] viewPagers;
 // ArrayList<ViewPager> viewPagerArrayList;
@@ -55,15 +54,12 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
 //        String selected_cat = getIntent().getStringExtra("categoryId");
 //        selectedCategoryId = Integer.valueOf(selected_cat);
-//        tourismViewPager = (ViewPager)findViewById(R.id.tourism_view_pager);
-//        eventsViewPager = (ViewPager)findViewById(R.id.events_view_pager);
+//
+//
 //        storeViewPager = (ViewPager)findViewById(R.id.store_view_pager);
 //        viewPagers = new ViewPager[Category.numberOfCategories];
-//        viewPagers[3] = tourismViewPager;
-//        viewPagers[4] = eventsViewPager;
-//        viewPagers[5] = shoppingViewPager;
 //        viewPagers[6] = storeViewPager;
-//        viewPagers[7] = hospitalViewPager;
+
 
 
 
@@ -125,9 +121,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
         } else if (itemId == R.id.restaurant_tab) {
             startActivity(new Intent(this, RestaurantActivity.class));
         }else if (itemId == R.id.tourism_tab) {
-            startActivity(new Intent(this, RestaurantActivity.class));
+            startActivity(new Intent(this, TourismActivity.class));
         }else if (itemId == R.id.event_tab) {
-            startActivity(new Intent(this, RestaurantActivity.class));
+            startActivity(new Intent(this, EventsActivity.class));
         }else if (itemId == R.id.shopping_tab) {
             startActivity(new Intent(this, ShoppingActivity.class));
         }else if (itemId == R.id.store_tab) {
