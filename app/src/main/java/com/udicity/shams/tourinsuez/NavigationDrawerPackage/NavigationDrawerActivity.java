@@ -19,6 +19,7 @@ import com.udicity.shams.tourinsuez.Hospital.HospitalActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
 import com.udicity.shams.tourinsuez.Shopping.ShoppingActivity;
+import com.udicity.shams.tourinsuez.StoreShops.StoreActivity;
 import com.udicity.shams.tourinsuez.TourismPlaces.TourismActivity;
 import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 
@@ -127,7 +128,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         }else if (itemId == R.id.shopping_tab) {
             startActivity(new Intent(this, ShoppingActivity.class));
         }else if (itemId == R.id.store_tab) {
-            startActivity(new Intent(this, RestaurantActivity.class));
+            startActivity(new Intent(this, StoreActivity.class));
         }else if (itemId == R.id.hospital_tab) {
             startActivity(new Intent(this, HospitalActivity.class));
         } else if (itemId == R.id.help_tab) {

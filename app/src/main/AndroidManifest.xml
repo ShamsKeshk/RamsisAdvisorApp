@@ -30,7 +30,8 @@
         <activity android:name=".Hospital.HospitalActivity" />
         <activity android:name=".Shopping.ShoppingActivity" />
         <activity android:name=".TourismPlaces.TourismActivity" />
-        <activity android:name=".Events.EventsActivity"></activity>
+        <activity android:name=".Events.EventsActivity" />
+        <activity android:name=".StoreShops.StoreActivity"></activity>
     </application>
 
 </manifest>

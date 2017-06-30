@@ -21,7 +21,7 @@ public class RestaurantActivity extends NavigationDrawerActivity {
         setContentView(R.layout.restaurant_activity);
 
         String selected_cat = getIntent().getStringExtra("categoryId");
-        selectedCategoryId = Integer.valueOf(selected_cat);
+//        selectedCategoryId = Integer.valueOf(selected_cat);
         restViewPager = (ViewPager)findViewById(R.id.rest_view_pager);
         restaurantFragmentAdapter = new RestaurantFragmentAdapter(getSupportFragmentManager(),this);
         restViewPager.setAdapter(restaurantFragmentAdapter);
