@@ -18,6 +18,7 @@ import android.widget.GridView;
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezActivity;
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.CategoryPackage.CategoryAdapter;
+import com.udicity.shams.tourinsuez.Events.EventsActivity;
 import com.udicity.shams.tourinsuez.Help.HelpActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
@@ -78,6 +79,9 @@ public class ScrollingActivity extends AppCompatActivity {
                 break;
             case 3 :
                 startActivity( new Intent(ScrollingActivity.this,RestaurantActivity.class));
+                break;
+            case 5 :
+                startActivity(new Intent(ScrollingActivity.this, EventsActivity.class));
                 break;
             case 9 :
                 startActivity( new Intent(ScrollingActivity.this,HelpActivity.class));

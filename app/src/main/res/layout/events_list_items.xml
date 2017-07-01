@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:id="@+id/event_image_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@drawable/hotel_drawer"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/event_name_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Event Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/icon_event_green_24px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:src="@drawable/ic_icon_place_green_24px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/event_start_date_info_text_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                tools:text="Start At 5 PM , 1/7/2017" />
+            <TextView
+                android:id="@+id/event_address_text_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp"
+                tools:text="13,Saad Zaghlol Street,Port Tawfik ,Suez" />
+
+        </LinearLayout>
+        <ImageView
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/event_more_information_id"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_more_info_horiz_green_24px"/>
+    </LinearLayout>
+
+</LinearLayout>

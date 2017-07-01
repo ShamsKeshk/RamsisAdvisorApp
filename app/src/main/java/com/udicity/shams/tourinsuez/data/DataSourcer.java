@@ -4,7 +4,9 @@ import android.content.Context;
 
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezCategory;
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
+import com.udicity.shams.tourinsuez.Events.EventsCategory;
 import com.udicity.shams.tourinsuez.Help.HelpCategory;
+import com.udicity.shams.tourinsuez.Hospital.HospitalCategory;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantCategory;
 import com.udicity.shams.tourinsuez.hotel.HotelCategory;
@@ -47,6 +49,22 @@ public class DataSourcer {
         return aboutSuezCategoryArrayList ;
     }
 
+    public static ArrayList<HotelCategory> getHotel() {
+
+        ArrayList<HotelCategory> hotelCategoryArrayList = new ArrayList<HotelCategory>();
+        hotelCategoryArrayList.add(new HotelCategory("Green House", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+
+        return hotelCategoryArrayList;
+    }
+
     public static ArrayList<RestaurantCategory> getRestaurant() {
 
         ArrayList<RestaurantCategory> restaurantCategoryArrayList = new ArrayList<RestaurantCategory>();
@@ -65,20 +83,39 @@ public class DataSourcer {
 
         return restaurantCategoryArrayList;
     }
-    public static ArrayList<HotelCategory> getHotel() {
 
-        ArrayList<HotelCategory> hotelCategoryArrayList = new ArrayList<HotelCategory>();
-        hotelCategoryArrayList.add(new HotelCategory("Green House", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
-        hotelCategoryArrayList.add(new HotelCategory("Ateia", 1500, R.drawable.hotel_try_up));
+    public static ArrayList<EventsCategory> getEvents() {
 
-        return hotelCategoryArrayList;
+        ArrayList<EventsCategory> eventsCategoryArrayList = new ArrayList<EventsCategory>();
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up,"Google I/O","Start At 12 AM , 24/10/2017","24 Talat-Harb Street,Port Tawfik ,Suez"));
+
+        return eventsCategoryArrayList;
+
+    }
+
+    public static ArrayList<HospitalCategory> getHospital() {
+
+        ArrayList<HospitalCategory> hospitalCategoryArrayList = new ArrayList<HospitalCategory>();
+
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+
+        return hospitalCategoryArrayList;
     }
 
     public static ArrayList<HelpCategory> getHelpList() {
