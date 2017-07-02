@@ -9,6 +9,7 @@ import com.udicity.shams.tourinsuez.Help.HelpCategory;
 import com.udicity.shams.tourinsuez.Hospital.HospitalCategory;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantCategory;
+import com.udicity.shams.tourinsuez.TourismPlaces.TourismCategory;
 import com.udicity.shams.tourinsuez.hotel.HotelCategory;
 
 import java.util.ArrayList;
@@ -82,6 +83,26 @@ public class DataSourcer {
         restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13));
 
         return restaurantCategoryArrayList;
+    }
+
+    public static ArrayList<TourismCategory> getTourismPlaces()
+    {
+        ArrayList<TourismCategory> tourismCategoryArrayList = new ArrayList<TourismCategory>();
+
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up,"El Sokhna","Museum","24 Abas El3qad,Etaqa ,Suez",8764));
+
+        return tourismCategoryArrayList;
     }
 
     public static ArrayList<EventsCategory> getEvents() {

@@ -7,8 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.udicity.shams.tourinsuez.R;
+import com.udicity.shams.tourinsuez.data.DataSourcer;
+
+import java.util.ArrayList;
 
 public class TourismFragment extends Fragment {
 
@@ -20,6 +24,15 @@ public class TourismFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.tourism_fragment, container, false);
+        View rootView =  inflater.inflate(R.layout.tourism_fragment, container, false);
+
+        ArrayList<TourismCategory> tourismCategoryArrayList = DataSourcer.getTourismPlaces();
+
+        TourismCategoryAdapter tourismCategoryAdapter = new TourismCategoryAdapter(getActivity(),tourismCategoryArrayList);
+
+        ListView listView = (ListView)rootView.findViewById(R.id.tourism_list_view);
+        listView.setAdapter(tourismCategoryAdapter);
+
+        return rootView;
     }
 }

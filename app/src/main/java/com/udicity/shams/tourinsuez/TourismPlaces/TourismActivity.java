@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity;
 import com.udicity.shams.tourinsuez.R;
 
-public class TourismActivity extends AppCompatActivity {
+public class TourismActivity extends NavigationDrawerActivity {
 
     ViewPager tourismViewPager;
     TourismFragmentAdapter tourismFragmentAdapter;
@@ -24,19 +25,9 @@ public class TourismActivity extends AppCompatActivity {
 
         String selected_cat = getIntent().getStringExtra("categoryId");
 
-
-        /*
-
         tourismViewPager = (ViewPager)findViewById(R.id.tourism_view_pager);
-
+        TourismFragmentAdapter tourismFragmentAdapter = new TourismFragmentAdapter(getSupportFragmentManager(),getApplicationContext());
         tourismViewPager.setAdapter(tourismFragmentAdapter);
-
         tourismViewPager.setVisibility(View.VISIBLE);
-        */
-
-
-
-
-
     }
 }

@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 /**
@@ -45,7 +43,7 @@ public class HospitalCategoryAdapter extends ArrayAdapter<HospitalCategory> {
         hospitalNameTextView.setText(currentHospital.getmCorporationName());
 
         TextView hospitalReviewTextView = (TextView)hospitalListItems.findViewById(R.id.hospital_number_review_text_view_id);
-        hospitalReviewTextView.setText(currentHospital.getmCorporationTotalReview());
+        hospitalReviewTextView.setText(String.valueOf(currentHospital.getmCorporationTotalReview()));
 
         TextView hospitalPhoneTextView = (TextView)hospitalListItems.findViewById(R.id.hospital_phone_number_text_view_id);
         hospitalPhoneTextView.setText(currentHospital.getmCorporationPhone());

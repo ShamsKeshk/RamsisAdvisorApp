@@ -20,8 +20,10 @@ import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.CategoryPackage.CategoryAdapter;
 import com.udicity.shams.tourinsuez.Events.EventsActivity;
 import com.udicity.shams.tourinsuez.Help.HelpActivity;
+import com.udicity.shams.tourinsuez.Hospital.HospitalActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
+import com.udicity.shams.tourinsuez.TourismPlaces.TourismActivity;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
 import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 
@@ -80,8 +82,14 @@ public class ScrollingActivity extends AppCompatActivity {
             case 3 :
                 startActivity( new Intent(ScrollingActivity.this,RestaurantActivity.class));
                 break;
+            case 4 :
+                startActivity( new Intent(ScrollingActivity.this,TourismActivity.class));
+                break;
             case 5 :
                 startActivity(new Intent(ScrollingActivity.this, EventsActivity.class));
+                break;
+            case 8 :
+                startActivity(new Intent(ScrollingActivity.this, HospitalActivity.class));
                 break;
             case 9 :
                 startActivity( new Intent(ScrollingActivity.this,HelpActivity.class));
