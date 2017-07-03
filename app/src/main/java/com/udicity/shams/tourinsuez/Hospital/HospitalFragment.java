@@ -1,7 +1,5 @@
 package com.udicity.shams.tourinsuez.Hospital;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -31,5 +29,4 @@ public class HospitalFragment extends Fragment {
         Toast.makeText(getContext(),"Hospital",Toast.LENGTH_SHORT).show();
         return rootView;
     }
-    
 }

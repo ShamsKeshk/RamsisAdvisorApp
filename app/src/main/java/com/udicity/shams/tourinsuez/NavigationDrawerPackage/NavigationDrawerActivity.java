@@ -13,29 +13,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezActivity;
+import com.udicity.shams.tourinsuez.CategoryPackage.Category;
 import com.udicity.shams.tourinsuez.Events.EventsActivity;
 import com.udicity.shams.tourinsuez.Help.HelpActivity;
 import com.udicity.shams.tourinsuez.Hospital.HospitalActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
 import com.udicity.shams.tourinsuez.Shopping.ShoppingActivity;
-import com.udicity.shams.tourinsuez.StoreShops.StoreActivity;
+import com.udicity.shams.tourinsuez.CafeShops.CafeActivity;
 import com.udicity.shams.tourinsuez.TourismPlaces.TourismActivity;
 import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-//    ViewPager storeViewPager;
 
-//    private int selectedCategoryId;
-//    ViewPager[] viewPagers;
-// ArrayList<ViewPager> viewPagerArrayList;
-//    <include layout="@layout/navigation_drawer_content" />
-
-
-
-
-
+    private int selectedCategoryId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,24 +43,11 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        String selected_cat = getIntent().getStringExtra("categoryId");
+        selectedCategoryId = Integer.valueOf(selected_cat);
     }
 
-//        String selected_cat = getIntent().getStringExtra("categoryId");
-//        selectedCategoryId = Integer.valueOf(selected_cat);
-//
-//
-//        storeViewPager = (ViewPager)findViewById(R.id.store_view_pager);
-//        viewPagers = new ViewPager[Category.numberOfCategories];
-//        viewPagers[6] = storeViewPager;
-
-
-
-
-
-
-//        if (selectedCategoryId == 1){
-//         aboutSuezViewPager.setAdapter(aboutSuezFragmentAdapter);
-//         visibleViewPager(aboutSuezViewPager);
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -78,7 +57,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,50 +84,98 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        Intent intent;
+        Category category = new Category();
+
         int itemId = item.getItemId();
 
         if (itemId == R.id.about_suez_tab) {
-            startActivity(new Intent(this, AboutSuezActivity.class));
-//             Handle the camera action
-//            invisibleAllViewPagers();
-//            aboutSuezViewPager.setAdapter(aboutSuezFragmentAdapter);
-//            visibleViewPager(aboutSuezViewPager);
+            if (selectedCategoryId == 1){
+                drawer.closeDrawer(GravityCompat.START);
+            }else
+            {
+                intent = new Intent(this, AboutSuezActivity.class);
+                category.setmCategoryId(1);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         } else if (itemId == R.id.hotel_tab) {
-            startActivity(new Intent(this, HotelActivity.class));
-//            invisibleAllViewPagers();
-//            hotelViewPager.setAdapter(hotelFragmentAdapter);
-//            visibleViewPager(hotelViewPager);
+            if (selectedCategoryId == 2){
+                drawer.closeDrawer(GravityCompat.START);
+
+            }else {
+                intent = new Intent(this, HotelActivity.class);
+                category.setmCategoryId(2);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
+
         } else if (itemId == R.id.restaurant_tab) {
-            startActivity(new Intent(this, RestaurantActivity.class));
+            if (selectedCategoryId == 3){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, RestaurantActivity.class);
+                category.setmCategoryId(3);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         }else if (itemId == R.id.tourism_tab) {
-            startActivity(new Intent(this, TourismActivity.class));
+            if (selectedCategoryId == 4){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, TourismActivity.class);
+                category.setmCategoryId(4);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         }else if (itemId == R.id.event_tab) {
-            startActivity(new Intent(this, EventsActivity.class));
+            if (selectedCategoryId == 5){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, EventsActivity.class);
+                category.setmCategoryId(5);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         }else if (itemId == R.id.shopping_tab) {
-            startActivity(new Intent(this, ShoppingActivity.class));
-        }else if (itemId == R.id.store_tab) {
-            startActivity(new Intent(this, StoreActivity.class));
+            if (selectedCategoryId == 6){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, ShoppingActivity.class);
+                category.setmCategoryId(6);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
+        }else if (itemId == R.id.cafe_tab) {
+            if (selectedCategoryId == 7){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, CafeActivity.class);
+                category.setmCategoryId(7);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         }else if (itemId == R.id.hospital_tab) {
-            startActivity(new Intent(this, HospitalActivity.class));
+            if (selectedCategoryId == 8){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, HospitalActivity.class);
+                category.setmCategoryId(8);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         } else if (itemId == R.id.help_tab) {
-            startActivity(new Intent(this, HelpActivity.class));
+            if (selectedCategoryId == 9){
+                drawer.closeDrawer(GravityCompat.START);
+            }else {
+                intent = new Intent(this, HelpActivity.class);
+                category.setmCategoryId(9);
+                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                startActivity(intent);
+            }
         }
-
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-//    public void invisibleAllViewPagers()
-//    {
-//        for(int i=0;i<viewPagers.length ;i++)
-//        {
-//            viewPagers[i].setVisibility(View.GONE);
-//        }
-//    }
-//    public void visibleViewPager(ViewPager viewPager) {
-//        viewPager.setVisibility(View.VISIBLE);
-//    }
-
 }

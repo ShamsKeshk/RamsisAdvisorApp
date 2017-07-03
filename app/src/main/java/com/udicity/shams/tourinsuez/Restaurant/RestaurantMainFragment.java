@@ -12,14 +12,11 @@ import com.udicity.shams.tourinsuez.data.DataSourcer;
 
 import java.util.ArrayList;
 
-
 public class RestaurantMainFragment extends Fragment {
-
 
     public RestaurantMainFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,5 +31,4 @@ public class RestaurantMainFragment extends Fragment {
         listView.setAdapter(restaurantCategoryAdapter);
         return rootView;
     }
-
 }

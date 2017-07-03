@@ -13,8 +13,6 @@ public class AboutSuezCategory {
     private String mTopicExplainPartTwo = NO_TEXT_PROVIDED;
     private int mTopicImageResourcePartTwo = NO_IMAGE_PROVIDED;
 
-
-
     public AboutSuezCategory(String topicHeader,String topicExplainPartOne)
     {
         mTopicHeader = topicHeader;
@@ -37,6 +35,13 @@ public class AboutSuezCategory {
     {
         mTopicHeader = topicHeader;
         mTopicExplainPartOne = topicExplainPartOne;
+        mTopicImageResourcePartOne = topicImageResourcePartOne;
+        mTopicExplainPartTwo = topicExplainPartTwo;
+        mTopicImageResourcePartTwo = topicImageResourcePartTwo;
+    }
+    public AboutSuezCategory(String topicHeader,int topicImageResourcePartOne,String topicExplainPartTwo,int topicImageResourcePartTwo)
+    {
+        mTopicHeader = topicHeader;
         mTopicImageResourcePartOne = topicImageResourcePartOne;
         mTopicExplainPartTwo = topicExplainPartTwo;
         mTopicImageResourcePartTwo = topicImageResourcePartTwo;

@@ -51,7 +51,6 @@ public class TourismCategoryAdapter extends ArrayAdapter<TourismCategory> {
         TextView placeAddress = (TextView)tourismListItems.findViewById(R.id.tourism_place_address_text_view);
         placeAddress.setText(currentTourismPlace.getmPlaceAddress());
 
-
         return tourismListItems;
     }
 }

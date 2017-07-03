@@ -9,13 +9,13 @@ public class ShoppingCategory {
     private int shopImageResource;
     private String shopName;
     private int shopTotalReview;
-    private String shopTimeOpen;
-    private String shopTimeClose;
+    private int shopTimeOpen;
+    private int shopTimeClose;
     private String shopAddress;
     private double shopLatMap;
     private double shopLongMap;
 
-    public ShoppingCategory(int shopImageResource, String shopName, int shopTotalReview, String shopTimeOpen, String shopTimeClose, String shopAddress) {
+    public ShoppingCategory(int shopImageResource, String shopName, int shopTotalReview, int shopTimeOpen, int shopTimeClose, String shopAddress) {
         this.shopImageResource = shopImageResource;
         this.shopName = shopName;
         this.shopTotalReview = shopTotalReview;
@@ -24,7 +24,7 @@ public class ShoppingCategory {
         this.shopAddress = shopAddress;
     }
 
-    public ShoppingCategory(int shopImageResource, String shopName, int shopTotalReview, String shopTimeOpen, String shopTimeClose, String shopAddress, double shopLatMap, double shopLongMap) {
+    public ShoppingCategory(int shopImageResource, String shopName, int shopTotalReview, int shopTimeOpen, int shopTimeClose, String shopAddress, double shopLatMap, double shopLongMap) {
         this.shopImageResource = shopImageResource;
         this.shopName = shopName;
         this.shopTotalReview = shopTotalReview;
@@ -59,19 +59,19 @@ public class ShoppingCategory {
         this.shopTotalReview = shopTotalReview;
     }
 
-    public String getShopTimeOpen() {
+    public int getShopTimeOpen() {
         return shopTimeOpen;
     }
 
-    public void setShopTimeOpen(String shopTimeOpen) {
+    public void setShopTimeOpen(int shopTimeOpen) {
         this.shopTimeOpen = shopTimeOpen;
     }
 
-    public String getShopTimeClose() {
+    public int getShopTimeClose() {
         return shopTimeClose;
     }
 
-    public void setShopTimeClose(String shopTimeClose) {
+    public void setShopTimeClose(int shopTimeClose) {
         this.shopTimeClose = shopTimeClose;
     }
 

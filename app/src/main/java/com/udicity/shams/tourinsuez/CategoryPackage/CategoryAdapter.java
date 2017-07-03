@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.udicity.shams.tourinsuez.R;
-
 import java.util.ArrayList;
 
 /**
@@ -34,14 +32,12 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
         {
             categoriesListItemView = LayoutInflater.from(getContext()).inflate(R.layout.scrolling_categories_list_items,parent,false);
         }
-
         Category currentCategory = getItem(position);
 
         TextView categoryTextView = (TextView)categoriesListItemView.findViewById(R.id.category_text_view);
         categoryTextView.setText(currentCategory.getmCategoryName());
         ImageView categoryImageView = (ImageView)categoriesListItemView.findViewById(R.id.category_image_icon_view);
         categoryImageView.setImageResource(currentCategory.getmCategoryImageResource());
-
 
         return categoriesListItemView;
     }

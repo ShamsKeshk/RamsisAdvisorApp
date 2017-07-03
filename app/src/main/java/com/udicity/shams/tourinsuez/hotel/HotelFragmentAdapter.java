@@ -38,7 +38,6 @@ public class HotelFragmentAdapter extends FragmentPagerAdapter {
         {
             return context.getString(R.string.hotel_category);
         }else return "hhhhh" ;
-
     }
 
     @Override

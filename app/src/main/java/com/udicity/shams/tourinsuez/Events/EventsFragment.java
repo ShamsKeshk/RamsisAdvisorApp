@@ -8,22 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
-
 import java.util.ArrayList;
-
 
 public class EventsFragment extends Fragment {
 
     public EventsFragment() {
         // Required empty public constructor
     }
-
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +30,4 @@ public class EventsFragment extends Fragment {
         Toast.makeText(getContext(),"Events",Toast.LENGTH_SHORT).show();
         return rootView;
     }
-
-
 }

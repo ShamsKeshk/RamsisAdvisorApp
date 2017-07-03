@@ -26,7 +26,7 @@
     <ImageView
         android:id="@+id/topic_one_image_view_id"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="220dp"
         tools:src="@drawable/hotel_drawer"
         android:scaleType="fitXY"
         android:layout_margin="10dp"/>
@@ -41,7 +41,7 @@
     <ImageView
         android:id="@+id/topic_two_image_view_id"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="220dp"
         tools:src="@drawable/hotel_drawer"
         android:scaleType="fitXY"
         android:layout_margin="10dp"/>

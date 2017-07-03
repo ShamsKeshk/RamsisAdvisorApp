@@ -1,9 +1,5 @@
 package com.udicity.shams.tourinsuez.Restaurant;
 
-/**
- *
- */
-
 public class RestaurantCategory {
 
     private String mRestaurantName;

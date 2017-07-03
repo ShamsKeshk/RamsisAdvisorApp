@@ -11,7 +11,6 @@ public class Category {
     private int mCategoryImageResource;
     private int mCategoryId;
 
-
     public Category(String categoryName, int categoryImageResource, int categoryId) {
         mCategoryName = categoryName;
         mCategoryImageResource = categoryImageResource;
@@ -45,5 +44,4 @@ public class Category {
     public int getmCategoryId() {
         return mCategoryId;
     }
-
 }

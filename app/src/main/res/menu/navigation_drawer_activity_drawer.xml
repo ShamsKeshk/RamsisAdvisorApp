@@ -28,9 +28,9 @@
             android:icon="@drawable/icon_shopping_cart_green_24px"
             android:title="Shopping" />
         <item
-            android:id="@+id/store_tab"
-            android:icon="@drawable/icon_store_green_24px"
-            android:title="Store" />
+            android:id="@+id/cafe_tab"
+            android:icon="@drawable/icon_local_cafe_green_30px"
+            android:title="Cafe" />
         <item
             android:id="@+id/hospital_tab"
             android:icon="@drawable/icon_local_hospital_green_24px"

@@ -37,9 +37,15 @@ public class HotelCategoryAdapter extends ArrayAdapter<HotelCategory>{
         TextView hotelNameTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_name_text_view_id);
         hotelNameTextView.setText(currentHotel.getmHotelName());
         TextView reviewTextView = (TextView)hotelListItemView.findViewById(R.id.hotel_number_review_text_view_id);
-        reviewTextView.setText(currentHotel.getmFinalReview()+" Review");
-        ImageView imageView = (ImageView)hotelListItemView.findViewById(R.id.hotel_filter_image_view);
+        reviewTextView.setText(currentHotel.getmFinalReview()+" Reviews");
+        ImageView imageView = (ImageView)hotelListItemView.findViewById(R.id.hotel_image_view_id);
         imageView.setImageResource(currentHotel.getmHotelImageResource());
+
+        TextView hotelPhoneTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_phone_number_text_view_id);
+        hotelPhoneTextView.setText(currentHotel.getmHotelPhoneNumber());
+        TextView hotelAddressTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_address_text_view_id);
+        hotelAddressTextView.setText(currentHotel.getmHotelAddress());
+
         return hotelListItemView;
     }
 }

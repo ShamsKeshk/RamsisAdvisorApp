@@ -9,8 +9,10 @@ public class HotelCategory {
     private String mHotelName;
     private int mFinalReview;
     private int mHotelImageResource;
-    private float mHotelLat;
-    private float mHotelLong;
+    private String mHotelPhoneNumber;
+    private String mHotelAddress;
+    private double mHotelLat;
+    private double mHotelLong;
 
     public HotelCategory(String Name,int finalReview,int imageResource)
     {
@@ -19,11 +21,36 @@ public class HotelCategory {
         mHotelImageResource = imageResource;
     }
 
-    public HotelCategory(String Name,int finalReview,int imageResource,float latMap,float longMap)
+    public HotelCategory(String Name,int finalReview,int imageResource,String mHotelPhoneNumber,String mHotelAddress)
     {
         mHotelName = Name;
         mFinalReview = finalReview;
         mHotelImageResource = imageResource;
+        this.mHotelPhoneNumber = mHotelPhoneNumber;
+        this.mHotelAddress = mHotelAddress;
+    }
+    public HotelCategory(String Name,int finalReview,int imageResource,String mHotelPhoneNumber,String mHotelAddress,double latMap,double longMap)
+    {
+        mHotelName = Name;
+        mFinalReview = finalReview;
+        mHotelImageResource = imageResource;
+        this.mHotelPhoneNumber = mHotelPhoneNumber;
+        this.mHotelAddress = mHotelAddress;
+        mHotelLat = latMap;
+        mHotelLong = longMap;
+    }
+
+
+    public HotelCategory(String Name,int finalReview,int imageResource,double latMap,double longMap)
+    {
+        mHotelName = Name;
+        mFinalReview = finalReview;
+        mHotelImageResource = imageResource;
+        mHotelLat = latMap;
+        mHotelLong = longMap;
+    }
+    public HotelCategory(double latMap,double longMap)
+    {
         mHotelLat = latMap;
         mHotelLong = longMap;
     }
@@ -52,20 +79,36 @@ public class HotelCategory {
     {
         return mHotelImageResource;
     }
-    public void setmHotelLat(float hotelLat)
+    public void setmHotelLat(double hotelLat)
     {
         mHotelLat = hotelLat;
     }
-    public float getmHotelLat()
+    public double getmHotelLat()
     {
         return mHotelLat;
     }
-    public void setmHotelLong(float hotelLong)
+    public void setmHotelLong(double hotelLong)
     {
         mHotelLong = hotelLong;
     }
-    public float getmHotelLong()
+    public double getmHotelLong()
     {
         return mHotelLong;
+    }
+
+    public String getmHotelPhoneNumber() {
+        return mHotelPhoneNumber;
+    }
+
+    public void setmHotelPhoneNumber(String mHotelPhoneNumber) {
+        this.mHotelPhoneNumber = mHotelPhoneNumber;
+    }
+
+    public String getmHotelAddress() {
+        return mHotelAddress;
+    }
+
+    public void setmHotelAddress(String mHotelAddress) {
+        this.mHotelAddress = mHotelAddress;
     }
 }

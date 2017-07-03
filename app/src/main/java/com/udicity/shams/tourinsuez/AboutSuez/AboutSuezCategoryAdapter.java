@@ -73,7 +73,6 @@ public class AboutSuezCategoryAdapter extends ArrayAdapter<AboutSuezCategory> {
             imageViewTwo.setVisibility(View.GONE);
         }
 
-
         return listItems;
     }
 }

@@ -1,10 +1,6 @@
 package com.udicity.shams.tourinsuez.Restaurant;
 
 import android.app.Activity;
-import android.icu.text.DateFormat;
-import android.icu.text.SimpleDateFormat;
-import android.icu.text.TimeZoneFormat;
-import android.icu.util.Calendar;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -15,10 +11,7 @@ import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
-import java.text.FieldPosition;
-import java.text.ParsePosition;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by shams on 25/06/17.

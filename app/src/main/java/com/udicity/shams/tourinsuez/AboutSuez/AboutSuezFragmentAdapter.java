@@ -26,6 +26,8 @@ public class AboutSuezFragmentAdapter extends FragmentPagerAdapter{
         if (position == 0)
         {
             return new  AboutSuezFragment();
+        }else if( position == 1){
+            return new AboutSuezDistrictFragment();
         }else {
             return null;
         }
@@ -33,7 +35,7 @@ public class AboutSuezFragmentAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 1;
+        return 2;
     }
 
     @Override
@@ -41,8 +43,10 @@ public class AboutSuezFragmentAdapter extends FragmentPagerAdapter{
 
         if (position == 0) {
           return   context.getString(R.string.about_suez_category);
+        }else if(position == 1){
+            return "District";
         }else {
-            return "hehehehe";
+            return "No Title Found";
         }
     }
 }

@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.udicity.shams.tourinsuez.R;
-
 import java.util.ArrayList;
 
 /**
