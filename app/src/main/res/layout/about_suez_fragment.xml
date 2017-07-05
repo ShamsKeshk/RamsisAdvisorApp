@@ -1,15 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/testing"
-    android:orientation="vertical"
-    tools:context="com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragment"
-    android:layout_margin="10dp">
+    style="@style/fragment_frame_layout_style"
+    tools:context="com.udicity.shams.tourinsuez.AboutSuez.AboutSuezFragment">
 
     <ListView
         android:id="@+id/about_suez_list_view"
-        style="@style/list_view_style">
-    </ListView>
+        style="@style/list_view_style" />
 
 </LinearLayout>

@@ -1,8 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.udicity.shams.tourinsuez.AboutSuez.AboutSuezDistrictFragment">
+    tools:context="com.udicity.shams.tourinsuez.AboutSuez.AboutSuezDistrictFragment"
+    style="@style/fragment_frame_layout_style">
 
     <ListView
         android:id="@+id/about_suez_district_list_view"

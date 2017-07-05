@@ -1,13 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="20dp"
+    style="@style/fragment_frame_layout_style"
     tools:context="com.udicity.shams.tourinsuez.Restaurant.RestaurantMainFragment">
 
         <ListView
             android:id="@+id/restaurant_food_filter_list_view"
-            style="@style/list_view_style">
-        </ListView>
-</LinearLayout>
+            style="@style/list_view_style" />
+</FrameLayout>
