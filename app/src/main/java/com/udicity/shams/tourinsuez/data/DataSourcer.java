@@ -78,18 +78,18 @@ public class DataSourcer {
     public static ArrayList<RestaurantCategory> getRestaurant() {
 
         ArrayList<RestaurantCategory> restaurantCategoryArrayList = new ArrayList<RestaurantCategory>();
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1220, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
-        restaurantCategoryArrayList.add(new RestaurantCategory("Ateia", 1422, 9, 13,"behind The third army clup,El Giesh Street, PortTawfik,Suez"));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Kababgy Mohamed El Masry","062 3324160", 1422, 9, 22,"30 Off El Tahrir St. SUEZ DISTRICT، Suez",29.965445, 32.553419));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"New Dolphin","062 3304830", 1220, 9, 23,"22 El Galaa St.، SUEZ DISTRICT، Suez",29.961058, 32.547325));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"CareerBuilder Pizza ","0106 465 9457", 1422, 9, 21,"Suez Rd, Suez",30.000076, 32.490196));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Fares Seafood","0102 234 3448", 1422, 9, 1," Ain El Sokhna Rd, Suez,",29.960793, 32.545023));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Sea Side", "062 3333397",1422, 9, 23,"Suez, Suez Governorate",29.956671, 32.544100));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"El haty","Not Provided", 1422, 9, 2,"Suez Governorate",29.961924, 32.549155));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Cook Door","16999", 1422, 9, 21,"Suez, Suez Governorate",29.966407, 32.554101));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Castello","0100 688 8033", 1422, 9, 1,"23-Jul, Suez Governorate",29.966575, 32.554290));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"El Gaser Sea Food","0122 222 4862", 1422, 9, 22,"Suez, Suez Governorate",29.964299, 32.557682));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Awlad Wares","0101 384 4402", 1422, 9, 3,"Nemsa Square ,Suez Governorate",29.965966, 32.554887));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"IL Gusto Restauranti Italiano","0102 345 6007", 1422, 9, 22,"Suez, Suez Governorate",29.964283, 32.534114));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img,"Pizza Shakshook","0100 335 3350", 1422, 9, 1,"Suez, Al Khassah, Suez",29.964745, 32.557194));
 
         return restaurantCategoryArrayList;
     }
@@ -170,16 +170,12 @@ public class DataSourcer {
 
         ArrayList<HospitalCategory> hospitalCategoryArrayList = new ArrayList<HospitalCategory>();
 
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.sokhna_suez,"Al Amal",9561,"010 2010 3384","3 Al-Amal,Fysal ,Suez"));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital,"Suez Military Hospital",9561,"0102 278 4166","Suez Rd, Suez, Suez Governorate",29.998252, 32.488599));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital,"General Suez Hospital",9561,"062 3331190","Salah Uddin St، Suez, Suez Governorate",29.968206, 32.547674));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital,"Suez Hospital For Health Insurance",9561,"062 3191381","SUEZ, PORT TAWFIK",29.956762, 32.566829));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital,"Al Amal",9561,"010 2010 3384","Suez Governorate",29.968355, 32.549737));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital,"Al Obour",9561,"010 2010 3384","Suez, Suez Governorate",29.970926, 32.531277));
+
 
         return hospitalCategoryArrayList;
     }
@@ -187,21 +183,21 @@ public class DataSourcer {
     public static ArrayList<HelpCategory> getHelpList() {
 
         ArrayList<HelpCategory> helpCategoryArrayList = new ArrayList<HelpCategory>();
-        helpCategoryArrayList.add(new HelpCategory("Ambulance","123",R.drawable.ambulance,-20.2541,20.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Ambulance facility","0623347363",R.drawable.ambulance,-20.2541,20.254));
-        helpCategoryArrayList.add(new HelpCategory("Fire Station","180",R.drawable.fire_station,-20.2541,20.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Civil Protection","0623331049",R.drawable.fire_station,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Tourism Police","0623331140",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez SOS Police","0623331078",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Police","122",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Police Station","0623331075",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Arbaeen Police Station","0623331074",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Faisal Police Station","0623670375",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Attaka Police Station","0623360324",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Ganayen Police Station","0623500051",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Police Directorate","0623331077",R.drawable.police,-33.2541,-87.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Police Supply Investigation","0623331070",R.drawable.police,-20.2541,20.254));
-        helpCategoryArrayList.add(new HelpCategory("Suez Traffic management","0623331082",R.drawable.police,-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Ambulance","123",R.drawable.ambulance,"Address Not Provided",-20.2541,20.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Ambulance facility","0623347363",R.drawable.ambulance,"Address Not Provided",-20.2541,20.254));
+        helpCategoryArrayList.add(new HelpCategory("Fire Station","180",R.drawable.fire_station,"Address Not Provided",-20.2541,20.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Civil Protection","0623331049",R.drawable.fire_station,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Tourism Police","0623331140",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez SOS Police","0623331078",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Police","122",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Police Station","0623331075",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Arbaeen Police Station","0623331074",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Faisal Police Station","0623670375",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Attaka Police Station","0623360324",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Ganayen Police Station","0623500051",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Police Directorate","0623331077",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Police Supply Investigation","0623331070",R.drawable.police,"Address Not Provided",-20.2541,20.254));
+        helpCategoryArrayList.add(new HelpCategory("Suez Traffic management","0623331082",R.drawable.police,"Address Not Provided",-33.2541,-87.254));
 
         return helpCategoryArrayList;
     }

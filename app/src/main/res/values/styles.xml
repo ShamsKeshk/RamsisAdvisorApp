@@ -25,36 +25,395 @@
         <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
     </style>
     <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textColor">#A8A19E</item>
+        <item name="android:textColor">@color/lineColor</item>
     </style>
 
     <style name="layout_size" parent="CategoryTab">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
-    <style name="view_pager_style">
+    <style name="layout_matchParent" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="layout_wrapContent" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="layout_width_match_parent" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+
+    <style name="view_pager_style" parent="layout_matchParent">
         <item name="android:visibility">gone</item>
     </style>
 
-    <style name="list_view_style">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+    <style name="list_view_style" parent="layout_matchParent">
     </style>
 
-    <style name="category_activity_style">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+    <style name="category_activity_style" parent="layout_matchParent">
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="fragment_frame_layout_style">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">10dp</item>
+    <style name="fragment_frame_layout_style" parent="layout_matchParent">
+        <item name="android:layout_margin">@dimen/ten_dp</item>
     </style>
 
+    <style name="about_suez_main_layout_style" parent="layout_matchParent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">@dimen/ten_dp</item>
+        <item name="android:layout_marginStart">@dimen/ten_dp</item>
+        <item name="android:layout_marginEnd">@dimen/ten_dp</item>
+    </style>
+
+    <style name="about_suez_topic_header_style" parent="layout_width_match_parent">
+        <item name="android:layout_margin">@dimen/ten_dp</item>
+        <item name="android:textSize">@dimen/twenty_two_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="about_suez_topic_explain_style" parent="layout_width_match_parent">
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+        <item name="android:layout_margin">@dimen/ten_dp</item>
+    </style>
+
+    <style name="about_suez_topic_image_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/two_hundred_twenty_two_dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_margin">@dimen/ten_dp</item>
+    </style>
+
+    <style name="main_linear_layout_list_items_style" parent="layout_matchParent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="card_container_linear_layout_cafe_shopping_restaurant_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginTop">@dimen/sixteen_dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="image_of_card_cafe_shopping_restaurant_container_style">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_width">@dimen/ninety_two_dp</item>
+        <item name="android:layout_height">@dimen/ninety_two_dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_card_container_discreption_linear_layout_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/sixteen_dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="name_of_cafe_shopping_restaurant_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_review_linear_layout_style" parent="layout_wrapContent">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_review_value_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="main_cafe_shopping_restaurant_state_linear_layout_style" parent="layout_width_match_parent">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_state_linear_layout_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/six_dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_state_static_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_state_value_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/eleven_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="cafe_shopping_restaurant_address_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/two_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/seven_dp</item>
+    </style>
+
+    <style name="line_between_cafe_shopping_restaurant_cards_text_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">.5dp</item>
+        <item name="android:layout_marginTop">@dimen/sixteen_dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="line_between_cafe_shopping_restaurant_states_text_view_style">
+        <item name="android:layout_width">@dimen/two_dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/lineColor</item>
+        <item name="android:layout_marginEnd">@dimen/three_dp</item>
+        <item name="android:layout_marginStart">@dimen/six_dp</item>
+        <item name="android:layout_marginTop">@dimen/six_dp</item>
+        <item name="android:layout_marginBottom">@dimen/one_dp</item>
+    </style>
+
+    <style name="main_event_relative_layout_image_card_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/eighty_hundred_dp</item>
+        <item name="android:layout_marginStart">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginTop">@dimen/ten_dp</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginBottom">@dimen/ten_dp</item>
+    </style>
+
+    <style name="event_image_card_style" parent="layout_matchParent">
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="event_name_text_view_style" parent="layout_wrapContent">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginStart">@dimen/ten_dp</item>
+        <item name="android:layout_marginBottom">@dimen/ten_dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="main_linear_layout_of_event_address_location_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sixty_dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginStart">@dimen/thirty_four_dp</item>
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+    </style>
+
+    <style name="event_address_location_icons_linear_layout_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="event_address_location_icons_style" parent="layout_wrapContent">
+        <item name="android:layout_marginBottom">@dimen/five_dp</item>
+    </style>
+
+    <style name="event_address_location_text_views_linear_layout_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="event_date_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginBottom">@dimen/five_dp</item>
+    </style>
+
+    <style name="event_address_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:layout_marginBottom">@dimen/five_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="event_more_information_image_view_style">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">@dimen/thirty_six_dp</item>
+        <item name="android:layout_height">@dimen/thirty_six_dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/three_dp</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+    </style>
+
+    <style name="main_hotel_hospital_linear_layout_card_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginTop">@dimen/ten_dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="image_hotel_hospital_card_style">
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:layout_width">@dimen/ninety_two_dp</item>
+        <item name="android:layout_height">@dimen/eighty_eight_dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="main_hotel_hospital_linear_layout_card_discription_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/ten_dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="hotel_hospital_name_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="hotel_hospital_review_linear_layout_style" parent="layout_wrapContent">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/four_dp</item>
+    </style>
+
+    <style name="hotel_hospital_review_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="hotel_hospital_phone_linear_layout_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/four_dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="hotel_hospital_phone_static_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="hotel_hospital_phone_value_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/eleven_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="hotel_hospital_address_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+    </style>
+
+    <style name="hotel_hospital_line_between_cards_text_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">.5dp</item>
+        <item name="android:layout_marginTop">@dimen/sixteen_dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="help_main_relative_layout_style">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ninety_two_dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="help_image_card_style">
+        <item name="android:layout_marginStart">@dimen/two_dp</item>
+        <item name="android:layout_width">@dimen/ninety_two_dp</item>
+        <item name="android:layout_height">@dimen/ninety_two_dp</item>
+    </style>
+
+    <style name="help_main_card_discription_linear_layout">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_toEndOf">@id/help_provider_image_view</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ninety_two_dp</item>
+        <item name="android:paddingStart">@dimen/sixteen_dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="help_provider_name_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/ten_dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+        <item name="android:layout_marginBottom">@dimen/two_dp</item>
+    </style>
+
+    <style name="help_provider_phone_linear_layout_style" parent="layout_wrapContent">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/two_dp</item>
+    </style>
+
+    <style name="help_phone_static_text_view_style" parent="layout_wrapContent">
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="help_phone_value_text_view_style" parent="layout_wrapContent">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="help_address_text_view_style" parent="layout_wrapContent">
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="help_provider_call_image_view_style">
+        <item name="android:layout_width">@dimen/twenty_four_dp</item>
+        <item name="android:layout_height">@dimen/twenty_four_dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+    </style>
+
+    <style name="tourism_main_card_linear_layout_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginEnd">@dimen/sixteen_dp</item>
+        <item name="android:layout_marginTop">@dimen/sixteen_dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tourism_image_card_style">
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:layout_width">@dimen/eighty_eight_dp</item>
+        <item name="android:layout_height">@dimen/eighty_eight_dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="tourism_main_card_discription_linear_layout_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/ten_dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="tourism_place_name_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginTop">@dimen/five_dp</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tourism_place_rating_review_linear_layout" parent="layout_width_match_parent">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tourism_place_review_value_text_view_style" parent="layout_wrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="tourism_place_type_text_view_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:layout_marginTop">@dimen/four_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="tourism_place_address_text_view_style" parent="layout_width_match_parent">
+        <item name="android:layout_marginTop">@dimen/four_dp</item>
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="tourism_line_between_places_text_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">.5dp</item>
+        <item name="android:layout_marginTop">@dimen/sixteen_dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
 
 </resources>

@@ -22,7 +22,7 @@ public class HospitalCategory {
         mCorporationTotalReview = corporationTotalReview;
     }
 
-    public HospitalCategory(int corporationImageResource, String corporationName, String corporationAddress, String corporationPhone, int corporationTotalReview, double corporationLatMap, double corporationLongMap) {
+    public HospitalCategory(int corporationImageResource, String corporationName, int corporationTotalReview, String corporationPhone, String corporationAddress, double corporationLatMap, double corporationLongMap) {
         mCorporationImageResource = corporationImageResource;
         mCorporationName = corporationName;
         mCorporationAddress = corporationAddress;

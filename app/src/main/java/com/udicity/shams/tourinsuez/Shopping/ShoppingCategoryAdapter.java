@@ -32,20 +32,20 @@ public class ShoppingCategoryAdapter extends ArrayAdapter<ShoppingCategory> {
         View shoppingListItem = convertView;
         if(shoppingListItem == null)
         {
-            shoppingListItem = LayoutInflater.from(getContext()).inflate(R.layout.shopping_list_items,parent,false);
+            shoppingListItem = LayoutInflater.from(getContext()).inflate(R.layout.cafe__shopping_restaurants_list_items,parent,false);
         }
         ShoppingCategory currentShoppingItem = getItem(position);
 
-        ImageView shoppingImageView = (ImageView)shoppingListItem.findViewById(R.id.shopping_image_view_id);
+        ImageView shoppingImageView = (ImageView)shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_image_view_id);
         shoppingImageView.setImageResource(currentShoppingItem.getShopImageResource());
 
-        TextView shoppingName = (TextView)shoppingListItem.findViewById(R.id.shopping_name_text_view_id);
+        TextView shoppingName = (TextView)shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_name_text_view_id);
         shoppingName.setText(currentShoppingItem.getShopName());
 
-        TextView shoppingTotalReview = (TextView)shoppingListItem.findViewById(R.id.shopping_review_number_text_view_id);
+        TextView shoppingTotalReview = (TextView)shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_review_number_text_view_id);
         shoppingTotalReview.setText(String.valueOf(currentShoppingItem.getShopTotalReview()));
 
-        TextView shoppingOpenTime = (TextView)shoppingListItem.findViewById(R.id.shopping_open_time_text_view);
+        TextView shoppingOpenTime = (TextView)shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
         if (currentShoppingItem.getShopTimeOpen() <= 12)
         {
             shoppingOpenTime.setText(currentShoppingItem.getShopTimeOpen()+" AM");
@@ -53,7 +53,7 @@ public class ShoppingCategoryAdapter extends ArrayAdapter<ShoppingCategory> {
         {
             shoppingOpenTime.setText(currentShoppingItem.getShopTimeOpen()+" PM");
         }
-        TextView shoppingCloseTime = (TextView)shoppingListItem.findViewById(R.id.shopping_close_time_text_view);
+        TextView shoppingCloseTime = (TextView)shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
         if (currentShoppingItem.getShopTimeOpen() <= 12)
         {
             shoppingCloseTime.setText(currentShoppingItem.getShopTimeClose()+" AM");
@@ -61,7 +61,7 @@ public class ShoppingCategoryAdapter extends ArrayAdapter<ShoppingCategory> {
         {
             shoppingCloseTime.setText(currentShoppingItem.getShopTimeClose()+" PM");
         }
-        TextView shoppingAddress = (TextView)shoppingListItem.findViewById(R.id.shopping_address_text_view_id);
+        TextView shoppingAddress = (TextView)shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
         shoppingAddress.setText(currentShoppingItem.getShopAddress());
 
         return shoppingListItem;

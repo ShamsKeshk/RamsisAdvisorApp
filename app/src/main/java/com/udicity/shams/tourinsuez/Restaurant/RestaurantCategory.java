@@ -4,12 +4,13 @@ public class RestaurantCategory {
 
     private String mRestaurantName;
     private int mFinalReview;
+    private String mRestaurantPhone;
     private int mRestaurantTimeOpen;
     private int mRestaurantTimeClose;
     private String mRestaurantAddress;
     private int mRestaurantImageResource;
-    private float mRestaurantLat;
-    private float mRestaurantLong;
+    private double mRestaurantLat;
+    private double mRestaurantLong;
 
     /**
      * @auther shams keshk <shamskeshk@gmail.com>
@@ -19,15 +20,19 @@ public class RestaurantCategory {
      * @param restaurantTimeOpen
      * @param restaurantTimeClose
      */
-    public RestaurantCategory(String restaurantName,int finalReview,int restaurantTimeOpen,int restaurantTimeClose,String mRestaurantAddress)
+    public RestaurantCategory(int imageResource,String restaurantName,String mRestaurantPhone,int finalReview,int restaurantTimeOpen,int restaurantTimeClose,String mRestaurantAddress,double latMap,double longMap)
     {
         mRestaurantName = restaurantName;
         mFinalReview = finalReview;
         mRestaurantTimeOpen = restaurantTimeOpen;
         mRestaurantTimeClose = restaurantTimeClose;
         this.mRestaurantAddress = mRestaurantAddress;
+        mRestaurantImageResource = imageResource;
+        this.mRestaurantPhone = mRestaurantPhone;
+        mRestaurantLat = latMap;
+        mRestaurantLong = longMap;
     }
-    public RestaurantCategory(String Name,int finalReview,int TimeOpen,int TimeClose,int imageResource,float latMap,float longMap)
+    public RestaurantCategory(int imageResource,String Name,int finalReview,int TimeOpen,int TimeClose,double latMap,double longMap)
     {
         mRestaurantName = Name;
         mFinalReview = finalReview;
@@ -77,19 +82,19 @@ public class RestaurantCategory {
     {
         return mRestaurantImageResource;
     }
-    public void setmRestaurantLat(float restaurantLat)
+    public void setmRestaurantLat(double restaurantLat)
     {
         mRestaurantLat = restaurantLat;
     }
-    public float getmRestaurantLat()
+    public double getmRestaurantLat()
     {
         return mRestaurantLat;
     }
-    public void setmRestaurantLong(float restaurantLong)
+    public void setmRestaurantLong(double restaurantLong)
     {
         mRestaurantLong = restaurantLong;
     }
-    public float getmRestaurantLong()
+    public double getmRestaurantLong()
     {
         return mRestaurantLong;
     }

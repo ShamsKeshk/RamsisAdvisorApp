@@ -29,33 +29,33 @@ public class CafeCategoryAdapter extends ArrayAdapter<CafeCategory> {
 
         View cafeListItem = convertView;
         if (cafeListItem == null) {
-            cafeListItem = LayoutInflater.from(getContext()).inflate(R.layout.shopping_list_items, parent, false);
+            cafeListItem = LayoutInflater.from(getContext()).inflate(R.layout.cafe__shopping_restaurants_list_items, parent, false);
         }
-        CafeCategory currentShoppingItem = getItem(position);
+        CafeCategory currentCafeItem = getItem(position);
 
-        ImageView shoppingImageView = (ImageView) cafeListItem.findViewById(R.id.shopping_image_view_id);
-        shoppingImageView.setImageResource(currentShoppingItem.getCafeImageResource());
+        ImageView shoppingImageView = (ImageView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_image_view_id);
+        shoppingImageView.setImageResource(currentCafeItem.getCafeImageResource());
 
-        TextView shoppingName = (TextView) cafeListItem.findViewById(R.id.shopping_name_text_view_id);
-        shoppingName.setText(currentShoppingItem.getCafeName());
+        TextView shoppingName = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_name_text_view_id);
+        shoppingName.setText(currentCafeItem.getCafeName());
 
-        TextView shoppingTotalReview = (TextView) cafeListItem.findViewById(R.id.shopping_review_number_text_view_id);
-        shoppingTotalReview.setText(String.valueOf(currentShoppingItem.getCafeTotalReview()));
+        TextView shoppingTotalReview = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_review_number_text_view_id);
+        shoppingTotalReview.setText(String.valueOf(currentCafeItem.getCafeTotalReview()));
 
-        TextView shoppingOpenTime = (TextView) cafeListItem.findViewById(R.id.shopping_open_time_text_view);
-        if (currentShoppingItem.getCafeTimeOpen() <= 12) {
-            shoppingOpenTime.setText(currentShoppingItem.getCafeTimeOpen() + " AM");
+        TextView shoppingOpenTime = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
+        if (currentCafeItem.getCafeTimeOpen() <= 12) {
+            shoppingOpenTime.setText(currentCafeItem.getCafeTimeOpen() + " AM");
         } else {
-            shoppingOpenTime.setText(currentShoppingItem.getCafeTimeOpen() + " PM");
+            shoppingOpenTime.setText(currentCafeItem.getCafeTimeOpen() + " PM");
         }
-        TextView shoppingCloseTime = (TextView) cafeListItem.findViewById(R.id.shopping_close_time_text_view);
-        if (currentShoppingItem.getCafeTimeOpen() <= 12) {
-            shoppingCloseTime.setText(currentShoppingItem.getCafeTimeClose() + " AM");
+        TextView shoppingCloseTime = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
+        if (currentCafeItem.getCafeTimeOpen() <= 12) {
+            shoppingCloseTime.setText(currentCafeItem.getCafeTimeClose() + " AM");
         } else {
-            shoppingCloseTime.setText(currentShoppingItem.getCafeTimeClose() + " PM");
+            shoppingCloseTime.setText(currentCafeItem.getCafeTimeClose() + " PM");
         }
-        TextView shoppingAddress = (TextView) cafeListItem.findViewById(R.id.shopping_address_text_view_id);
-        shoppingAddress.setText(currentShoppingItem.getCafeAddress());
+        TextView shoppingAddress = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
+        shoppingAddress.setText(currentCafeItem.getCafeAddress());
 
         return cafeListItem;
     }

@@ -18,22 +18,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:paddingEnd="20dp"
-            android:paddingStart="20dp"
+            android:paddingTop="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            android:paddingEnd="@dimen/twenty_dp"
+            android:paddingStart="@dimen/twenty_dp"
             tools:text="Hotel"
-            android:textSize="16sp"
+            android:textSize="@dimen/sixteen_sp"
             android:textStyle="bold"/>
         <ImageView
             android:id="@+id/category_image_icon_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="10dp"
-            android:paddingEnd="20dp"
-            android:paddingStart="20dp"
-            android:paddingBottom="20dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/twenty_dp"
+            android:paddingStart="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/twenty_dp"
             tools:src="@mipmap/ic_launcher_round"/>
     </LinearLayout>
 </FrameLayout>

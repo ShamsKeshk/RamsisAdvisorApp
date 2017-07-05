@@ -32,23 +32,23 @@ public class HospitalCategoryAdapter extends ArrayAdapter<HospitalCategory> {
         View hospitalListItems = convertView;
         if (hospitalListItems == null)
         {
-            hospitalListItems = LayoutInflater.from(getContext()).inflate(R.layout.hospital_list_items,parent,false);
+            hospitalListItems = LayoutInflater.from(getContext()).inflate(R.layout.hotel_hospital_list_items,parent,false);
         }
         HospitalCategory currentHospital = getItem(position);
 
-        ImageView hospitalImageView = (ImageView)hospitalListItems.findViewById(R.id.hospital_image_view_id);
+        ImageView hospitalImageView = (ImageView)hospitalListItems.findViewById(R.id.hotel_hospital_image_view_id);
         hospitalImageView.setImageResource(currentHospital.getmCorporationImageResource());
 
-        TextView hospitalNameTextView = (TextView)hospitalListItems.findViewById(R.id.hospital_name_text_view_id);
+        TextView hospitalNameTextView = (TextView)hospitalListItems.findViewById(R.id.hotel_hospital_name_text_view_id);
         hospitalNameTextView.setText(currentHospital.getmCorporationName());
 
-        TextView hospitalReviewTextView = (TextView)hospitalListItems.findViewById(R.id.hospital_number_review_text_view_id);
+        TextView hospitalReviewTextView = (TextView)hospitalListItems.findViewById(R.id.hotel_hospital_number_review_text_view_id);
         hospitalReviewTextView.setText(String.valueOf(currentHospital.getmCorporationTotalReview()));
 
-        TextView hospitalPhoneTextView = (TextView)hospitalListItems.findViewById(R.id.hospital_phone_number_text_view_id);
+        TextView hospitalPhoneTextView = (TextView)hospitalListItems.findViewById(R.id.hotel_hospital_phone_number_text_view_id);
         hospitalPhoneTextView.setText(currentHospital.getmCorporationPhone());
 
-        TextView hospitalAddressTextView = (TextView)hospitalListItems.findViewById(R.id.hospital_address_text_view_id);
+        TextView hospitalAddressTextView = (TextView)hospitalListItems.findViewById(R.id.hotel_hospital_address_text_view_id);
         hospitalAddressTextView.setText(currentHospital.getmCorporationAddress());
 
         return hospitalListItems;

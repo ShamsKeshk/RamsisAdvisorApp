@@ -38,6 +38,9 @@ public class HelpCategoryAdapter extends ArrayAdapter<HelpCategory> {
         nameTextView.setText(currentView.getmHelpProviderName());
         TextView numberTextView = (TextView)helpListItems.findViewById(R.id.help_provider_phone_number_text_view);
         numberTextView.setText(currentView.getmHelpProviderPhoneNumber());
+        TextView addressTextView = (TextView)helpListItems.findViewById(R.id.help_provider_address_text_view);
+        addressTextView.setText(currentView.getmHelpProviderAddress());
+
         return helpListItems;
     }
 }

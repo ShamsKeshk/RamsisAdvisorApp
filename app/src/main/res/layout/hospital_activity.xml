@@ -5,6 +5,11 @@
     style="@style/category_activity_style"
     tools:context="com.udicity.shams.tourinsuez.Hospital.HospitalActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    <include layout="@layout/maps_activity" />
+    </FrameLayout>
     <android.support.v4.view.ViewPager
         style="@style/view_pager_style"
         android:id="@+id/hospital_view_pager"/>

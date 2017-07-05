@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/main_linear_layout_list_items_style">
+
+    <LinearLayout style="@style/card_container_linear_layout_cafe_shopping_restaurant_style">
+
+        <ImageView
+            android:id="@+id/cafe_shopping_restaurant_image_view_id"
+            android:src="@drawable/sokhna_suez"
+            style="@style/image_of_card_cafe_shopping_restaurant_container_style" />
+
+        <LinearLayout style="@style/cafe_shopping_restaurant_card_container_discreption_linear_layout_style">
+
+            <TextView
+                android:id="@+id/cafe_shopping_restaurant_name_text_view_id"
+                tools:text="Si Sayed"
+                style="@style/name_of_cafe_shopping_restaurant_text_view_style" />
+
+            <LinearLayout style="@style/cafe_shopping_restaurant_review_linear_layout_style">
+
+                <RatingBar
+                    android:id="@+id/cafe_shopping_restaurant_rating_review_id"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5" />
+
+                <TextView
+                    android:id="@+id/cafe_shopping_restaurant_review_number_text_view_id"
+                    tools:text="1,477 Reviews"
+                    style="@style/cafe_shopping_restaurant_review_value_text_view_style" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/main_cafe_shopping_restaurant_state_linear_layout_style">
+                <LinearLayout style="@style/cafe_shopping_restaurant_state_linear_layout_style">
+
+                    <TextView
+                        android:text="@string/restaurant_open"
+                        style="@style/cafe_shopping_restaurant_state_static_text_view_style" />
+
+                    <TextView
+                        android:id="@+id/cafe_shopping_restaurant_open_time_text_view"
+                        tools:text="9 AM"
+                        style="@style/cafe_shopping_restaurant_state_value_text_view_style" />
+                </LinearLayout>
+                <TextView
+                    android:text=" "
+                    style="@style/line_between_cafe_shopping_restaurant_states_text_view_style" />
+                <LinearLayout style="@style/cafe_shopping_restaurant_state_linear_layout_style">
+
+                    <TextView
+                        style="@style/cafe_shopping_restaurant_state_static_text_view_style"
+                        android:text="@string/restaurant_close" />
+
+                    <TextView
+                        android:id="@+id/cafe_shopping_restaurant_close_time_text_view"
+                        tools:text="3 AM"
+                        style="@style/cafe_shopping_restaurant_state_value_text_view_style"  />
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/cafe_shopping_restaurant_address_text_view_id"
+                android:text="@string/random_address"
+                style="@style/cafe_shopping_restaurant_address_text_view_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView style="@style/line_between_cafe_shopping_restaurant_cards_text_view_style" />
+
+</LinearLayout>

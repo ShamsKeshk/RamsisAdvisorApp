@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
@@ -30,32 +31,36 @@ public class RestaurantCategoryAdapter extends ArrayAdapter<RestaurantCategory> 
         View listRestaurantView = convertView;
         if (listRestaurantView == null)
         {
-         listRestaurantView = LayoutInflater.from(getContext()).inflate(R.layout.restaurant_list_items,parent,false);
+         listRestaurantView = LayoutInflater.from(getContext()).inflate(R.layout.cafe__shopping_restaurants_list_items,parent,false);
         }
         RestaurantCategory currentRestaurant = getItem(position);
-        TextView restaurantNameTextView = (TextView) listRestaurantView.findViewById(R.id.restaurant_name_text_view_id);
+        ImageView restaurantImageView = (ImageView)listRestaurantView.findViewById(R.id.cafe_shopping_restaurant_image_view_id);
+        restaurantImageView.setImageResource(currentRestaurant.getmRestaurantImageResource());
+        TextView restaurantNameTextView = (TextView) listRestaurantView.findViewById(R.id.cafe_shopping_restaurant_name_text_view_id);
         restaurantNameTextView.setText(currentRestaurant.getmRestaurantName());
-        TextView reviewTextView = (TextView)listRestaurantView.findViewById(R.id.restaurant_review_number_text_view_id);
+        TextView reviewTextView = (TextView)listRestaurantView.findViewById(R.id.cafe_shopping_restaurant_review_number_text_view_id);
         reviewTextView.setText(currentRestaurant.getmFinalReview()+" Review");
-        TextView timeOpen = (TextView)listRestaurantView.findViewById(R.id.restaurant_open_time_text_view);
+        TextView timeOpen = (TextView)listRestaurantView.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
         int openTime = currentRestaurant.getmRestaurantTimeOpen();
         if(openTime < 12 &&openTime >= 0)
         {
             timeOpen.setText(String.valueOf(openTime)+" AM");
         }else
         {
+            openTime = openTime - 12;
             timeOpen.setText(String.valueOf(openTime)+" PM");
         }
-        TextView timeClose = (TextView)listRestaurantView.findViewById(R.id.restaurant_close_time_text_view);
+        TextView timeClose = (TextView)listRestaurantView.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
         int closeTime = currentRestaurant.getmRestaurantTimeClose();
         if(closeTime < 12 &&closeTime >= 0)
         {
             timeClose.setText(String.valueOf(closeTime)+" AM");
         }else
         {
+            closeTime = closeTime - 12;
             timeClose.setText(String.valueOf(closeTime)+" PM");
         }
-        TextView restaurantAddress = (TextView)listRestaurantView.findViewById(R.id.restaurant_address_text_view_id);
+        TextView restaurantAddress = (TextView)listRestaurantView.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
         restaurantAddress.setText(currentRestaurant.getmRestaurantAddress());
 
         return listRestaurantView;

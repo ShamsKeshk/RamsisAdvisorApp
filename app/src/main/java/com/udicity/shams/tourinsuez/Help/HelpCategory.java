@@ -10,14 +10,16 @@ public class HelpCategory {
     private int mHelpProviderImageResource;
     private double mHelpProviderMapLat;
     private double mHelpProviderMapLong;
+    private String mHelpProviderAddress;
 
-    public HelpCategory(String helpProviderName,String helpProviderPhoneNumber,int helpProviderImageResource,double helpProviderMapLat,double helpProviderMapLong)
+    public HelpCategory(String helpProviderName,String helpProviderPhoneNumber,int helpProviderImageResource,String mHelpProviderAddress,double helpProviderMapLat,double helpProviderMapLong)
     {
         mHelpProviderName = helpProviderName;
         mHelpProviderPhoneNumber = helpProviderPhoneNumber ;
         mHelpProviderImageResource = helpProviderImageResource;
         mHelpProviderMapLat = helpProviderMapLat;
         mHelpProviderMapLong = helpProviderMapLong;
+        this.mHelpProviderAddress = mHelpProviderAddress;
     }
     public HelpCategory(String helpProviderName,String helpProviderPhoneNumber,double helpProviderMapLat,double helpProviderMapLong)
     {
@@ -65,5 +67,13 @@ public class HelpCategory {
     public double getmHelpProviderMapLong()
     {
         return mHelpProviderMapLong;
+    }
+
+    public String getmHelpProviderAddress() {
+        return mHelpProviderAddress;
+    }
+
+    public void setmHelpProviderAddress(String mHelpProviderAddress) {
+        this.mHelpProviderAddress = mHelpProviderAddress;
     }
 }
