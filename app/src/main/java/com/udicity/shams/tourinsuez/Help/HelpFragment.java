@@ -1,16 +1,21 @@
 package com.udicity.shams.tourinsuez.Help;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
 import java.util.ArrayList;
+
+import static android.R.id.list;
 
 public class HelpFragment extends Fragment {
 
@@ -24,11 +29,20 @@ public class HelpFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.help_fragment, container, false);
 
-        ArrayList<HelpCategory> helpCategoryArrayList = DataSourcer.getHelpList();
+        final ArrayList<HelpCategory> helpCategoryArrayList = DataSourcer.getHelpList();
         HelpCategoryAdapter helpCategoryAdapter = new HelpCategoryAdapter(getActivity(),helpCategoryArrayList);
         ListView listView = (ListView)rootView.findViewById(R.id.help_list_view);
         listView.setAdapter(helpCategoryAdapter);
         Toast.makeText(getContext(),"Help !",Toast.LENGTH_SHORT).show();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                HelpCategory currentHelpItem = helpCategoryArrayList.get(position);
+                String phoneNumber = currentHelpItem.getmHelpProviderPhoneNumber();
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phoneNumber));
+                startActivity(intent);
+            }
+        });
         return rootView;
     }
 }

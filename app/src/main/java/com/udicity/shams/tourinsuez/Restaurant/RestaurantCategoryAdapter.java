@@ -30,12 +30,12 @@ public class RestaurantCategoryAdapter extends ArrayAdapter<RestaurantCategory> 
         View listRestaurantView = convertView;
         if (listRestaurantView == null)
         {
-         listRestaurantView = LayoutInflater.from(getContext()).inflate(R.layout.restaurant_food_filter_items,parent,false);
+         listRestaurantView = LayoutInflater.from(getContext()).inflate(R.layout.restaurant_list_items,parent,false);
         }
         RestaurantCategory currentRestaurant = getItem(position);
         TextView restaurantNameTextView = (TextView) listRestaurantView.findViewById(R.id.restaurant_name_text_view_id);
         restaurantNameTextView.setText(currentRestaurant.getmRestaurantName());
-        TextView reviewTextView = (TextView)listRestaurantView.findViewById(R.id.restaurant_number_review_text_view_id);
+        TextView reviewTextView = (TextView)listRestaurantView.findViewById(R.id.restaurant_review_number_text_view_id);
         reviewTextView.setText(currentRestaurant.getmFinalReview()+" Review");
         TextView timeOpen = (TextView)listRestaurantView.findViewById(R.id.restaurant_open_time_text_view);
         int openTime = currentRestaurant.getmRestaurantTimeOpen();
@@ -55,6 +55,8 @@ public class RestaurantCategoryAdapter extends ArrayAdapter<RestaurantCategory> 
         {
             timeClose.setText(String.valueOf(closeTime)+" PM");
         }
+        TextView restaurantAddress = (TextView)listRestaurantView.findViewById(R.id.restaurant_address_text_view_id);
+        restaurantAddress.setText(currentRestaurant.getmRestaurantAddress());
 
         return listRestaurantView;
     }

@@ -1,32 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:layout_margin="20dp"
     tools:context="com.udicity.shams.tourinsuez.Restaurant.RestaurantMainFragment">
-        <TextView
-            android:id="@+id/restaurant_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            android:text="Restaurants"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/just_line"
-            android:layout_below="@id/restaurant_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/grey" />
         <ListView
-            android:layout_below="@id/just_line"
-            android:layout_alignParentStart="true"
             android:id="@+id/restaurant_food_filter_list_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            style="@style/list_view_style">
         </ListView>
-</RelativeLayout>
+</LinearLayout>

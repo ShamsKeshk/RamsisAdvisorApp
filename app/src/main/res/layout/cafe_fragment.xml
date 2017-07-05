@@ -6,7 +6,6 @@
 
     <ListView
         android:id="@+id/cafe_list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        style="@style/list_view_style"/>
 
 </FrameLayout>

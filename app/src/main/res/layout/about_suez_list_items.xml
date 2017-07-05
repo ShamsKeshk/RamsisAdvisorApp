@@ -27,7 +27,7 @@
         android:id="@+id/topic_one_image_view_id"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        tools:src="@drawable/hotel_drawer"
+        tools:src="@drawable/about_suez_topic_one"
         android:scaleType="fitXY"
         android:layout_margin="10dp"/>
 
@@ -42,7 +42,7 @@
         android:id="@+id/topic_two_image_view_id"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        tools:src="@drawable/hotel_drawer"
+        tools:src="@drawable/about_suez_topic_two"
         android:scaleType="fitXY"
         android:layout_margin="10dp"/>
 

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="92dp">
+    android:layout_height="92dp"
+    android:gravity="center_vertical">
     <ImageView
-        android:layout_margin="5dp"
         android:id="@+id/help_provider_image_view"
-        android:layout_gravity="center"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:src="@drawable/icon_help_green_30px"/>
+        android:layout_marginStart="2dp"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        tools:src="@drawable/icon_help_green_30px"/>
     <LinearLayout
-        android:layout_margin="5dp"
-        android:layout_gravity="start"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="4"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/help_provider_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:paddingStart="16dp"
         android:orientation="vertical">
         <TextView
             android:layout_marginTop="10dp"
@@ -37,29 +38,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
+                android:textStyle="italic"
                 android:text="phone : "/>
             <TextView
                 android:id="@+id/help_provider_phone_number_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="italic"
                 android:textSize="12sp"
                 tools:text="123"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:text="24 street 13 Al_Amal , Fysal ,suez"/>
-
 
     </LinearLayout>
     <ImageView
-        android:layout_margin="5dp"
         android:id="@+id/help_provider_call_image_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:layout_gravity="center"
-        android:src="@android:drawable/sym_call_outgoing"/>
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_call_green_24px"/>
 
-</LinearLayout>
+</RelativeLayout>

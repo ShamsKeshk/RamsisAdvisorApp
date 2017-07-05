@@ -6,6 +6,7 @@ public class RestaurantCategory {
     private int mFinalReview;
     private int mRestaurantTimeOpen;
     private int mRestaurantTimeClose;
+    private String mRestaurantAddress;
     private int mRestaurantImageResource;
     private float mRestaurantLat;
     private float mRestaurantLong;
@@ -18,12 +19,13 @@ public class RestaurantCategory {
      * @param restaurantTimeOpen
      * @param restaurantTimeClose
      */
-    public RestaurantCategory(String restaurantName,int finalReview,int restaurantTimeOpen,int restaurantTimeClose)
+    public RestaurantCategory(String restaurantName,int finalReview,int restaurantTimeOpen,int restaurantTimeClose,String mRestaurantAddress)
     {
         mRestaurantName = restaurantName;
         mFinalReview = finalReview;
         mRestaurantTimeOpen = restaurantTimeOpen;
         mRestaurantTimeClose = restaurantTimeClose;
+        this.mRestaurantAddress = mRestaurantAddress;
     }
     public RestaurantCategory(String Name,int finalReview,int TimeOpen,int TimeClose,int imageResource,float latMap,float longMap)
     {
@@ -92,4 +94,11 @@ public class RestaurantCategory {
         return mRestaurantLong;
     }
 
+    public String getmRestaurantAddress() {
+        return mRestaurantAddress;
+    }
+
+    public void setmRestaurantAddress(String mRestaurantAddress) {
+        this.mRestaurantAddress = mRestaurantAddress;
+    }
 }
