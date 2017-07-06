@@ -17,31 +17,32 @@ public class Category {
         mCategoryId = categoryId;
         numberOfCategories = numberOfCategories + 1;
     }
+
     public Category() {
 
-    }
-
-    public void setmCategoryName(String categoryName) {
-        mCategoryName = categoryName;
     }
 
     public String getmCategoryName() {
         return mCategoryName;
     }
 
-    public void setmCategoryImageResource(int categoryImageResource) {
-        mCategoryImageResource = categoryImageResource;
+    public void setmCategoryName(String categoryName) {
+        mCategoryName = categoryName;
     }
 
     public int getmCategoryImageResource() {
         return mCategoryImageResource;
     }
 
-    public void setmCategoryId(int categoryId) {
-        mCategoryId = categoryId;
+    public void setmCategoryImageResource(int categoryImageResource) {
+        mCategoryImageResource = categoryImageResource;
     }
 
     public int getmCategoryId() {
         return mCategoryId;
+    }
+
+    public void setmCategoryId(int categoryId) {
+        mCategoryId = categoryId;
     }
 }

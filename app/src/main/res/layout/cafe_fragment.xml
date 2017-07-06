@@ -5,5 +5,5 @@
 
     <ListView
         android:id="@+id/cafe_list_view"
-        style="@style/list_view_style"/>
+        style="@style/list_view_style" />
 </FrameLayout>

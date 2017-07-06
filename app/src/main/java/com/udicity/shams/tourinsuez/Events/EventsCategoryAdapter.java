@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.udicity.shams.tourinsuez.R;
+
 import java.util.ArrayList;
 
 /**
@@ -18,9 +20,8 @@ import java.util.ArrayList;
 
 public class EventsCategoryAdapter extends ArrayAdapter<EventsCategory> {
 
-    public EventsCategoryAdapter(Activity activity, ArrayList<EventsCategory> eventsCategoryArrayList)
-    {
-        super(activity,0,eventsCategoryArrayList);
+    public EventsCategoryAdapter(Activity activity, ArrayList<EventsCategory> eventsCategoryArrayList) {
+        super(activity, 0, eventsCategoryArrayList);
     }
 
     @NonNull
@@ -28,22 +29,21 @@ public class EventsCategoryAdapter extends ArrayAdapter<EventsCategory> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View eventsListView = convertView;
-        if(eventsListView == null)
-        {
-            eventsListView = LayoutInflater.from(getContext()).inflate(R.layout.events_list_items,parent,false);
+        if (eventsListView == null) {
+            eventsListView = LayoutInflater.from(getContext()).inflate(R.layout.events_list_items, parent, false);
         }
         EventsCategory currentEvent = getItem(position);
 
-        ImageView eventImageView = (ImageView)eventsListView.findViewById(R.id.event_image_view_id);
+        ImageView eventImageView = (ImageView) eventsListView.findViewById(R.id.event_image_view_id);
         eventImageView.setImageResource(currentEvent.getmEventImageResource());
 
-        TextView eventNameTextView = (TextView)eventsListView.findViewById(R.id.event_name_text_view_id);
+        TextView eventNameTextView = (TextView) eventsListView.findViewById(R.id.event_name_text_view_id);
         eventNameTextView.setText(currentEvent.getmEventName());
 
-        TextView eventStartDateTextView = (TextView)eventsListView.findViewById(R.id.event_start_date_info_text_view_id);
+        TextView eventStartDateTextView = (TextView) eventsListView.findViewById(R.id.event_start_date_info_text_view_id);
         eventStartDateTextView.setText(currentEvent.getmEventStartDate());
 
-        TextView eventAddressTextView = (TextView)eventsListView.findViewById(R.id.event_address_text_view_id);
+        TextView eventAddressTextView = (TextView) eventsListView.findViewById(R.id.event_address_text_view_id);
         eventAddressTextView.setText(currentEvent.getmEventAddress());
 
         return eventsListView;

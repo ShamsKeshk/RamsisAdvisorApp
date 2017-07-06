@@ -20,7 +20,6 @@ public class AboutSuezDistrictFragment extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,9 +29,9 @@ public class AboutSuezDistrictFragment extends Fragment {
 
         ArrayList<AboutSuezCategory> aboutSuezDistrictArrayList = DataSourcer.getAboutSuezDistrictInfo(getContext());
 
-        ListView listView = (ListView)rootView.findViewById(R.id.about_suez_district_list_view);
+        ListView listView = (ListView) rootView.findViewById(R.id.about_suez_district_list_view);
 
-        AboutSuezCategoryAdapter aboutSuezCategoryAdapter = new AboutSuezCategoryAdapter(getActivity(),aboutSuezDistrictArrayList);
+        AboutSuezCategoryAdapter aboutSuezCategoryAdapter = new AboutSuezCategoryAdapter(getActivity(), aboutSuezDistrictArrayList);
         listView.setAdapter(aboutSuezCategoryAdapter);
         return rootView;
     }

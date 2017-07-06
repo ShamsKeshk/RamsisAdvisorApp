@@ -9,14 +9,16 @@ import com.udicity.shams.tourinsuez.R;
 
 /**
  * Created by shams on 26/06/17.
+ * <p>
+ * I Add Restaurant To View Pager Cause I Will Add Another Two Or Three Fragments
+ * Explain : I Will Add One For Seafood Restaurant , Another For Another Type Of Food ..
  */
 
 public class RestaurantFragmentAdapter extends FragmentPagerAdapter {
 
-    Context mContext;
+    private Context mContext;
 
-    public RestaurantFragmentAdapter(FragmentManager fragmentManager, Context context)
-    {
+    public RestaurantFragmentAdapter(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
         mContext = context;
     }
@@ -25,15 +27,14 @@ public class RestaurantFragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new RestaurantMainFragment();
-        }else return null;
+        } else return null;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position == 0)
-        {
+        if (position == 0) {
             return mContext.getString(R.string.restaurant_category);
-        }else return "hhhhh" ;
+        } else return mContext.getString(R.string.no_title_found);
 
     }
 

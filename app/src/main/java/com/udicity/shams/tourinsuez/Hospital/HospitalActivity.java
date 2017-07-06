@@ -1,8 +1,8 @@
 package com.udicity.shams.tourinsuez.Hospital;
 
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -16,11 +16,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
-import com.udicity.shams.tourinsuez.hotel.HotelCategory;
 
 import java.util.ArrayList;
 
-public class HospitalActivity extends NavigationDrawerActivity implements OnMapReadyCallback{
+public class HospitalActivity extends NavigationDrawerActivity implements OnMapReadyCallback {
 
     private ViewPager hospitalViewPager;
     private HospitalFragmentAdapter hospitalFragmentAdapter;
@@ -32,7 +31,7 @@ public class HospitalActivity extends NavigationDrawerActivity implements OnMapR
 
         MarkerOptions marker;
 
-        ArrayList<HospitalCategory> hospitalCategoryArrayList = DataSourcer.getHospital();
+        ArrayList<HospitalCategory> hospitalCategoryArrayList = DataSourcer.getHospital(getApplicationContext());
         double lat;
         double lon;
         String hospitalName;
@@ -53,17 +52,17 @@ public class HospitalActivity extends NavigationDrawerActivity implements OnMapR
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FrameLayout frameLayout = (FrameLayout)findViewById(R.id.navigation_drawer_content_frame_layout_id);
-        getLayoutInflater().inflate(R.layout.hospital_activity,frameLayout);
+        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.navigation_drawer_content_frame_layout_id);
+        getLayoutInflater().inflate(R.layout.hospital_activity, frameLayout);
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         supportMapFragment.getMapAsync(this);
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton)findViewById(R.id.fab_map);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab_map);
         floatingActionButton.setVisibility(View.GONE);
 
-        hospitalFragmentAdapter = new HospitalFragmentAdapter(getSupportFragmentManager(),getApplicationContext());
-        hospitalViewPager = (ViewPager)findViewById(R.id.hospital_view_pager);
+        hospitalFragmentAdapter = new HospitalFragmentAdapter(getSupportFragmentManager(), getApplicationContext());
+        hospitalViewPager = (ViewPager) findViewById(R.id.hospital_view_pager);
         hospitalViewPager.setAdapter(hospitalFragmentAdapter);
         hospitalViewPager.setVisibility(View.VISIBLE);
     }

@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
+
 import java.util.ArrayList;
 
 public class AboutSuezFragment extends Fragment {
@@ -28,7 +30,7 @@ public class AboutSuezFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.about_suez_list_view);
         AboutSuezCategoryAdapter aboutSuezCategoryAdapter = new AboutSuezCategoryAdapter(getActivity(), aboutSuezCategoryArrayList);
         listView.setAdapter(aboutSuezCategoryAdapter);
-        Toast.makeText(getActivity(), "About Suez", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), R.string.about_suez_category, Toast.LENGTH_SHORT).show();
         return rootView;
     }
 }

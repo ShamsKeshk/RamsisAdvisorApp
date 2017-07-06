@@ -2,33 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/help_main_relative_layout_style">
+
     <ImageView
         android:id="@+id/help_provider_image_view"
-        tools:src="@drawable/icon_help_green_30px"
-        style="@style/help_image_card_style" />
+        style="@style/help_image_card_style"
+        tools:src="@drawable/icon_help_green_30px" />
+
     <LinearLayout style="@style/help_main_card_discription_linear_layout">
+
         <TextView
             android:id="@+id/help_provider_name_text_view"
-            tools:text="Police"
-            style="@style/help_provider_name_text_view_style" />
+            style="@style/help_provider_name_text_view_style"
+            tools:text="Police" />
+
         <LinearLayout style="@style/help_provider_phone_linear_layout_style">
+
             <TextView
-                android:text="@string/phone"
-                style="@style/help_phone_static_text_view_style" />
+                style="@style/help_phone_static_text_view_style"
+                android:text="@string/phone" />
+
             <TextView
                 android:id="@+id/help_provider_phone_number_text_view"
-                tools:text="123"
-                style="@style/help_phone_value_text_view_style" />
+                style="@style/help_phone_value_text_view_style"
+                tools:text="123" />
         </LinearLayout>
+
         <TextView
             android:id="@+id/help_provider_address_text_view"
-            tools:text="24 street 13 Al_Amal , Fysal ,suez"
-            style="@style/help_address_text_view_style" />
+            style="@style/help_address_text_view_style"
+            tools:text="24 street 13 Al_Amal , Fysal ,suez" />
 
     </LinearLayout>
+
     <ImageView
         android:id="@+id/help_provider_call_image_view"
-        android:src="@drawable/ic_call_green_24px"
-        style="@style/help_provider_call_image_view_style" />
+        style="@style/help_provider_call_image_view_style"
+        android:src="@drawable/ic_call_green_24px" />
 
 </RelativeLayout>

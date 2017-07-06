@@ -10,14 +10,18 @@ import com.udicity.shams.tourinsuez.Restaurant.RestaurantMainFragment;
 
 /**
  * Created by shams on 26/06/17.
+ * <p>
+ * I Add Hotel Fragment To View Pager , Cause I Will Add Another Two Fragments ..
+ * Example : The First Fragment For Top Hotel
+ * The Second Will Be For Local Hotels.
+ * And THe Third Will Be For people That Provide Their Houses for Sleep against few Money..
  */
 
 public class HotelFragmentAdapter extends FragmentPagerAdapter {
 
-    Context context;
+    private Context context;
 
-    public HotelFragmentAdapter(FragmentManager fm,Context contextP)
-    {
+    public HotelFragmentAdapter(FragmentManager fm, Context contextP) {
         super(fm);
         context = contextP;
     }
@@ -26,18 +30,17 @@ public class HotelFragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new HotelFragment();
-        }else if(position == 1)
-        {
+        } else if (position == 1) {
             return new RestaurantMainFragment();
-        }return null;
+        }
+        return null;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position == 0)
-        {
+        if (position == 0) {
             return context.getString(R.string.hotel_category);
-        }else return "hhhhh" ;
+        } else return context.getString(R.string.no_title_found);
     }
 
     @Override

@@ -1,9 +1,9 @@
 package com.udicity.shams.tourinsuez.GoogleMap;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,7 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        FloatingActionButton floatingActionButton = (FloatingActionButton)findViewById(R.id.fab_map);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab_map);
         floatingActionButton.setVisibility(View.VISIBLE);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,9 +69,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         */
-        ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel();
-        ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant();
-        ArrayList<HospitalCategory> hospitalCategoryArrayList = DataSourcer.getHospital();
+        ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel(getApplicationContext());
+        ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant(getApplicationContext());
+        ArrayList<HospitalCategory> hospitalCategoryArrayList = DataSourcer.getHospital(getApplicationContext());
 
         double hotelLat;
         double hotelLong;
@@ -83,40 +83,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         double hospitalLong;
         String hospitalName;
 
-        for (int i = 0; i < hotelCategoryArrayList.size();i++)
-        {
+        for (int i = 0; i < hotelCategoryArrayList.size(); i++) {
             hotelLat = hotelCategoryArrayList.get(i).getmHotelLat();
             hotelLong = hotelCategoryArrayList.get(i).getmHotelLong();
             hotelName = hotelCategoryArrayList.get(i).getmHotelName();
-            marker = new MarkerOptions().position(new LatLng(hotelLat,hotelLong)).title(hotelName);
+            marker = new MarkerOptions().position(new LatLng(hotelLat, hotelLong)).title(hotelName);
             marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.png_hotel_red_24px));
 
             mMap.addMarker(marker);
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(hotelLat,hotelLong)));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(hotelLat, hotelLong)));
         }
-        for (int i = 0; i < restaurantCategoryArrayList.size();i++)
-        {
+        for (int i = 0; i < restaurantCategoryArrayList.size(); i++) {
             restaurantLat = restaurantCategoryArrayList.get(i).getmRestaurantLat();
             restaurantLong = restaurantCategoryArrayList.get(i).getmRestaurantLong();
             restaurantName = restaurantCategoryArrayList.get(i).getmRestaurantName();
-            marker = new MarkerOptions().position(new LatLng(restaurantLat,restaurantLong)).title(restaurantName);
+            marker = new MarkerOptions().position(new LatLng(restaurantLat, restaurantLong)).title(restaurantName);
             marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.png_restaurant_green_24px));
 
             mMap.addMarker(marker);
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(restaurantLat,restaurantLong)));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(10f),1500,null);
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(restaurantLat, restaurantLong)));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(10f), 1500, null);
         }
-        for (int i = 0;i< hospitalCategoryArrayList.size();i++)
-        {
+        for (int i = 0; i < hospitalCategoryArrayList.size(); i++) {
             hospitalLat = hospitalCategoryArrayList.get(i).getmCorporationLatMap();
             hospitalLong = hospitalCategoryArrayList.get(i).getmCorporationLongMap();
             hospitalName = hospitalCategoryArrayList.get(i).getmCorporationName();
-            marker = new MarkerOptions().position(new LatLng(hospitalLat,hospitalLong)).title(hospitalName);
+            marker = new MarkerOptions().position(new LatLng(hospitalLat, hospitalLong)).title(hospitalName);
             marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.png_local_hospital_blue_24px));
 
             mMap.addMarker(marker);
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(hospitalLat,hospitalLong)));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(10f),1500,null);
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(hospitalLat, hospitalLong)));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(10f), 1500, null);
         }
     }
 }

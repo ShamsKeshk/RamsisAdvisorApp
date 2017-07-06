@@ -3,7 +3,7 @@
     style="@style/fragment_frame_layout_style"
     tools:context="com.udicity.shams.tourinsuez.Restaurant.RestaurantMainFragment">
 
-        <ListView
-            android:id="@+id/restaurant_food_filter_list_view"
-            style="@style/list_view_style" />
+    <ListView
+        android:id="@+id/restaurant_food_filter_list_view"
+        style="@style/list_view_style" />
 </FrameLayout>

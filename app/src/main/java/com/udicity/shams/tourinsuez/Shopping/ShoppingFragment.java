@@ -24,9 +24,9 @@ public class ShoppingFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.shopping_fragment, container, false);
 
-        ArrayList<ShoppingCategory> shoppingCategoryArrayList = DataSourcer.getShoppingPlaces();
-        ShoppingCategoryAdapter shoppingCategoryAdapter = new ShoppingCategoryAdapter(getActivity(),shoppingCategoryArrayList);
-        ListView listView = (ListView)rootView.findViewById(R.id.shopping_list_view);
+        ArrayList<ShoppingCategory> shoppingCategoryArrayList = DataSourcer.getShoppingPlaces(getContext());
+        ShoppingCategoryAdapter shoppingCategoryAdapter = new ShoppingCategoryAdapter(getActivity(), shoppingCategoryArrayList,getContext());
+        ListView listView = (ListView) rootView.findViewById(R.id.shopping_list_view);
         listView.setAdapter(shoppingCategoryAdapter);
 
         return rootView;

@@ -1,6 +1,7 @@
 package com.udicity.shams.tourinsuez.CafeShops;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.udicity.shams.tourinsuez.R;
+
 import java.util.ArrayList;
 
 /**
@@ -18,9 +21,11 @@ import java.util.ArrayList;
 
 public class CafeCategoryAdapter extends ArrayAdapter<CafeCategory> {
 
-    public CafeCategoryAdapter(Activity activity, ArrayList<CafeCategory> cafeCategoryArrayList)
-    {
-        super(activity,0,cafeCategoryArrayList);
+    private Context context;
+
+    public CafeCategoryAdapter(Activity activity, ArrayList<CafeCategory> cafeCategoryArrayList, Context context) {
+        super(activity, 0, cafeCategoryArrayList);
+        this.context = context;
     }
 
     @NonNull
@@ -43,16 +48,22 @@ public class CafeCategoryAdapter extends ArrayAdapter<CafeCategory> {
         shoppingTotalReview.setText(String.valueOf(currentCafeItem.getCafeTotalReview()));
 
         TextView shoppingOpenTime = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
+        String cafeOpenText;
         if (currentCafeItem.getCafeTimeOpen() <= 12) {
-            shoppingOpenTime.setText(currentCafeItem.getCafeTimeOpen() + " AM");
+            cafeOpenText = currentCafeItem.getCafeTimeOpen() + context.getString(R.string.am);
+            shoppingOpenTime.setText(cafeOpenText);
         } else {
-            shoppingOpenTime.setText(currentCafeItem.getCafeTimeOpen() + " PM");
+            cafeOpenText = currentCafeItem.getCafeTimeOpen() + context.getString(R.string.pm);
+            shoppingOpenTime.setText(cafeOpenText);
         }
         TextView shoppingCloseTime = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
+        String cafeCloseText;
         if (currentCafeItem.getCafeTimeOpen() <= 12) {
-            shoppingCloseTime.setText(currentCafeItem.getCafeTimeClose() + " AM");
+            cafeCloseText = currentCafeItem.getCafeTimeClose() + context.getString(R.string.am);
+            shoppingCloseTime.setText(cafeCloseText);
         } else {
-            shoppingCloseTime.setText(currentCafeItem.getCafeTimeClose() + " PM");
+            cafeCloseText = currentCafeItem.getCafeTimeClose() + context.getString(R.string.pm);
+            shoppingCloseTime.setText(cafeCloseText);
         }
         TextView shoppingAddress = (TextView) cafeListItem.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
         shoppingAddress.setText(currentCafeItem.getCafeAddress());

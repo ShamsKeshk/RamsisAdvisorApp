@@ -7,33 +7,36 @@
     android:clickable="false"
     android:focusable="false"
     android:focusableInTouchMode="false">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:background="?android:attr/selectableItemBackground">
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/category_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="@dimen/twenty_dp"
             android:paddingBottom="@dimen/ten_dp"
             android:paddingEnd="@dimen/twenty_dp"
             android:paddingStart="@dimen/twenty_dp"
-            tools:text="Hotel"
+            android:paddingTop="@dimen/twenty_dp"
             android:textSize="@dimen/sixteen_sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:text="Hotel" />
+
         <ImageView
             android:id="@+id/category_image_icon_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="@dimen/ten_dp"
+            android:paddingBottom="@dimen/twenty_dp"
             android:paddingEnd="@dimen/twenty_dp"
             android:paddingStart="@dimen/twenty_dp"
-            android:paddingBottom="@dimen/twenty_dp"
-            tools:src="@mipmap/ic_launcher_round"/>
+            android:paddingTop="@dimen/ten_dp"
+            tools:src="@mipmap/ic_launcher_round" />
     </LinearLayout>
 </FrameLayout>

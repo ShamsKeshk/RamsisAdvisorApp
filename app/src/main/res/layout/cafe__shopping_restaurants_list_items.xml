@@ -7,15 +7,15 @@
 
         <ImageView
             android:id="@+id/cafe_shopping_restaurant_image_view_id"
-            android:src="@drawable/sokhna_suez"
-            style="@style/image_of_card_cafe_shopping_restaurant_container_style" />
+            style="@style/image_of_card_cafe_shopping_restaurant_container_style"
+            android:src="@drawable/sokhna_suez" />
 
         <LinearLayout style="@style/cafe_shopping_restaurant_card_container_discreption_linear_layout_style">
 
             <TextView
                 android:id="@+id/cafe_shopping_restaurant_name_text_view_id"
-                tools:text="Si Sayed"
-                style="@style/name_of_cafe_shopping_restaurant_text_view_style" />
+                style="@style/name_of_cafe_shopping_restaurant_text_view_style"
+                tools:text="Si Sayed" />
 
             <LinearLayout style="@style/cafe_shopping_restaurant_review_linear_layout_style">
 
@@ -28,26 +28,29 @@
 
                 <TextView
                     android:id="@+id/cafe_shopping_restaurant_review_number_text_view_id"
-                    tools:text="1,477 Reviews"
-                    style="@style/cafe_shopping_restaurant_review_value_text_view_style" />
+                    style="@style/cafe_shopping_restaurant_review_value_text_view_style"
+                    tools:text="1,477 Reviews" />
 
             </LinearLayout>
 
             <LinearLayout style="@style/main_cafe_shopping_restaurant_state_linear_layout_style">
+
                 <LinearLayout style="@style/cafe_shopping_restaurant_state_linear_layout_style">
 
                     <TextView
-                        android:text="@string/restaurant_open"
-                        style="@style/cafe_shopping_restaurant_state_static_text_view_style" />
+                        style="@style/cafe_shopping_restaurant_state_static_text_view_style"
+                        android:text="@string/restaurant_open" />
 
                     <TextView
                         android:id="@+id/cafe_shopping_restaurant_open_time_text_view"
-                        tools:text="9 AM"
-                        style="@style/cafe_shopping_restaurant_state_value_text_view_style" />
+                        style="@style/cafe_shopping_restaurant_state_value_text_view_style"
+                        tools:text="9 AM" />
                 </LinearLayout>
+
                 <TextView
-                    android:text=" "
-                    style="@style/line_between_cafe_shopping_restaurant_states_text_view_style" />
+                    style="@style/line_between_cafe_shopping_restaurant_states_text_view_style"
+                    android:text=" " />
+
                 <LinearLayout style="@style/cafe_shopping_restaurant_state_linear_layout_style">
 
                     <TextView
@@ -56,15 +59,16 @@
 
                     <TextView
                         android:id="@+id/cafe_shopping_restaurant_close_time_text_view"
-                        tools:text="3 AM"
-                        style="@style/cafe_shopping_restaurant_state_value_text_view_style"  />
+                        style="@style/cafe_shopping_restaurant_state_value_text_view_style"
+                        tools:text="3 AM" />
 
                 </LinearLayout>
             </LinearLayout>
+
             <TextView
                 android:id="@+id/cafe_shopping_restaurant_address_text_view_id"
-                android:text="@string/random_address"
-                style="@style/cafe_shopping_restaurant_address_text_view_style" />
+                style="@style/cafe_shopping_restaurant_address_text_view_style"
+                android:text="@string/random_address" />
         </LinearLayout>
     </LinearLayout>
 

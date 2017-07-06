@@ -13,15 +13,13 @@ public class RestaurantCategory {
     private double mRestaurantLong;
 
     /**
-     * @auther shams keshk <shamskeshk@gmail.com>
-     *
      * @param restaurantName
      * @param finalReview
      * @param restaurantTimeOpen
      * @param restaurantTimeClose
+     * @auther shams keshk <shamskeshk@gmail.com>
      */
-    public RestaurantCategory(int imageResource,String restaurantName,String mRestaurantPhone,int finalReview,int restaurantTimeOpen,int restaurantTimeClose,String mRestaurantAddress,double latMap,double longMap)
-    {
+    public RestaurantCategory(int imageResource, String restaurantName, String mRestaurantPhone, int finalReview, int restaurantTimeOpen, int restaurantTimeClose, String mRestaurantAddress, double latMap, double longMap) {
         mRestaurantName = restaurantName;
         mFinalReview = finalReview;
         mRestaurantTimeOpen = restaurantTimeOpen;
@@ -32,8 +30,8 @@ public class RestaurantCategory {
         mRestaurantLat = latMap;
         mRestaurantLong = longMap;
     }
-    public RestaurantCategory(int imageResource,String Name,int finalReview,int TimeOpen,int TimeClose,double latMap,double longMap)
-    {
+
+    public RestaurantCategory(int imageResource, String Name, int finalReview, int TimeOpen, int TimeClose, double latMap, double longMap) {
         mRestaurantName = Name;
         mFinalReview = finalReview;
         mRestaurantTimeOpen = TimeOpen;
@@ -42,61 +40,61 @@ public class RestaurantCategory {
         mRestaurantLat = latMap;
         mRestaurantLong = longMap;
     }
-    public void setmRestaurantName(String restaurantName)
-    {
-     mRestaurantName = restaurantName;
-    }
-    public String getmRestaurantName()
-    {
+
+    public String getmRestaurantName() {
         return mRestaurantName;
     }
-    public void setmFinalReview(int finalReview)
-    {
-        mFinalReview = finalReview;
+
+    public void setmRestaurantName(String restaurantName) {
+        mRestaurantName = restaurantName;
     }
-    public int getmFinalReview()
-    {
+
+    public int getmFinalReview() {
         return mFinalReview;
     }
-    public void setmRestaurantTimeOpen(int timeOpen)
-    {
-        mRestaurantTimeOpen = timeOpen;
+
+    public void setmFinalReview(int finalReview) {
+        mFinalReview = finalReview;
     }
-    public int getmRestaurantTimeOpen()
-    {
+
+    public int getmRestaurantTimeOpen() {
         return mRestaurantTimeOpen;
     }
-    public void setmRestaurantTimeClose(int timeClose)
-    {
-        mRestaurantTimeClose = timeClose;
+
+    public void setmRestaurantTimeOpen(int timeOpen) {
+        mRestaurantTimeOpen = timeOpen;
     }
-    public int getmRestaurantTimeClose()
-    {
+
+    public int getmRestaurantTimeClose() {
         return mRestaurantTimeClose;
     }
-    public void setmRestaurantImageResource(int imageResource)
-    {
-        mRestaurantImageResource = imageResource;
+
+    public void setmRestaurantTimeClose(int timeClose) {
+        mRestaurantTimeClose = timeClose;
     }
-    public int getmRestaurantImageResource()
-    {
+
+    public int getmRestaurantImageResource() {
         return mRestaurantImageResource;
     }
-    public void setmRestaurantLat(double restaurantLat)
-    {
-        mRestaurantLat = restaurantLat;
+
+    public void setmRestaurantImageResource(int imageResource) {
+        mRestaurantImageResource = imageResource;
     }
-    public double getmRestaurantLat()
-    {
+
+    public double getmRestaurantLat() {
         return mRestaurantLat;
     }
-    public void setmRestaurantLong(double restaurantLong)
-    {
-        mRestaurantLong = restaurantLong;
+
+    public void setmRestaurantLat(double restaurantLat) {
+        mRestaurantLat = restaurantLat;
     }
-    public double getmRestaurantLong()
-    {
+
+    public double getmRestaurantLong() {
         return mRestaurantLong;
+    }
+
+    public void setmRestaurantLong(double restaurantLong) {
+        mRestaurantLong = restaurantLong;
     }
 
     public String getmRestaurantAddress() {
@@ -105,5 +103,13 @@ public class RestaurantCategory {
 
     public void setmRestaurantAddress(String mRestaurantAddress) {
         this.mRestaurantAddress = mRestaurantAddress;
+    }
+
+    public String getmRestaurantPhone() {
+        return mRestaurantPhone;
+    }
+
+    public void setmRestaurantPhone(String mRestaurantPhone) {
+        this.mRestaurantPhone = mRestaurantPhone;
     }
 }

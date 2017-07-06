@@ -5,24 +5,27 @@
 
     <TextView
         android:id="@+id/topic_id"
-        tools:text="Topic"
-        style="@style/about_suez_topic_header_style" />
+        style="@style/about_suez_topic_header_style"
+        tools:text="Topic" />
+
     <TextView
         android:id="@+id/topic_one_explain_id"
-        tools:text="Explain Your Topic"
-        style="@style/about_suez_topic_explain_style" />
+        style="@style/about_suez_topic_explain_style"
+        tools:text="Explain Your Topic" />
+
     <ImageView
         android:id="@+id/topic_one_image_view_id"
-        tools:src="@drawable/about_suez_topic_one"
-        style="@style/about_suez_topic_image_style" />
+        style="@style/about_suez_topic_image_style"
+        tools:src="@drawable/about_suez_topic_one" />
 
     <TextView
         android:id="@+id/topic_two_explain_id"
-        tools:text="Explain Your Topic"
-        style="@style/about_suez_topic_explain_style"/>
+        style="@style/about_suez_topic_explain_style"
+        tools:text="Explain Your Topic" />
+
     <ImageView
         android:id="@+id/topic_two_image_view_id"
-        tools:src="@drawable/about_suez_topic_two"
-        style="@style/about_suez_topic_image_style" />
+        style="@style/about_suez_topic_image_style"
+        tools:src="@drawable/about_suez_topic_two" />
 
 </LinearLayout>

@@ -13,21 +13,18 @@ import com.udicity.shams.tourinsuez.R;
 
 public class ShoppingFragmentAdapter extends FragmentPagerAdapter {
 
-    Context context;
+    private Context context;
 
-    public ShoppingFragmentAdapter(FragmentManager fm,Context context)
-    {
+    public ShoppingFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0)
-        {
+        if (position == 0) {
             return new ShoppingFragment();
-        }else
-        {
+        } else {
             return null;
         }
     }
@@ -36,9 +33,8 @@ public class ShoppingFragmentAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
             return context.getString(R.string.shopping_category);
-        }else
-        {
-            return "No Title Found";
+        } else {
+            return context.getString(R.string.no_title_found);
         }
     }
 

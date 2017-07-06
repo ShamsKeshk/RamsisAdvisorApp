@@ -24,10 +24,10 @@ public class RestaurantMainFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.restaurant_main_fragment, container, false);
 
-       ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant();
+        ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant(getContext());
 
-        ListView listView = (ListView)rootView.findViewById(R.id.restaurant_food_filter_list_view);
-        RestaurantCategoryAdapter restaurantCategoryAdapter =new RestaurantCategoryAdapter(getActivity(),restaurantCategoryArrayList);
+        ListView listView = (ListView) rootView.findViewById(R.id.restaurant_food_filter_list_view);
+        RestaurantCategoryAdapter restaurantCategoryAdapter = new RestaurantCategoryAdapter(getActivity(), restaurantCategoryArrayList,getContext());
         listView.setAdapter(restaurantCategoryAdapter);
         return rootView;
     }

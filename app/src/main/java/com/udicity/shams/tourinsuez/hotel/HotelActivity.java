@@ -1,8 +1,8 @@
 package com.udicity.shams.tourinsuez.hotel;
 
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -13,7 +13,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.udicity.shams.tourinsuez.GoogleMap.MapsActivity;
 import com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -22,8 +21,8 @@ import java.util.ArrayList;
 
 public class HotelActivity extends NavigationDrawerActivity implements OnMapReadyCallback {
 
-    ViewPager hotelViewPager;
-    HotelFragmentAdapter hotelFragmentAdapter;
+    private ViewPager hotelViewPager;
+    private HotelFragmentAdapter hotelFragmentAdapter;
     private GoogleMap googleMap;
 
     @Override
@@ -32,7 +31,7 @@ public class HotelActivity extends NavigationDrawerActivity implements OnMapRead
 
         MarkerOptions marker;
 
-        ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel();
+        ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel(getApplicationContext());
         double lat;
         double lon;
         String hotelName;
@@ -45,7 +44,7 @@ public class HotelActivity extends NavigationDrawerActivity implements OnMapRead
 
             this.googleMap.addMarker(marker);
             this.googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lon)));
-            this.googleMap.animateCamera(CameraUpdateFactory.zoomTo(8.5f),1500,null);
+            this.googleMap.animateCamera(CameraUpdateFactory.zoomTo(8.5f), 1500, null);
 
         }
     }
@@ -60,16 +59,16 @@ public class HotelActivity extends NavigationDrawerActivity implements OnMapRead
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        FloatingActionButton floatingActionButton = (FloatingActionButton)findViewById(R.id.fab_map);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab_map);
         floatingActionButton.setVisibility(View.GONE);
 
         // Add a marker in Suez and move the camera
 
 
-            hotelViewPager = (ViewPager) findViewById(R.id.hotel_view_pager);
-            hotelFragmentAdapter = new HotelFragmentAdapter(getSupportFragmentManager(), this);
+        hotelViewPager = (ViewPager) findViewById(R.id.hotel_view_pager);
+        hotelFragmentAdapter = new HotelFragmentAdapter(getSupportFragmentManager(), this);
 
-            hotelViewPager.setAdapter(hotelFragmentAdapter);
-            hotelViewPager.setVisibility(View.VISIBLE);
-        }
+        hotelViewPager.setAdapter(hotelFragmentAdapter);
+        hotelViewPager.setVisibility(View.VISIBLE);
     }
+}

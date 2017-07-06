@@ -11,24 +11,22 @@ import com.udicity.shams.tourinsuez.R;
  * Created by shams on 27/06/17.
  */
 
-public class TourismFragmentAdapter extends FragmentPagerAdapter{
+public class TourismFragmentAdapter extends FragmentPagerAdapter {
 
-    Context context;
+    private Context context;
 
-    public TourismFragmentAdapter(FragmentManager fm, Context context)
-    {
+    public TourismFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-       if(position == 0)
-       {
-           return new TourismFragment();
-       }else {
-           return null;
-       }
+        if (position == 0) {
+            return new TourismFragment();
+        } else {
+            return null;
+        }
     }
 
     @Override

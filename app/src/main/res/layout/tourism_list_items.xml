@@ -7,15 +7,15 @@
 
         <ImageView
             android:id="@+id/tourism_place_image_view"
-            android:src="@drawable/sokhna_suez"
-            style="@style/tourism_image_card_style" />
+            style="@style/tourism_image_card_style"
+            android:src="@drawable/sokhna_suez" />
 
         <LinearLayout style="@style/tourism_main_card_discription_linear_layout_style">
 
             <TextView
                 android:id="@+id/tourism_place_name_text_view_id"
-                tools:text="El Sokhna"
-                style="@style/tourism_place_name_text_view_style" />
+                style="@style/tourism_place_name_text_view_style"
+                tools:text="El Sokhna" />
 
             <LinearLayout style="@style/tourism_place_rating_review_linear_layout">
 
@@ -28,20 +28,20 @@
 
                 <TextView
                     android:id="@+id/tourism_place_review_number_text_view_id"
-                    tools:text="1,477 Reviews"
-                    style="@style/tourism_place_review_value_text_view_style" />
+                    style="@style/tourism_place_review_value_text_view_style"
+                    tools:text="1,477 Reviews" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tourism_place_type_text_view"
-                tools:text="Museum"
-                style="@style/tourism_place_type_text_view_style" />
+                style="@style/tourism_place_type_text_view_style"
+                tools:text="Museum" />
 
             <TextView
                 android:id="@+id/tourism_place_address_text_view"
-                tools:text="10,Mohsen Khalefa,etaqa,Suez"
-                style="@style/tourism_place_address_text_view_style" />
+                style="@style/tourism_place_address_text_view_style"
+                tools:text="10,Mohsen Khalefa,etaqa,Suez" />
 
         </LinearLayout>
     </LinearLayout>

@@ -11,24 +11,22 @@ import com.udicity.shams.tourinsuez.R;
  * Created by shams on 27/06/17.
  */
 
-public class AboutSuezFragmentAdapter extends FragmentPagerAdapter{
+public class AboutSuezFragmentAdapter extends FragmentPagerAdapter {
 
-    Context context;
+    private Context context;
 
-    public AboutSuezFragmentAdapter(FragmentManager fm, Context context)
-    {
+    public AboutSuezFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0)
-        {
-            return new  AboutSuezFragment();
-        }else if( position == 1){
+        if (position == 0) {
+            return new AboutSuezFragment();
+        } else if (position == 1) {
             return new AboutSuezDistrictFragment();
-        }else {
+        } else {
             return null;
         }
     }
@@ -42,11 +40,11 @@ public class AboutSuezFragmentAdapter extends FragmentPagerAdapter{
     public CharSequence getPageTitle(int position) {
 
         if (position == 0) {
-          return   context.getString(R.string.about_suez_category);
-        }else if(position == 1){
-            return "District";
-        }else {
-            return "No Title Found";
+            return context.getString(R.string.about_suez_category);
+        } else if (position == 1) {
+            return context.getString(R.string.district_fragment_title);
+        } else {
+            return context.getString(R.string.no_title_found);
         }
     }
 }

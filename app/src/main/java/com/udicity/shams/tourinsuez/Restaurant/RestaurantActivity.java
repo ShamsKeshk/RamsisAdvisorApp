@@ -1,8 +1,8 @@
 package com.udicity.shams.tourinsuez.Restaurant;
 
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -21,8 +21,8 @@ import java.util.ArrayList;
 
 public class RestaurantActivity extends NavigationDrawerActivity implements OnMapReadyCallback {
 
-    ViewPager restViewPager;
-    RestaurantFragmentAdapter restaurantFragmentAdapter;
+    private ViewPager restViewPager;
+    private RestaurantFragmentAdapter restaurantFragmentAdapter;
     private GoogleMap mGoogleMap;
 
     @Override
@@ -30,20 +30,19 @@ public class RestaurantActivity extends NavigationDrawerActivity implements OnMa
         mGoogleMap = googleMap;
         MarkerOptions marker;
 
-        ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant();
+        ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant(getApplicationContext());
         double lat;
         double lon;
         String restaurantName;
-        for(int i = 0;i<restaurantCategoryArrayList.size();i++)
-        {
+        for (int i = 0; i < restaurantCategoryArrayList.size(); i++) {
             lat = restaurantCategoryArrayList.get(i).getmRestaurantLat();
             lon = restaurantCategoryArrayList.get(i).getmRestaurantLong();
             restaurantName = restaurantCategoryArrayList.get(i).getmRestaurantName();
-            marker = new MarkerOptions().position(new LatLng(lat,lon)).title(restaurantName);
+            marker = new MarkerOptions().position(new LatLng(lat, lon)).title(restaurantName);
             marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_restaurant_red_24px));
             mGoogleMap.addMarker(marker);
-            mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(lat,lon)));
-            mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(8.5f),1500,null);
+            mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(lat, lon)));
+            mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(8.5f), 1500, null);
 
         }
     }
@@ -52,17 +51,17 @@ public class RestaurantActivity extends NavigationDrawerActivity implements OnMa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FrameLayout frameLayout = (FrameLayout)findViewById(R.id.navigation_drawer_content_frame_layout_id);
-        getLayoutInflater().inflate(R.layout.restaurant_activity , frameLayout);
+        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.navigation_drawer_content_frame_layout_id);
+        getLayoutInflater().inflate(R.layout.restaurant_activity, frameLayout);
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         supportMapFragment.getMapAsync(this);
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton)findViewById(R.id.fab_map);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab_map);
         floatingActionButton.setVisibility(View.GONE);
 
-        restViewPager = (ViewPager)findViewById(R.id.rest_view_pager);
-        restaurantFragmentAdapter = new RestaurantFragmentAdapter(getSupportFragmentManager(),this);
+        restViewPager = (ViewPager) findViewById(R.id.rest_view_pager);
+        restaurantFragmentAdapter = new RestaurantFragmentAdapter(getSupportFragmentManager(), this);
         restViewPager.setAdapter(restaurantFragmentAdapter);
         restViewPager.setVisibility(View.VISIBLE);
     }

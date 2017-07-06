@@ -20,9 +20,8 @@ import java.util.ArrayList;
 
 public class TourismCategoryAdapter extends ArrayAdapter<TourismCategory> {
 
-    public TourismCategoryAdapter(Activity activity, ArrayList<TourismCategory> tourismCategoryArrayList)
-    {
-        super(activity,0,tourismCategoryArrayList);
+    public TourismCategoryAdapter(Activity activity, ArrayList<TourismCategory> tourismCategoryArrayList) {
+        super(activity, 0, tourismCategoryArrayList);
     }
 
     @NonNull
@@ -30,25 +29,24 @@ public class TourismCategoryAdapter extends ArrayAdapter<TourismCategory> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View tourismListItems = convertView;
-        if (tourismListItems == null)
-        {
-            tourismListItems = LayoutInflater.from(getContext()).inflate(R.layout.tourism_list_items,parent,false);
+        if (tourismListItems == null) {
+            tourismListItems = LayoutInflater.from(getContext()).inflate(R.layout.tourism_list_items, parent, false);
         }
         TourismCategory currentTourismPlace = getItem(position);
 
-        ImageView placeImageView = (ImageView)tourismListItems.findViewById(R.id.tourism_place_image_view);
+        ImageView placeImageView = (ImageView) tourismListItems.findViewById(R.id.tourism_place_image_view);
         placeImageView.setImageResource(currentTourismPlace.getmPlaceImageResource());
 
-        TextView placeName = (TextView)tourismListItems.findViewById(R.id.tourism_place_name_text_view_id);
+        TextView placeName = (TextView) tourismListItems.findViewById(R.id.tourism_place_name_text_view_id);
         placeName.setText(currentTourismPlace.getmPlaceName());
 
-        TextView placeReview = (TextView)tourismListItems.findViewById(R.id.tourism_place_review_number_text_view_id);
+        TextView placeReview = (TextView) tourismListItems.findViewById(R.id.tourism_place_review_number_text_view_id);
         placeReview.setText(String.valueOf(currentTourismPlace.getmPlaceReviews()));
 
-        TextView placeType = (TextView)tourismListItems.findViewById(R.id.tourism_place_type_text_view);
+        TextView placeType = (TextView) tourismListItems.findViewById(R.id.tourism_place_type_text_view);
         placeType.setText(currentTourismPlace.getmPlaceType());
 
-        TextView placeAddress = (TextView)tourismListItems.findViewById(R.id.tourism_place_address_text_view);
+        TextView placeAddress = (TextView) tourismListItems.findViewById(R.id.tourism_place_address_text_view);
         placeAddress.setText(currentTourismPlace.getmPlaceAddress());
 
         return tourismListItems;

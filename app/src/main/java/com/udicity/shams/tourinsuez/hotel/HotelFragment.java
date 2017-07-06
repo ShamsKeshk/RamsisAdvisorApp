@@ -26,11 +26,11 @@ public class HotelFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.hotel_main_fragment, container, false);
 
-        ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel();
-        ListView listView = (ListView)rootView.findViewById(R.id.hotel_list_view);
-        HotelCategoryAdapter categoryAdapter= new HotelCategoryAdapter(getActivity(),hotelCategoryArrayList);
+        ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel(getContext());
+        ListView listView = (ListView) rootView.findViewById(R.id.hotel_list_view);
+        HotelCategoryAdapter categoryAdapter = new HotelCategoryAdapter(getActivity(), hotelCategoryArrayList,getContext());
         listView.setAdapter(categoryAdapter);
-        Toast.makeText(getActivity(),"Hello Hotel" , Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), R.string.hotel_category, Toast.LENGTH_SHORT).show();
 
         return rootView;
     }

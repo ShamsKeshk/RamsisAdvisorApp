@@ -2,41 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/main_linear_layout_list_items_style">
+
     <RelativeLayout style="@style/main_event_relative_layout_image_card_style">
+
         <ImageView
             android:id="@+id/event_image_view_id"
-            tools:src="@drawable/hotel_drawer"
-            style="@style/event_image_card_style" />
+            style="@style/event_image_card_style"
+            tools:src="@drawable/hotel_drawer" />
+
         <TextView
             android:id="@+id/event_name_text_view_id"
-            tools:text="Event Name"
-            style="@style/event_name_text_view_style" />
+            style="@style/event_name_text_view_style"
+            tools:text="Event Name" />
     </RelativeLayout>
+
     <LinearLayout style="@style/main_linear_layout_of_event_address_location_style">
+
         <LinearLayout style="@style/event_address_location_icons_linear_layout_style">
+
             <ImageView
-                android:src="@drawable/icon_event_green_24px"
-                style="@style/event_address_location_icons_style" />
+                style="@style/event_address_location_icons_style"
+                android:src="@drawable/icon_event_green_24px" />
+
             <ImageView
-                android:src="@drawable/ic_icon_place_green_24px"
-                style="@style/event_address_location_icons_style" />
-            </LinearLayout>
+                style="@style/event_address_location_icons_style"
+                android:src="@drawable/ic_icon_place_green_24px" />
+        </LinearLayout>
 
         <LinearLayout style="@style/event_address_location_text_views_linear_layout_style">
+
             <TextView
                 android:id="@+id/event_start_date_info_text_view_id"
-                tools:text="Start At 5 PM , 1/7/2017"
-                style="@style/event_date_text_view_style" />
+                style="@style/event_date_text_view_style"
+                tools:text="Start At 5 PM , 1/7/2017" />
+
             <TextView
                 android:id="@+id/event_address_text_view_id"
-                tools:text="13,Saad Zaghlol Street,Port Tawfik ,Suez"
-                style="@style/event_address_text_view_style" />
+                style="@style/event_address_text_view_style"
+                tools:text="13,Saad Zaghlol Street,Port Tawfik ,Suez" />
 
         </LinearLayout>
+
         <ImageView
             android:id="@+id/event_more_information_id"
-            android:src="@drawable/icon_more_info_horiz_green_24px"
-            style="@style/event_more_information_image_view_style" />
+            style="@style/event_more_information_image_view_style"
+            android:src="@drawable/icon_more_info_horiz_green_24px" />
     </LinearLayout>
 
 </LinearLayout>

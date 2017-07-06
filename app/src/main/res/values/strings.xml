@@ -39,4 +39,146 @@
     <string name="about_suez_city_district_explain">The city is divided into five main districts:</string>
     <string name="random_address">10 Baradis Street,Suez ,Suez</string>
     <string name="phone">phone :</string>
+    <string name="district_fragment_title">District</string>
+    <string name="no_title_found">No Title Found</string>
+    <string name="am"> AM</string>
+    <string name="pm"> PM</string>
+    <string name="about_tab_category">About</string>
+    <string name="city_district">City District</string>
+    <string name="arbaeen_district">Arbaeen District</string>
+    <string name="suez_district">Suez District</string>
+    <string name="ganayen_district">Ganayen District</string>
+    <string name="faisal_district">Faisal District</string>
+    <string name="attaka_district">Attaka District</string>
+    <string name="summer_palace_hotel">Summer Palace Hotel</string>
+    <string name="red_sea">Red Sea</string>
+    <string name="green_house">Green House</string>
+    <string name="bonita_hotel">Bonita Hotel</string>
+    <string name="victory_hotel">Victory Hotel</string>
+    <string name="le_printemps_el_sokhna">Le Printemps el-Sokhna</string>
+    <string name="horizon_el_wady_hotel">Horizon El-wadi</string>
+    <string name="summer_palace_phone_number">062 3221287</string>
+    <string name="red_sea_phone_number">062 3190192</string>
+    <string name="green_house_phone_number">062 3191554</string>
+    <string name="bonita_hotel_phone_number">062 7845321</string>
+    <string name="victory_hotel_phone_number">not available</string>
+    <string name="le_printemps_el_sokhna_phone_number">062 3348216</string>
+    <string name="horizon_el_wady_hotel_phone_number">0111 311 5585</string>
+    <string name="summer_palace_address">behind free zone suez ,El Giesh Street, PortTawfik,Suez</string>
+    <string name="red_sea_hotel_address">behind The third army clup,El Giesh Street, PortTawfik,Suez</string>
+    <string name="green_house_address">El Giesh Street,next to cornish of suez,Suez</string>
+    <string name="bonita_hotel_address">KABRIT, Suez Governorate 43717</string>
+    <string name="victory_hotel_address">elsayed hashim,Al-arbaen,Suez</string>
+    <string name="le_printemps_el_sokhna_address">24 El ma3mal,Attaka,Suez</string>
+    <string name="horizon_el_wady_hotel_address">El-sokhna,Ataqah, Suez</string>
+    <string name="el_masry_restaurant_name">Kababgy Mohamed El Masry</string>
+    <string name="new_dolphin">New Dolphin</string>
+    <string name="career_builder_pizza">CareerBuilder Pizza</string>
+    <string name="fares_seafood">Fares Seafood</string>
+    <string name="sea_side">Sea Side</string>
+    <string name="el_haty">El haty</string>
+    <string name="cook_door">Cook Door</string>
+    <string name="castello">Castello</string>
+    <string name="el_gaser_sea_food">El Gaser Sea Food</string>
+    <string name="awlad_wares">Awlad Wares</string>
+    <string name="le_gusto_restaurant">IL Gusto Restauranti Italiano</string>
+    <string name="shakshook_restaurant">Pizza Shakshook</string>
+    <string name="el_masry_phone_number">062 3324160</string>
+    <string name="new_dolphin_phone_number">062 3304830</string>
+    <string name="career_builder_pizaa_phone_number">0106 465 9457</string>
+    <string name="fares_seefood">0102 234 3448</string>
+    <string name="sea_side_phone_number">062 3333397</string>
+    <string name="el_haty_phone_number">Not Provided</string>
+    <string name="cook_door_phone_number">16999</string>
+    <string name="castello_phone_number">0100 688 8033</string>
+    <string name="el_gaser_sea_food_phone_number">0122 222 4862</string>
+    <string name="awlad_wares_phone_number">0101 384 4402</string>
+    <string name="le_gusto_phone_number">0102 345 6007</string>
+    <string name="shakshook_phone_number">0100 335 3350</string>
+    <string name="el_masry_address">30 Off El Tahrir St. SUEZ DISTRICT، Suez</string>
+    <string name="new_dolphin_address">22 El Galaa St.، SUEZ DISTRICT، Suez</string>
+    <string name="career_builder_pizaa_address">Suez Rd, Suez</string>
+    <string name="fares_seefood_address">Ain El Sokhna Rd, Suez,</string>
+    <string name="sea_side_address">Suez, Suez Governorate</string>
+    <string name="el_haty_address">Suez Government</string>
+    <string name="cook_door_address">Suez, Suez Governorate</string>
+    <string name="castello_address">23-Jul, Suez Governorate</string>
+    <string name="el_gaser_sea_food_address">Suez, Suez Governorate</string>
+    <string name="awlad_wares_address">Nemsa Square ,Suez Governorate</string>
+    <string name="le_gusto_address">Suez, Suez Governorate</string>
+    <string name="shakshook_address">Suez, Al Khassah, Suez</string>
+    <string name="el_sokhna">El Sokhna</string>
+    <string name="muesum">Museum</string>
+    <string name="address_of_sokhna">24 Abas El3qad,Etaqa ,Suez</string>
+    <string name="google_i_o">Google I/O</string>
+    <string name="google_event_date">Start At 12 AM , 24/10/2017</string>
+    <string name="google_event_address">24 Talat-Harb Street,Port Tawfik ,Suez</string>
+    <string name="awlad_ragab">Awlad Ragab</string>
+    <string name="awlad_ragab_address">45 El manial ,Fysal ,Suez</string>
+    <string name="suez_military_hospital">Suez Military Hospital</string>
+    <string name="general_suez_hospital">General Suez Hospital</string>
+    <string name="suez_hospital_for_health_insurance">Suez Hospital For Health Insurance</string>
+    <string name="al_amal">Al Amal</string>
+    <string name="al_obour">Al Obour</string>
+    <string name="suez_military_hospital_phone">0102 278 4166</string>
+    <string name="general_suez_hospital_phone">062 3331190</string>
+    <string name="suez_hospital_for_health_insurance_phone">062 3191381</string>
+    <string name="al_amal_phone">010 2010 3384</string>
+    <string name="al_obour_phone">010 2010 3384</string>
+    <string name="suez_military_hospital_address">Suez Rd, Suez, Suez Governorate</string>
+    <string name="general_suez_hospital_address">Salah Uddin St، Suez, Suez Governorate</string>
+    <string name="suez_hospital_for_health_insurance_address">SUEZ, PORT TAWFIK</string>
+    <string name="al_amal_address">Suez Governorate</string>
+    <string name="al_obour_address">Suez, Suez Governorate</string>
+    <string name="ambulance_phone">123</string>
+    <string name="hospitel_address">Address Not Provided</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="suez_ambulance_facility">Suez Ambulance facility</string>
+    <string name="suez_ambulance_facility_phone">0623347363</string>
+    <string name="fire_station">Fire Station</string>
+    <string name="fire_station_phone">180</string>
+    <string name="suez_civil_protection">Suez Civil Protection</string>
+    <string name="suez_civil_protection_phone">0623331049</string>
+    <string name="tourism_police">Tourism Police</string>
+    <string name="tourism_police_phone">0623331140</string>
+    <string name="suez_sos_police">Suez SOS Police</string>
+    <string name="suez_sos_police_phone">0623331078</string>
+    <string name="suez_police">Suez Police</string>
+    <string name="suez_police_phone">122</string>
+    <string name="suez_police_station">Suez Police Station</string>
+    <string name="arbaeen_police_station">Arbaeen Police Station</string>
+    <string name="faisal_police_station">Faisal Police Station</string>
+    <string name="attaka_police_station">Attaka Police Station</string>
+    <string name="ganayen_police_station">Ganayen Police Station</string>
+    <string name="suez_police_directorate">Suez Police Directorate</string>
+    <string name="suez_police_supply_investigation">Suez Police Supply Investigation</string>
+    <string name="suez_traffic_management">Suez Traffic management</string>
+    <string name="suez_police_station_phone">0623331075</string>
+    <string name="arbaeen_police_station_phone">0623331074</string>
+    <string name="faisal_police_station_phone">0623670375</string>
+    <string name="attaka_police_station_phone">0623360324</string>
+    <string name="ganayen_police_station_phone">0623500051</string>
+    <string name="suez_police_directorate_address">0623331077</string>
+    <string name="suez_police_supply_investigation_address">0623331070</string>
+    <string name="suez_traffic_management_address">0623331082</string>
+    <string name="reviews"> Reviews</string>
+    <string name="category_id">categoryId</string>
+
+    "Suez Police Station", "0623331075", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+    Arbaeen Police Station", "0623331074", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+    Faisal Police Station", "0623670375", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+    Attaka Police Station", "0623360324", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+    Ganayen Police Station", "0623500051", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+    Suez Police Directorate", "0623331077", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+    Suez Police Supply Investigation", "0623331070", R.drawable.police, "Address Not Provided",
+    -20.2541, 20.254));
+    Suez Traffic management", "0623331082", R.drawable.police, "Address Not Provided", -33.2541,
+    -87.254));
+
 </resources>

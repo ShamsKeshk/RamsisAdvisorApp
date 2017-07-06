@@ -14,23 +14,21 @@ public class HotelCategory {
     private double mHotelLat;
     private double mHotelLong;
 
-    public HotelCategory(String Name,int finalReview,int imageResource)
-    {
+    public HotelCategory(String Name, int finalReview, int imageResource) {
         mHotelName = Name;
         mFinalReview = finalReview;
         mHotelImageResource = imageResource;
     }
 
-    public HotelCategory(String Name,int finalReview,int imageResource,String mHotelPhoneNumber,String mHotelAddress)
-    {
+    public HotelCategory(String Name, int finalReview, int imageResource, String mHotelPhoneNumber, String mHotelAddress) {
         mHotelName = Name;
         mFinalReview = finalReview;
         mHotelImageResource = imageResource;
         this.mHotelPhoneNumber = mHotelPhoneNumber;
         this.mHotelAddress = mHotelAddress;
     }
-    public HotelCategory(String Name,int finalReview,int imageResource,String mHotelPhoneNumber,String mHotelAddress,double latMap,double longMap)
-    {
+
+    public HotelCategory(String Name, int finalReview, int imageResource, String mHotelPhoneNumber, String mHotelAddress, double latMap, double longMap) {
         mHotelName = Name;
         mFinalReview = finalReview;
         mHotelImageResource = imageResource;
@@ -41,59 +39,57 @@ public class HotelCategory {
     }
 
 
-    public HotelCategory(String Name,int finalReview,int imageResource,double latMap,double longMap)
-    {
+    public HotelCategory(String Name, int finalReview, int imageResource, double latMap, double longMap) {
         mHotelName = Name;
         mFinalReview = finalReview;
         mHotelImageResource = imageResource;
         mHotelLat = latMap;
         mHotelLong = longMap;
     }
-    public HotelCategory(double latMap,double longMap)
-    {
+
+    public HotelCategory(double latMap, double longMap) {
         mHotelLat = latMap;
         mHotelLong = longMap;
     }
-    public void setmHotelName(String hotelName)
-    {
-        mHotelName = hotelName;
-    }
-    public String getmHotelName()
-    {
+
+    public String getmHotelName() {
         return mHotelName;
     }
-    public void setmFinalReview(int finalReview)
-    {
-        mFinalReview = finalReview;
+
+    public void setmHotelName(String hotelName) {
+        mHotelName = hotelName;
     }
-    public int getmFinalReview()
-    {
+
+    public int getmFinalReview() {
         return mFinalReview;
     }
 
-    public void setmHotelImageResource(int imageResource)
-    {
-        mHotelImageResource = imageResource;
+    public void setmFinalReview(int finalReview) {
+        mFinalReview = finalReview;
     }
-    public int getmHotelImageResource()
-    {
+
+    public int getmHotelImageResource() {
         return mHotelImageResource;
     }
-    public void setmHotelLat(double hotelLat)
-    {
-        mHotelLat = hotelLat;
+
+    public void setmHotelImageResource(int imageResource) {
+        mHotelImageResource = imageResource;
     }
-    public double getmHotelLat()
-    {
+
+    public double getmHotelLat() {
         return mHotelLat;
     }
-    public void setmHotelLong(double hotelLong)
-    {
-        mHotelLong = hotelLong;
+
+    public void setmHotelLat(double hotelLat) {
+        mHotelLat = hotelLat;
     }
-    public double getmHotelLong()
-    {
+
+    public double getmHotelLong() {
         return mHotelLong;
+    }
+
+    public void setmHotelLong(double hotelLong) {
+        mHotelLong = hotelLong;
     }
 
     public String getmHotelPhoneNumber() {

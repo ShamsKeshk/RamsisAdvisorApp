@@ -14,16 +14,15 @@ public class TourismCategory {
     private double mPlaceLatMap;
     private double mPlaceLongMap;
 
-    public TourismCategory(int mPlaceImageResource,String mPlaceName,String mPlaceType,String mPlaceAddress,int mPlaceReviews)
-    {
+    public TourismCategory(int mPlaceImageResource, String mPlaceName, String mPlaceType, String mPlaceAddress, int mPlaceReviews) {
         this.mPlaceImageResource = mPlaceImageResource;
         this.mPlaceName = mPlaceName;
         this.mPlaceType = mPlaceType;
         this.mPlaceReviews = mPlaceReviews;
         this.mPlaceAddress = mPlaceAddress;
     }
-    public TourismCategory(int mPlaceImageResource,String mPlaceName,String mPlaceType,String mPlaceAddress,int mPlaceReviews,double mPlaceLatMap,double mPlaceLongMap)
-    {
+
+    public TourismCategory(int mPlaceImageResource, String mPlaceName, String mPlaceType, String mPlaceAddress, int mPlaceReviews, double mPlaceLatMap, double mPlaceLongMap) {
         this.mPlaceImageResource = mPlaceImageResource;
         this.mPlaceName = mPlaceName;
         this.mPlaceType = mPlaceType;

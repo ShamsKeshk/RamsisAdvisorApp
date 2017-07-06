@@ -1,17 +1,14 @@
 package com.udicity.shams.tourinsuez.NavigationDrawerPackage;
 
-/**
- * this is me 
- */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
@@ -48,17 +45,13 @@ public class ScrollingActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(ScrollingActivity.this, MapsActivity.class);
                 startActivity(intent);
-
-               /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                        */
             }
         });
 
-        final ArrayList<Category> categoryArrayList = DataSourcer.getCategories();
+        final ArrayList<Category> categoryArrayList = DataSourcer.getCategories(getApplicationContext());
 
-        GridView gridView = (GridView)findViewById(R.id.grid_view_categories);
-        CategoryAdapter categoryAdapter = new CategoryAdapter(this , categoryArrayList);
+        GridView gridView = (GridView) findViewById(R.id.grid_view_categories);
+        CategoryAdapter categoryAdapter = new CategoryAdapter(this, categoryArrayList);
         gridView.setAdapter(categoryAdapter);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -70,58 +63,58 @@ public class ScrollingActivity extends AppCompatActivity {
         });
     }
 
-    public void sendToIntent(Category category)
-    {
+    public void sendToIntent(Category category) {
         Intent intent;
-        switch(category.getmCategoryId())
-        {
-            case 1 :
-                intent = new Intent(ScrollingActivity.this,AboutSuezActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+        String CATEGORY_ID =  getString(R.string.category_id);
+
+        switch (category.getmCategoryId()) {
+            case 1:
+                intent = new Intent(ScrollingActivity.this, AboutSuezActivity.class);
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 2 :
-                intent = new Intent(ScrollingActivity.this,HotelActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+            case 2:
+                intent = new Intent(ScrollingActivity.this, HotelActivity.class);
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 3 :
-                intent = new Intent(ScrollingActivity.this,RestaurantActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+            case 3:
+                intent = new Intent(ScrollingActivity.this, RestaurantActivity.class);
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 4 :
-                intent = new  Intent(ScrollingActivity.this,TourismActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+            case 4:
+                intent = new Intent(ScrollingActivity.this, TourismActivity.class);
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 5 :
+            case 5:
                 intent = new Intent(ScrollingActivity.this, EventsActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 6 :
+            case 6:
                 intent = new Intent(ScrollingActivity.this, ShoppingActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 7 :
+            case 7:
                 intent = new Intent(ScrollingActivity.this, CafeActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 8 :
+            case 8:
                 intent = new Intent(ScrollingActivity.this, HospitalActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
-            case 9 :
-                intent = new Intent(ScrollingActivity.this,HelpActivity.class);
-                intent.putExtra("categoryId", String.valueOf(category.getmCategoryId()));
+            case 9:
+                intent = new Intent(ScrollingActivity.this, HelpActivity.class);
+                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
                 startActivity(intent);
                 break;
             default:
-                return;
+                break;
         }
     }
 

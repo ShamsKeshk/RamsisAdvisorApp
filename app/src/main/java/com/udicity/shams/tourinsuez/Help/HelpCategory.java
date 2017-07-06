@@ -12,61 +12,60 @@ public class HelpCategory {
     private double mHelpProviderMapLong;
     private String mHelpProviderAddress;
 
-    public HelpCategory(String helpProviderName,String helpProviderPhoneNumber,int helpProviderImageResource,String mHelpProviderAddress,double helpProviderMapLat,double helpProviderMapLong)
-    {
+    public HelpCategory(String helpProviderName, String helpProviderPhoneNumber, int helpProviderImageResource, String mHelpProviderAddress, double helpProviderMapLat, double helpProviderMapLong) {
         mHelpProviderName = helpProviderName;
-        mHelpProviderPhoneNumber = helpProviderPhoneNumber ;
+        mHelpProviderPhoneNumber = helpProviderPhoneNumber;
         mHelpProviderImageResource = helpProviderImageResource;
         mHelpProviderMapLat = helpProviderMapLat;
         mHelpProviderMapLong = helpProviderMapLong;
         this.mHelpProviderAddress = mHelpProviderAddress;
     }
-    public HelpCategory(String helpProviderName,String helpProviderPhoneNumber,double helpProviderMapLat,double helpProviderMapLong)
-    {
+
+    public HelpCategory(String helpProviderName, String helpProviderPhoneNumber, double helpProviderMapLat, double helpProviderMapLong) {
         mHelpProviderName = helpProviderName;
-        mHelpProviderPhoneNumber = helpProviderPhoneNumber ;
+        mHelpProviderPhoneNumber = helpProviderPhoneNumber;
         mHelpProviderMapLat = helpProviderMapLat;
         mHelpProviderMapLong = helpProviderMapLong;
     }
-    public void setmHelpProviderName(String helpProviderName)
-    {
-        mHelpProviderName = helpProviderName;
-    }
-    public String getmHelpProviderName()
-    {
+
+    public String getmHelpProviderName() {
         return mHelpProviderName;
     }
-    public void setmHelpProviderPhoneNumber(String helpProviderPhoneNumber)
-    {
-        mHelpProviderPhoneNumber = helpProviderPhoneNumber;
+
+    public void setmHelpProviderName(String helpProviderName) {
+        mHelpProviderName = helpProviderName;
     }
-    public String getmHelpProviderPhoneNumber()
-    {
+
+    public String getmHelpProviderPhoneNumber() {
         return mHelpProviderPhoneNumber;
     }
-    public void setmHelpProviderMapLat(double helpProviderMapLat)
-    {
-        mHelpProviderMapLat = helpProviderMapLat;
+
+    public void setmHelpProviderPhoneNumber(String helpProviderPhoneNumber) {
+        mHelpProviderPhoneNumber = helpProviderPhoneNumber;
     }
-    public void setmHelpProviderImageResource(int helpProviderImageResource)
-    {
-        mHelpProviderImageResource = helpProviderImageResource;
-    }
-    public int getmHelpProviderImageResource()
-    {
+
+    public int getmHelpProviderImageResource() {
         return mHelpProviderImageResource;
     }
-    public double getmHelpProviderMapLat()
-    {
-        return  mHelpProviderMapLat;
+
+    public void setmHelpProviderImageResource(int helpProviderImageResource) {
+        mHelpProviderImageResource = helpProviderImageResource;
     }
-    public void setmHelpProviderMapLong(double helpProviderMapLong)
-    {
-        mHelpProviderMapLong = helpProviderMapLong;
+
+    public double getmHelpProviderMapLat() {
+        return mHelpProviderMapLat;
     }
-    public double getmHelpProviderMapLong()
-    {
+
+    public void setmHelpProviderMapLat(double helpProviderMapLat) {
+        mHelpProviderMapLat = helpProviderMapLat;
+    }
+
+    public double getmHelpProviderMapLong() {
         return mHelpProviderMapLong;
+    }
+
+    public void setmHelpProviderMapLong(double helpProviderMapLong) {
+        mHelpProviderMapLong = helpProviderMapLong;
     }
 
     public String getmHelpProviderAddress() {

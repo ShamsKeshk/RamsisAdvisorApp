@@ -20,56 +20,46 @@ import java.util.ArrayList;
 
 public class AboutSuezCategoryAdapter extends ArrayAdapter<AboutSuezCategory> {
 
-    public AboutSuezCategoryAdapter(Activity activity, ArrayList<AboutSuezCategory> aboutSuezCategoryArrayList)
-    {
-        super(activity,0,aboutSuezCategoryArrayList);
+    public AboutSuezCategoryAdapter(Activity activity, ArrayList<AboutSuezCategory> aboutSuezCategoryArrayList) {
+        super(activity, 0, aboutSuezCategoryArrayList);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItems = convertView;
-        if(listItems == null)
-        {
-            listItems = LayoutInflater.from(getContext()).inflate(R.layout.about_suez_list_items,parent,false);
+        if (listItems == null) {
+            listItems = LayoutInflater.from(getContext()).inflate(R.layout.about_suez_list_items, parent, false);
         }
         AboutSuezCategory currentItem = getItem(position);
-        TextView topicTextView = (TextView)listItems.findViewById(R.id.topic_id);
+        TextView topicTextView = (TextView) listItems.findViewById(R.id.topic_id);
         topicTextView.setText(currentItem.getmTopicHeader());
-        TextView textViewOne = (TextView)listItems.findViewById(R.id.topic_one_explain_id);
-        if(currentItem.hasTextOne())
-        {
+        TextView textViewOne = (TextView) listItems.findViewById(R.id.topic_one_explain_id);
+        if (currentItem.hasTextOne()) {
             textViewOne.setText(currentItem.getmTopicExplainPartOne());
             textViewOne.setVisibility(View.VISIBLE);
-        }else
-        {
+        } else {
             textViewOne.setVisibility(View.GONE);
         }
         ImageView imageViewOne = (ImageView) listItems.findViewById(R.id.topic_one_image_view_id);
-        if(currentItem.hasImageOne())
-        {
+        if (currentItem.hasImageOne()) {
             imageViewOne.setImageResource(currentItem.getmTopicImageResourcePartOne());
             imageViewOne.setVisibility(View.VISIBLE);
-        }else
-        {
+        } else {
             imageViewOne.setVisibility(View.GONE);
         }
-        TextView textViewTwo = (TextView)listItems.findViewById(R.id.topic_two_explain_id);
-        if(currentItem.hasTextTwo())
-        {
+        TextView textViewTwo = (TextView) listItems.findViewById(R.id.topic_two_explain_id);
+        if (currentItem.hasTextTwo()) {
             textViewTwo.setText(currentItem.getmTopicExplainPartTwo());
             textViewTwo.setVisibility(View.VISIBLE);
-        }else
-        {
+        } else {
             textViewTwo.setVisibility(View.GONE);
         }
         ImageView imageViewTwo = (ImageView) listItems.findViewById(R.id.topic_two_image_view_id);
-        if(currentItem.hasImageTwo())
-        {
+        if (currentItem.hasImageTwo()) {
             imageViewTwo.setImageResource(currentItem.getmTopicImageResourcePartTwo());
             imageViewTwo.setVisibility(View.VISIBLE);
-        }else
-        {
+        } else {
             imageViewTwo.setVisibility(View.GONE);
         }
 

@@ -2,9 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sss"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/sss"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity"
     tools:showIn="@layout/navigation_drawer_app_bar">
@@ -12,7 +12,6 @@
     <FrameLayout
         android:id="@+id/navigation_drawer_content_frame_layout_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
+        android:layout_height="match_parent"></FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

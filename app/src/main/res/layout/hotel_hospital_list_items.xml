@@ -3,57 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/main_linear_layout_list_items_style">
 
-<LinearLayout style="@style/main_hotel_hospital_linear_layout_card_style">
+    <LinearLayout style="@style/main_hotel_hospital_linear_layout_card_style">
 
-    <ImageView
-        android:id="@+id/hotel_hospital_image_view_id"
-        android:src="@drawable/hotel_try_up"
-        style="@style/image_hotel_hospital_card_style" />
+        <ImageView
+            android:id="@+id/hotel_hospital_image_view_id"
+            style="@style/image_hotel_hospital_card_style"
+            android:src="@drawable/hotel_try_up" />
 
-    <LinearLayout style="@style/main_hotel_hospital_linear_layout_card_discription_style">
-
-        <TextView
-            android:id="@+id/hotel_hospital_name_text_view_id"
-            tools:text="Green House"
-            style="@style/hotel_hospital_name_text_view_style" />
-
-        <LinearLayout style="@style/hotel_hospital_review_linear_layout_style">
-
-            <RatingBar
-                android:id="@+id/hotel_hospital_rating_review_id"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5" />
+        <LinearLayout style="@style/main_hotel_hospital_linear_layout_card_discription_style">
 
             <TextView
-                android:id="@+id/hotel_hospital_number_review_text_view_id"
-                tools:text="1,477 Reviews"
-                style="@style/hotel_hospital_review_text_view_style" />
+                android:id="@+id/hotel_hospital_name_text_view_id"
+                style="@style/hotel_hospital_name_text_view_style"
+                tools:text="Green House" />
+
+            <LinearLayout style="@style/hotel_hospital_review_linear_layout_style">
+
+                <RatingBar
+                    android:id="@+id/hotel_hospital_rating_review_id"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5" />
+
+                <TextView
+                    android:id="@+id/hotel_hospital_number_review_text_view_id"
+                    style="@style/hotel_hospital_review_text_view_style"
+                    tools:text="1,477 Reviews" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/hotel_hospital_phone_linear_layout_style">
+
+                <TextView
+                    style="@style/hotel_hospital_phone_static_text_view_style"
+                    android:text="@string/phone" />
+
+                <TextView
+                    android:id="@+id/hotel_hospital_phone_number_text_view_id"
+                    style="@style/hotel_hospital_phone_value_text_view_style"
+                    tools:text="010 2010 3384" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hotel_hospital_address_text_view_id"
+                style="@style/hotel_hospital_address_text_view_style"
+                tools:text="10 Baradis Street,Suez ,Suez" />
 
         </LinearLayout>
-
-        <LinearLayout style="@style/hotel_hospital_phone_linear_layout_style">
-
-            <TextView
-                android:text="@string/phone"
-                style="@style/hotel_hospital_phone_static_text_view_style" />
-
-            <TextView
-                android:id="@+id/hotel_hospital_phone_number_text_view_id"
-                tools:text="010 2010 3384"
-                style="@style/hotel_hospital_phone_value_text_view_style" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/hotel_hospital_address_text_view_id"
-            tools:text="10 Baradis Street,Suez ,Suez"
-            style="@style/hotel_hospital_address_text_view_style" />
-
     </LinearLayout>
-</LinearLayout>
 
-<TextView style="@style/hotel_hospital_line_between_cards_text_view_style" />
+    <TextView style="@style/hotel_hospital_line_between_cards_text_view_style" />
 
 </LinearLayout>

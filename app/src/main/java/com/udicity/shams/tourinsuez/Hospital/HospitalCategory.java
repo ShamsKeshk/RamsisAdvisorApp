@@ -32,61 +32,60 @@ public class HospitalCategory {
         mCorporationLongMap = corporationLongMap;
     }
 
-    public void setmCorporationName(String mCorporationName) {
-        this.mCorporationName = mCorporationName;
-    }
-
     public String getmCorporationName() {
         return mCorporationName;
     }
 
-    public void setmCorporationAddress(String mCorporationAddress) {
-        this.mCorporationAddress = mCorporationAddress;
+    public void setmCorporationName(String mCorporationName) {
+        this.mCorporationName = mCorporationName;
     }
 
     public String getmCorporationAddress() {
         return mCorporationAddress;
     }
 
-    public void setmCorporationPhone(String mCorporationPhone) {
-        this.mCorporationPhone = mCorporationPhone;
+    public void setmCorporationAddress(String mCorporationAddress) {
+        this.mCorporationAddress = mCorporationAddress;
     }
 
     public String getmCorporationPhone() {
         return mCorporationPhone;
     }
 
-    public void setmCorporationImageResource(int mCorporationImageResource) {
-        this.mCorporationImageResource = mCorporationImageResource;
+    public void setmCorporationPhone(String mCorporationPhone) {
+        this.mCorporationPhone = mCorporationPhone;
     }
 
     public int getmCorporationImageResource() {
         return mCorporationImageResource;
     }
 
-    public void setmCorporationTotalReview(int mCorporationTotalReview) {
-        this.mCorporationTotalReview = mCorporationTotalReview;
+    public void setmCorporationImageResource(int mCorporationImageResource) {
+        this.mCorporationImageResource = mCorporationImageResource;
     }
 
     public int getmCorporationTotalReview() {
         return mCorporationTotalReview;
     }
 
-
-    public void setmCorporationLatMap(double mCorporationLatMap) {
-        this.mCorporationLatMap = mCorporationLatMap;
+    public void setmCorporationTotalReview(int mCorporationTotalReview) {
+        this.mCorporationTotalReview = mCorporationTotalReview;
     }
 
     public double getmCorporationLatMap() {
         return mCorporationLatMap;
     }
 
-    public void setmCorporationLongMap(double mCorporationLongMap) {
-        this.mCorporationLongMap = mCorporationLongMap;
+    public void setmCorporationLatMap(double mCorporationLatMap) {
+        this.mCorporationLatMap = mCorporationLatMap;
     }
 
     public double getmCorporationLongMap() {
         return mCorporationLongMap;
+    }
+
+    public void setmCorporationLongMap(double mCorporationLongMap) {
+        this.mCorporationLongMap = mCorporationLongMap;
     }
 
 }

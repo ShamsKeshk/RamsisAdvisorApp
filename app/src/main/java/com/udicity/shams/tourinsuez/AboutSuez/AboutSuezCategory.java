@@ -13,115 +13,110 @@ public class AboutSuezCategory {
     private String mTopicExplainPartTwo = NO_TEXT_PROVIDED;
     private int mTopicImageResourcePartTwo = NO_IMAGE_PROVIDED;
 
-    public AboutSuezCategory(String topicHeader,String topicExplainPartOne)
-    {
+    public AboutSuezCategory(String topicHeader, String topicExplainPartOne) {
         mTopicHeader = topicHeader;
         mTopicExplainPartOne = topicExplainPartOne;
     }
-    public AboutSuezCategory(String topicHeader,String topicExplainPartOne,int topicImageResourcePartOne)
-    {
-        mTopicHeader = topicHeader;
-        mTopicExplainPartOne = topicExplainPartOne;
-        mTopicImageResourcePartOne = topicImageResourcePartOne;
-    }
-    public AboutSuezCategory(String topicHeader,String topicExplainPartOne,int topicImageResourcePartOne,String topicExplainPartTwo)
-    {
+
+    public AboutSuezCategory(String topicHeader, String topicExplainPartOne, int topicImageResourcePartOne) {
         mTopicHeader = topicHeader;
         mTopicExplainPartOne = topicExplainPartOne;
         mTopicImageResourcePartOne = topicImageResourcePartOne;
-        mTopicExplainPartTwo = topicExplainPartTwo;
     }
-    public AboutSuezCategory(String topicHeader,String topicExplainPartOne,int topicImageResourcePartOne,String topicExplainPartTwo,int topicImageResourcePartTwo)
-    {
+
+    public AboutSuezCategory(String topicHeader, String topicExplainPartOne, int topicImageResourcePartOne, String topicExplainPartTwo) {
         mTopicHeader = topicHeader;
         mTopicExplainPartOne = topicExplainPartOne;
         mTopicImageResourcePartOne = topicImageResourcePartOne;
         mTopicExplainPartTwo = topicExplainPartTwo;
-        mTopicImageResourcePartTwo = topicImageResourcePartTwo;
     }
-    public AboutSuezCategory(String topicHeader,int topicImageResourcePartOne,String topicExplainPartTwo,int topicImageResourcePartTwo)
-    {
+
+    public AboutSuezCategory(String topicHeader, String topicExplainPartOne, int topicImageResourcePartOne, String topicExplainPartTwo, int topicImageResourcePartTwo) {
         mTopicHeader = topicHeader;
+        mTopicExplainPartOne = topicExplainPartOne;
         mTopicImageResourcePartOne = topicImageResourcePartOne;
         mTopicExplainPartTwo = topicExplainPartTwo;
         mTopicImageResourcePartTwo = topicImageResourcePartTwo;
     }
-    public void setmTopicHeader(String topicHeader)
-    {
+
+    public AboutSuezCategory(String topicHeader, int topicImageResourcePartOne, String topicExplainPartTwo, int topicImageResourcePartTwo) {
         mTopicHeader = topicHeader;
+        mTopicImageResourcePartOne = topicImageResourcePartOne;
+        mTopicExplainPartTwo = topicExplainPartTwo;
+        mTopicImageResourcePartTwo = topicImageResourcePartTwo;
     }
-    public String getmTopicHeader()
-    {
+
+    public String getmTopicHeader() {
         return mTopicHeader;
     }
-    public void setmTopicExplainPartOne(String topicExplainPartOne)
-    {
-        mTopicExplainPartOne = topicExplainPartOne;
+
+    public void setmTopicHeader(String topicHeader) {
+        mTopicHeader = topicHeader;
     }
-    public String getmTopicExplainPartOne()
-    {
+
+    public String getmTopicExplainPartOne() {
         return mTopicExplainPartOne;
     }
-    public void setmTopicImageResourcePartOne(int imageResourcePartOne)
-    {
-        mTopicImageResourcePartOne = imageResourcePartOne;
+
+    public void setmTopicExplainPartOne(String topicExplainPartOne) {
+        mTopicExplainPartOne = topicExplainPartOne;
     }
-    public int getmTopicImageResourcePartOne()
-    {
+
+    public int getmTopicImageResourcePartOne() {
         return mTopicImageResourcePartOne;
     }
-    public void setmTopicExplainPartTwo(String topicExplainPartTwo)
-    {
-        mTopicExplainPartTwo = topicExplainPartTwo;
+
+    public void setmTopicImageResourcePartOne(int imageResourcePartOne) {
+        mTopicImageResourcePartOne = imageResourcePartOne;
     }
-    public String getmTopicExplainPartTwo()
-    {
+
+    public String getmTopicExplainPartTwo() {
         return mTopicExplainPartTwo;
     }
-    public void setmTopicImageResourcePartTwo(int imageResourcePartTwo)
-    {
-        mTopicImageResourcePartTwo = imageResourcePartTwo;
+
+    public void setmTopicExplainPartTwo(String topicExplainPartTwo) {
+        mTopicExplainPartTwo = topicExplainPartTwo;
     }
-    public int getmTopicImageResourcePartTwo()
-    {
+
+    public int getmTopicImageResourcePartTwo() {
         return mTopicImageResourcePartTwo;
     }
-    public boolean hasTextOne()
-    {
-        if (mTopicExplainPartOne.matches(NO_TEXT_PROVIDED))
-        {
+
+    public void setmTopicImageResourcePartTwo(int imageResourcePartTwo) {
+        mTopicImageResourcePartTwo = imageResourcePartTwo;
+    }
+
+    public boolean hasTextOne() {
+        if (mTopicExplainPartOne.matches(NO_TEXT_PROVIDED)) {
             return false;
-        }else {
+        } else {
             return true;
         }
 
     }
-    public boolean hasTextTwo()
-    {
-        if (mTopicExplainPartTwo.matches(NO_TEXT_PROVIDED))
-        {
+
+    public boolean hasTextTwo() {
+        if (mTopicExplainPartTwo.matches(NO_TEXT_PROVIDED)) {
             return false;
-        }else {
+        } else {
             return true;
         }
 
     }
-    public boolean hasImageOne()
-    {
-        if (mTopicImageResourcePartOne == NO_IMAGE_PROVIDED)
-        {
+
+    public boolean hasImageOne() {
+        if (mTopicImageResourcePartOne == NO_IMAGE_PROVIDED) {
             return false;
-        }else {
+        } else {
             return true;
         }
 
     }
-    public boolean hasImageTwo()
-    {
-        if (mTopicImageResourcePartTwo == NO_IMAGE_PROVIDED)
-        {
+
+    public boolean hasImageTwo() {
+        if (mTopicImageResourcePartTwo == NO_IMAGE_PROVIDED) {
             return false;
-        }else {
+        } else {
             return true;
         }
 
