@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -27,42 +25,49 @@ public class AboutSuezCategoryAdapter extends ArrayAdapter<AboutSuezCategory> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItems = convertView;
-        if (listItems == null) {
-            listItems = LayoutInflater.from(getContext()).inflate(R.layout.about_suez_list_items, parent, false);
+
+        AboutSuezViewHolder viewHolder;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.about_suez_list_items, parent, false);
+
+            viewHolder = new AboutSuezViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (AboutSuezViewHolder) convertView.getTag();
         }
         AboutSuezCategory currentItem = getItem(position);
-        TextView topicTextView = (TextView) listItems.findViewById(R.id.topic_id);
-        topicTextView.setText(currentItem.getmTopicHeader());
-        TextView textViewOne = (TextView) listItems.findViewById(R.id.topic_one_explain_id);
+
+        assert currentItem != null;
+        viewHolder.getmTopicHeader().setText(currentItem.getmTopicHeader());
+
         if (currentItem.hasTextOne()) {
-            textViewOne.setText(currentItem.getmTopicExplainPartOne());
-            textViewOne.setVisibility(View.VISIBLE);
+            viewHolder.getmTopicOneExplain().setText(currentItem.getmTopicExplainPartOne());
+            viewHolder.getmTopicOneExplain().setVisibility(View.VISIBLE);
         } else {
-            textViewOne.setVisibility(View.GONE);
-        }
-        ImageView imageViewOne = (ImageView) listItems.findViewById(R.id.topic_one_image_view_id);
-        if (currentItem.hasImageOne()) {
-            imageViewOne.setImageResource(currentItem.getmTopicImageResourcePartOne());
-            imageViewOne.setVisibility(View.VISIBLE);
-        } else {
-            imageViewOne.setVisibility(View.GONE);
-        }
-        TextView textViewTwo = (TextView) listItems.findViewById(R.id.topic_two_explain_id);
-        if (currentItem.hasTextTwo()) {
-            textViewTwo.setText(currentItem.getmTopicExplainPartTwo());
-            textViewTwo.setVisibility(View.VISIBLE);
-        } else {
-            textViewTwo.setVisibility(View.GONE);
-        }
-        ImageView imageViewTwo = (ImageView) listItems.findViewById(R.id.topic_two_image_view_id);
-        if (currentItem.hasImageTwo()) {
-            imageViewTwo.setImageResource(currentItem.getmTopicImageResourcePartTwo());
-            imageViewTwo.setVisibility(View.VISIBLE);
-        } else {
-            imageViewTwo.setVisibility(View.GONE);
+            viewHolder.getmTopicOneExplain().setVisibility(View.GONE);
         }
 
-        return listItems;
+        if (currentItem.hasImageOne()) {
+            viewHolder.getmTopicOneImage().setImageResource(currentItem.getmTopicImageResourcePartOne());
+            viewHolder.getmTopicOneImage().setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.getmTopicOneImage().setVisibility(View.GONE);
+        }
+
+        if (currentItem.hasTextTwo()) {
+            viewHolder.getmTopicTwoExplain().setText(currentItem.getmTopicExplainPartTwo());
+            viewHolder.getmTopicTwoExplain().setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.getmTopicTwoExplain().setVisibility(View.GONE);
+        }
+
+        if (currentItem.hasImageTwo()) {
+            viewHolder.getmTopicTwoImage().setImageResource(currentItem.getmTopicImageResourcePartTwo());
+            viewHolder.getmTopicTwoImage().setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.getmTopicTwoImage().setVisibility(View.GONE);
+        }
+
+        return convertView;
     }
 }

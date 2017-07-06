@@ -17,6 +17,7 @@ public class AboutSuezActivity extends NavigationDrawerActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         FrameLayout frameLayout = (FrameLayout) findViewById(R.id.navigation_drawer_content_frame_layout_id);
         getLayoutInflater().inflate(R.layout.about_suez_activity, frameLayout);
 
@@ -28,4 +29,5 @@ public class AboutSuezActivity extends NavigationDrawerActivity {
         aboutSuezViewPager.setVisibility(View.VISIBLE);
         tabLayout.setupWithViewPager(aboutSuezViewPager);
     }
+
 }

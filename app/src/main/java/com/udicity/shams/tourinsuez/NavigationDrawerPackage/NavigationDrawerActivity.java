@@ -29,7 +29,7 @@ import com.udicity.shams.tourinsuez.hotel.HotelActivity;
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private String CATEGORY_ID ;
+    private String CATEGORY_ID;
     private int selectedCategoryId;
 
     @Override

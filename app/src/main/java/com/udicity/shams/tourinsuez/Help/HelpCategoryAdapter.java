@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -27,20 +25,29 @@ public class HelpCategoryAdapter extends ArrayAdapter<HelpCategory> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View helpListItems = convertView;
-        if (helpListItems == null) {
-            helpListItems = LayoutInflater.from(getContext()).inflate(R.layout.help_item_list, parent, false);
-        }
-        HelpCategory currentView = getItem(position);
-        ImageView helpProviderImageView = (ImageView) helpListItems.findViewById(R.id.help_provider_image_view);
-        helpProviderImageView.setImageResource(currentView.getmHelpProviderImageResource());
-        TextView nameTextView = (TextView) helpListItems.findViewById(R.id.help_provider_name_text_view);
-        nameTextView.setText(currentView.getmHelpProviderName());
-        TextView numberTextView = (TextView) helpListItems.findViewById(R.id.help_provider_phone_number_text_view);
-        numberTextView.setText(currentView.getmHelpProviderPhoneNumber());
-        TextView addressTextView = (TextView) helpListItems.findViewById(R.id.help_provider_address_text_view);
-        addressTextView.setText(currentView.getmHelpProviderAddress());
 
-        return helpListItems;
+        HelpViewHolder viewHolder;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.help_item_list, parent, false);
+
+            viewHolder = new HelpViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (HelpViewHolder) convertView.getTag();
+        }
+
+        HelpCategory currentView = getItem(position);
+
+        assert currentView != null;
+
+        viewHolder.getHelpProviderImage().setImageResource(currentView.getmHelpProviderImageResource());
+
+        viewHolder.getHelpProviderName().setText(currentView.getmHelpProviderName());
+
+        viewHolder.getHelpProviderPhone().setText(currentView.getmHelpProviderPhoneNumber());
+
+        viewHolder.getHelpProviderAddress().setText(currentView.getmHelpProviderAddress());
+
+        return convertView;
     }
 }

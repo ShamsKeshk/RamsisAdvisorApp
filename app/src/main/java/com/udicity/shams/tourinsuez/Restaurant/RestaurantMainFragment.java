@@ -27,7 +27,7 @@ public class RestaurantMainFragment extends Fragment {
         ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant(getContext());
 
         ListView listView = (ListView) rootView.findViewById(R.id.restaurant_food_filter_list_view);
-        RestaurantCategoryAdapter restaurantCategoryAdapter = new RestaurantCategoryAdapter(getActivity(), restaurantCategoryArrayList,getContext());
+        RestaurantCategoryAdapter restaurantCategoryAdapter = new RestaurantCategoryAdapter(getActivity(), restaurantCategoryArrayList, getContext());
         listView.setAdapter(restaurantCategoryAdapter);
         return rootView;
     }

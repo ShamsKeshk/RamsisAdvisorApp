@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -28,27 +26,30 @@ public class HospitalCategoryAdapter extends ArrayAdapter<HospitalCategory> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View hospitalListItems = convertView;
-        if (hospitalListItems == null) {
-            hospitalListItems = LayoutInflater.from(getContext()).inflate(R.layout.hotel_hospital_list_items, parent, false);
+        HospitalViewHolder viewHolder;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.hotel_hospital_list_items, parent, false);
+
+            viewHolder = new HospitalViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (HospitalViewHolder) convertView.getTag();
         }
+
         HospitalCategory currentHospital = getItem(position);
 
-        ImageView hospitalImageView = (ImageView) hospitalListItems.findViewById(R.id.hotel_hospital_image_view_id);
-        hospitalImageView.setImageResource(currentHospital.getmCorporationImageResource());
+        assert currentHospital != null;
 
-        TextView hospitalNameTextView = (TextView) hospitalListItems.findViewById(R.id.hotel_hospital_name_text_view_id);
-        hospitalNameTextView.setText(currentHospital.getmCorporationName());
+        viewHolder.getHospitalImage().setImageResource(currentHospital.getmCorporationImageResource());
 
-        TextView hospitalReviewTextView = (TextView) hospitalListItems.findViewById(R.id.hotel_hospital_number_review_text_view_id);
-        hospitalReviewTextView.setText(String.valueOf(currentHospital.getmCorporationTotalReview()));
+        viewHolder.getHospitalName().setText(currentHospital.getmCorporationName());
 
-        TextView hospitalPhoneTextView = (TextView) hospitalListItems.findViewById(R.id.hotel_hospital_phone_number_text_view_id);
-        hospitalPhoneTextView.setText(currentHospital.getmCorporationPhone());
+        viewHolder.getHospitalReview().setText(String.valueOf(currentHospital.getmCorporationTotalReview()));
 
-        TextView hospitalAddressTextView = (TextView) hospitalListItems.findViewById(R.id.hotel_hospital_address_text_view_id);
-        hospitalAddressTextView.setText(currentHospital.getmCorporationAddress());
+        viewHolder.getHospitalPhone().setText(currentHospital.getmCorporationPhone());
 
-        return hospitalListItems;
+        viewHolder.getHospitalAddress().setText(currentHospital.getmCorporationAddress());
+
+        return convertView;
     }
 }

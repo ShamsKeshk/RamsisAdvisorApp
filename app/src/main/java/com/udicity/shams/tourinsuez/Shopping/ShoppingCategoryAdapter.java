@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -33,42 +31,46 @@ public class ShoppingCategoryAdapter extends ArrayAdapter<ShoppingCategory> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View shoppingListItem = convertView;
-        if (shoppingListItem == null) {
-            shoppingListItem = LayoutInflater.from(getContext()).inflate(R.layout.cafe__shopping_restaurants_list_items, parent, false);
+        ShoppingViewHolder viewHolder;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.cafe__shopping_restaurants_list_items, parent, false);
+
+            viewHolder = new ShoppingViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ShoppingViewHolder) convertView.getTag();
         }
+
         ShoppingCategory currentShoppingItem = getItem(position);
 
-        ImageView shoppingImageView = (ImageView) shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_image_view_id);
-        shoppingImageView.setImageResource(currentShoppingItem.getShopImageResource());
+        assert currentShoppingItem != null;
 
-        TextView shoppingName = (TextView) shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_name_text_view_id);
-        shoppingName.setText(currentShoppingItem.getShopName());
+        viewHolder.getShoppingImage().setImageResource(currentShoppingItem.getShopImageResource());
 
-        TextView shoppingTotalReview = (TextView) shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_review_number_text_view_id);
-        shoppingTotalReview.setText(String.valueOf(currentShoppingItem.getShopTotalReview()));
+        viewHolder.getShoppingName().setText(currentShoppingItem.getShopName());
 
-        TextView shoppingOpenTime = (TextView) shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
+        viewHolder.getShoppingTotalReview().setText(String.valueOf(currentShoppingItem.getShopTotalReview()));
+
         String openTime;
         if (currentShoppingItem.getShopTimeOpen() <= 12) {
             openTime = currentShoppingItem.getShopTimeOpen() + context.getString(R.string.am);
-            shoppingOpenTime.setText(openTime);
+            viewHolder.getShoppingOpenTime().setText(openTime);
         } else {
             openTime = currentShoppingItem.getShopTimeOpen() + context.getString(R.string.pm);
-            shoppingOpenTime.setText(openTime);
+            viewHolder.getShoppingOpenTime().setText(openTime);
         }
-        TextView shoppingCloseTime = (TextView) shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
-        String closeTime ;
+
+        String closeTime;
         if (currentShoppingItem.getShopTimeOpen() <= 12) {
             closeTime = currentShoppingItem.getShopTimeClose() + context.getString(R.string.am);
-            shoppingCloseTime.setText(closeTime);
+            viewHolder.getShoppingCloseTime().setText(closeTime);
         } else {
             closeTime = currentShoppingItem.getShopTimeClose() + context.getString(R.string.pm);
-            shoppingCloseTime.setText(closeTime);
+            viewHolder.getShoppingCloseTime().setText(closeTime);
         }
-        TextView shoppingAddress = (TextView) shoppingListItem.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
-        shoppingAddress.setText(currentShoppingItem.getShopAddress());
 
-        return shoppingListItem;
+        viewHolder.getShoppingAddress().setText(currentShoppingItem.getShopAddress());
+
+        return convertView;
     }
 }

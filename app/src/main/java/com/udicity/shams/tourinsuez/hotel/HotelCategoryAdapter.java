@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -23,7 +21,7 @@ public class HotelCategoryAdapter extends ArrayAdapter<HotelCategory> {
 
     private Context context;
 
-    public HotelCategoryAdapter(Activity activity, ArrayList<HotelCategory> hotelCategoryArrayList,Context context) {
+    public HotelCategoryAdapter(Activity activity, ArrayList<HotelCategory> hotelCategoryArrayList, Context context) {
         super(activity, 0, hotelCategoryArrayList);
         this.context = context;
     }
@@ -31,24 +29,33 @@ public class HotelCategoryAdapter extends ArrayAdapter<HotelCategory> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View hotelListItemView = convertView;
-        if (hotelListItemView == null) {
-            hotelListItemView = LayoutInflater.from(getContext()).inflate(R.layout.hotel_hospital_list_items, parent, false);
+
+        HotelViewHolder viewHolder;
+
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.hotel_hospital_list_items, parent, false);
+
+            viewHolder = new HotelViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (HotelViewHolder) convertView.getTag();
         }
+
         HotelCategory currentHotel = getItem(position);
-        TextView hotelNameTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_hospital_name_text_view_id);
-        hotelNameTextView.setText(currentHotel.getmHotelName());
-        TextView reviewTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_hospital_number_review_text_view_id);
-        String hotelReview = currentHotel.getmFinalReview() + "\t"+context.getString(R.string.reviews);
-        reviewTextView.setText(hotelReview);
-        ImageView imageView = (ImageView) hotelListItemView.findViewById(R.id.hotel_hospital_image_view_id);
-        imageView.setImageResource(currentHotel.getmHotelImageResource());
 
-        TextView hotelPhoneTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_hospital_phone_number_text_view_id);
-        hotelPhoneTextView.setText(currentHotel.getmHotelPhoneNumber());
-        TextView hotelAddressTextView = (TextView) hotelListItemView.findViewById(R.id.hotel_hospital_address_text_view_id);
-        hotelAddressTextView.setText(currentHotel.getmHotelAddress());
+        assert currentHotel != null;
 
-        return hotelListItemView;
+        viewHolder.getHotelName().setText(currentHotel.getmHotelName());
+
+        String hotelReview = currentHotel.getmFinalReview() + "\t" + context.getString(R.string.reviews);
+        viewHolder.getHotelReview().setText(hotelReview);
+
+        viewHolder.getHotelImage().setImageResource(currentHotel.getmHotelImageResource());
+
+        viewHolder.getHotelPhone().setText(currentHotel.getmHotelPhoneNumber());
+
+        viewHolder.getHotelAddress().setText(currentHotel.getmHotelAddress());
+
+        return convertView;
     }
 }

@@ -65,7 +65,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
     public void sendToIntent(Category category) {
         Intent intent;
-        String CATEGORY_ID =  getString(R.string.category_id);
+        String CATEGORY_ID = getString(R.string.category_id);
 
         switch (category.getmCategoryId()) {
             case 1:

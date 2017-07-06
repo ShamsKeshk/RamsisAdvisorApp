@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -28,24 +26,28 @@ public class EventsCategoryAdapter extends ArrayAdapter<EventsCategory> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View eventsListView = convertView;
-        if (eventsListView == null) {
-            eventsListView = LayoutInflater.from(getContext()).inflate(R.layout.events_list_items, parent, false);
+        EventsViewHolder viewHolder;
+
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.events_list_items, parent, false);
+
+            viewHolder = new EventsViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (EventsViewHolder) convertView.getTag();
         }
+
         EventsCategory currentEvent = getItem(position);
+        assert currentEvent != null;
 
-        ImageView eventImageView = (ImageView) eventsListView.findViewById(R.id.event_image_view_id);
-        eventImageView.setImageResource(currentEvent.getmEventImageResource());
+        viewHolder.getEventImage().setImageResource(currentEvent.getmEventImageResource());
 
-        TextView eventNameTextView = (TextView) eventsListView.findViewById(R.id.event_name_text_view_id);
-        eventNameTextView.setText(currentEvent.getmEventName());
+        viewHolder.getEventName().setText(currentEvent.getmEventName());
 
-        TextView eventStartDateTextView = (TextView) eventsListView.findViewById(R.id.event_start_date_info_text_view_id);
-        eventStartDateTextView.setText(currentEvent.getmEventStartDate());
+        viewHolder.getEventStartDate().setText(currentEvent.getmEventStartDate());
 
-        TextView eventAddressTextView = (TextView) eventsListView.findViewById(R.id.event_address_text_view_id);
-        eventAddressTextView.setText(currentEvent.getmEventAddress());
+        viewHolder.getEventAddress().setText(currentEvent.getmEventAddress());
 
-        return eventsListView;
+        return convertView;
     }
 }

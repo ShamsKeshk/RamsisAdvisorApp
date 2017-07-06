@@ -25,7 +25,7 @@ public class DataSourcer {
     public static ArrayList<Category> getCategories(Context context) {
 
         ArrayList<Category> categoryArrayList = new ArrayList<Category>();
-        categoryArrayList.add(new Category(context.getString(R.string.about_suez_category), R.drawable.icon_info_green_30px, 1));
+        categoryArrayList.add(new Category(context.getString(R.string.about_tab_category), R.drawable.icon_info_green_30px, 1));
         categoryArrayList.add(new Category(context.getString(R.string.hotel_category), R.drawable.icon_hotel_green_30px, 2));
         categoryArrayList.add(new Category(context.getString(R.string.restaurant_category), R.drawable.icon_restaurant_green_30px, 3));
         categoryArrayList.add(new Category(context.getString(R.string.tourism_category), R.drawable.icon_tourism_green_30px, 4));

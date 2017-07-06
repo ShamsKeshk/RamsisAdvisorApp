@@ -28,7 +28,7 @@ public class HotelFragment extends Fragment {
 
         ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel(getContext());
         ListView listView = (ListView) rootView.findViewById(R.id.hotel_list_view);
-        HotelCategoryAdapter categoryAdapter = new HotelCategoryAdapter(getActivity(), hotelCategoryArrayList,getContext());
+        HotelCategoryAdapter categoryAdapter = new HotelCategoryAdapter(getActivity(), hotelCategoryArrayList, getContext());
         listView.setAdapter(categoryAdapter);
         Toast.makeText(getActivity(), R.string.hotel_category, Toast.LENGTH_SHORT).show();
 
