@@ -24,7 +24,8 @@
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:numStars="5" />
+                    android:numStars="5"
+                    />
 
                 <TextView
                     android:id="@+id/cafe_shopping_restaurant_review_number_text_view_id"

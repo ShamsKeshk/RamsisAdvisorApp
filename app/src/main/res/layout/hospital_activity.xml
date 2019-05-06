@@ -11,7 +11,7 @@
         <include layout="@layout/maps_activity" />
     </FrameLayout>
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/hospital_view_pager"
         style="@style/view_pager_style" />
 

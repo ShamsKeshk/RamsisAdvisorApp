@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutSuez.MainAboutFragment"
+    style="@style/category_activity_style">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/about_suez_tab_view_pager_blank_fragment"
+        style="@style/layout_size" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/about_suez_view_pager_blank_fragment"
+        style="@style/view_pager_style" />
+
+</LinearLayout>

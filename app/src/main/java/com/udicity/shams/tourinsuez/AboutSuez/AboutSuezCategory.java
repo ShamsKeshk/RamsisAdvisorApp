@@ -87,38 +87,22 @@ public class AboutSuezCategory {
     }
 
     public boolean hasTextOne() {
-        if (mTopicExplainPartOne.matches(NO_TEXT_PROVIDED)) {
-            return false;
-        } else {
-            return true;
-        }
+        return !mTopicExplainPartOne.matches(NO_TEXT_PROVIDED);
 
     }
 
     public boolean hasTextTwo() {
-        if (mTopicExplainPartTwo.matches(NO_TEXT_PROVIDED)) {
-            return false;
-        } else {
-            return true;
-        }
+        return !mTopicExplainPartTwo.matches(NO_TEXT_PROVIDED);
 
     }
 
     public boolean hasImageOne() {
-        if (mTopicImageResourcePartOne == NO_IMAGE_PROVIDED) {
-            return false;
-        } else {
-            return true;
-        }
+        return mTopicImageResourcePartOne != NO_IMAGE_PROVIDED;
 
     }
 
     public boolean hasImageTwo() {
-        if (mTopicImageResourcePartTwo == NO_IMAGE_PROVIDED) {
-            return false;
-        } else {
-            return true;
-        }
+        return mTopicImageResourcePartTwo != NO_IMAGE_PROVIDED;
 
     }
 }

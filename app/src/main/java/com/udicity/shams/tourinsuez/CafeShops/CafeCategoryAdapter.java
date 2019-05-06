@@ -2,13 +2,15 @@ package com.udicity.shams.tourinsuez.CafeShops;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.squareup.picasso.Picasso;
 import com.udicity.shams.tourinsuez.R;
 
 import java.util.ArrayList;
@@ -44,7 +46,10 @@ public class CafeCategoryAdapter extends ArrayAdapter<CafeCategory> {
 
         assert currentCafeItem != null;
 
-        viewHolder.getCafeImage().setImageResource(currentCafeItem.getCafeImageResource());
+        Picasso.get()
+                .load(currentCafeItem.getCafeImageResource())
+                .into(viewHolder.getCafeImage());
+
         viewHolder.getCafeName().setText(currentCafeItem.getCafeName());
         viewHolder.getCafeTotalReview().setText(String.valueOf(currentCafeItem.getCafeTotalReview()));
 
@@ -67,6 +72,8 @@ public class CafeCategoryAdapter extends ArrayAdapter<CafeCategory> {
         }
 
         viewHolder.getCafeAddress().setText(currentCafeItem.getCafeAddress());
+        viewHolder.getRatingBar().setNumStars(6);
+        viewHolder.getRatingBar().setRating(2.5f);
 
         return convertView;
     }

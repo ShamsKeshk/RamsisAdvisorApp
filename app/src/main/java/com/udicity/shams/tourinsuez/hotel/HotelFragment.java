@@ -1,12 +1,13 @@
 package com.udicity.shams.tourinsuez.hotel;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -27,7 +28,7 @@ public class HotelFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.hotel_main_fragment, container, false);
 
         ArrayList<HotelCategory> hotelCategoryArrayList = DataSourcer.getHotel(getContext());
-        ListView listView = (ListView) rootView.findViewById(R.id.hotel_list_view);
+        ListView listView = rootView.findViewById(R.id.hotel_list_view);
         HotelCategoryAdapter categoryAdapter = new HotelCategoryAdapter(getActivity(), hotelCategoryArrayList, getContext());
         listView.setAdapter(categoryAdapter);
         Toast.makeText(getActivity(), R.string.hotel_category, Toast.LENGTH_SHORT).show();

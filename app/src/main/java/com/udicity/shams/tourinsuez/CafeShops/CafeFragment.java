@@ -1,11 +1,12 @@
 package com.udicity.shams.tourinsuez.CafeShops;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -26,7 +27,7 @@ public class CafeFragment extends Fragment {
 
         ArrayList<CafeCategory> cafeCategoryArrayList = DataSourcer.getCafePlaces(getContext());
         CafeCategoryAdapter cafeCategoryAdapter = new CafeCategoryAdapter(getActivity(), cafeCategoryArrayList, getContext());
-        ListView listView = (ListView) rootView.findViewById(R.id.cafe_list_view);
+        ListView listView = rootView.findViewById(R.id.cafe_list_view);
         listView.setAdapter(cafeCategoryAdapter);
         return rootView;
     }

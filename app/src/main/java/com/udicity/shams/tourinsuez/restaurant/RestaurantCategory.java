@@ -1,4 +1,4 @@
-package com.udicity.shams.tourinsuez.Restaurant;
+package com.udicity.shams.tourinsuez.restaurant;
 
 public class RestaurantCategory {
 

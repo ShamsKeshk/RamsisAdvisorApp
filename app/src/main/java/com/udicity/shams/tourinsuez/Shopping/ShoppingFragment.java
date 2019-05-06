@@ -1,11 +1,12 @@
 package com.udicity.shams.tourinsuez.Shopping;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -26,7 +27,7 @@ public class ShoppingFragment extends Fragment {
 
         ArrayList<ShoppingCategory> shoppingCategoryArrayList = DataSourcer.getShoppingPlaces(getContext());
         ShoppingCategoryAdapter shoppingCategoryAdapter = new ShoppingCategoryAdapter(getActivity(), shoppingCategoryArrayList, getContext());
-        ListView listView = (ListView) rootView.findViewById(R.id.shopping_list_view);
+        ListView listView = rootView.findViewById(R.id.shopping_list_view);
         listView.setAdapter(shoppingCategoryAdapter);
 
         return rootView;

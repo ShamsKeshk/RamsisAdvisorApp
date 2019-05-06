@@ -19,11 +19,11 @@ public class AboutSuezViewHolder {
     private ImageView mTopicTwoImage;
 
     public AboutSuezViewHolder(View view) {
-        this.mTopicHeader = (TextView) view.findViewById(R.id.topic_id);
-        this.mTopicOneExplain = (TextView) view.findViewById(R.id.topic_one_explain_id);
-        this.mTopicOneImage = (ImageView) view.findViewById(R.id.topic_one_image_view_id);
-        this.mTopicTwoExplain = (TextView) view.findViewById(R.id.topic_two_explain_id);
-        this.mTopicTwoImage = (ImageView) view.findViewById(R.id.topic_two_image_view_id);
+        this.mTopicHeader = view.findViewById(R.id.topic_id);
+        this.mTopicOneExplain = view.findViewById(R.id.topic_one_explain_id);
+        this.mTopicOneImage = view.findViewById(R.id.topic_one_image_view_id);
+        this.mTopicTwoExplain = view.findViewById(R.id.topic_two_explain_id);
+        this.mTopicTwoImage = view.findViewById(R.id.topic_two_image_view_id);
     }
 
     public TextView getmTopicHeader() {

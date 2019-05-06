@@ -1,11 +1,12 @@
-package com.udicity.shams.tourinsuez.Restaurant;
+package com.udicity.shams.tourinsuez.restaurant;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -26,7 +27,7 @@ public class RestaurantMainFragment extends Fragment {
 
         ArrayList<RestaurantCategory> restaurantCategoryArrayList = DataSourcer.getRestaurant(getContext());
 
-        ListView listView = (ListView) rootView.findViewById(R.id.restaurant_food_filter_list_view);
+        ListView listView = rootView.findViewById(R.id.restaurant_food_filter_list_view);
         RestaurantCategoryAdapter restaurantCategoryAdapter = new RestaurantCategoryAdapter(getActivity(), restaurantCategoryArrayList, getContext());
         listView.setAdapter(restaurantCategoryAdapter);
         return rootView;

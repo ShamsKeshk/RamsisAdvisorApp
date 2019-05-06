@@ -1,13 +1,15 @@
 package com.udicity.shams.tourinsuez.AboutSuez;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.squareup.picasso.Picasso;
 import com.udicity.shams.tourinsuez.R;
 
 import java.util.ArrayList;
@@ -48,7 +50,9 @@ public class AboutSuezCategoryAdapter extends ArrayAdapter<AboutSuezCategory> {
         }
 
         if (currentItem.hasImageOne()) {
-            viewHolder.getmTopicOneImage().setImageResource(currentItem.getmTopicImageResourcePartOne());
+            Picasso.get()
+                    .load(currentItem.getmTopicImageResourcePartOne())
+                    .into(viewHolder.getmTopicOneImage());
             viewHolder.getmTopicOneImage().setVisibility(View.VISIBLE);
         } else {
             viewHolder.getmTopicOneImage().setVisibility(View.GONE);
@@ -62,7 +66,9 @@ public class AboutSuezCategoryAdapter extends ArrayAdapter<AboutSuezCategory> {
         }
 
         if (currentItem.hasImageTwo()) {
-            viewHolder.getmTopicTwoImage().setImageResource(currentItem.getmTopicImageResourcePartTwo());
+            Picasso.get()
+                    .load(currentItem.getmTopicImageResourcePartTwo())
+                    .into(viewHolder.getmTopicTwoImage());
             viewHolder.getmTopicTwoImage().setVisibility(View.VISIBLE);
         } else {
             viewHolder.getmTopicTwoImage().setVisibility(View.GONE);

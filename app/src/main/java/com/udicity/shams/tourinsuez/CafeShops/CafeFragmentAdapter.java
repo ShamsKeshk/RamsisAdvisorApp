@@ -1,9 +1,10 @@
 package com.udicity.shams.tourinsuez.CafeShops;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -17,13 +18,14 @@ public class CafeFragmentAdapter extends FragmentPagerAdapter {
 
     private Context context;
 
-    public CafeFragmentAdapter(FragmentManager fm, Context context) {
-        super(fm);
+    public CafeFragmentAdapter(FragmentManager fragmentManager, Context context) {
+        super(fragmentManager);
         this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
+
         if (position == 0) {
             return new CafeFragment();
         } else {

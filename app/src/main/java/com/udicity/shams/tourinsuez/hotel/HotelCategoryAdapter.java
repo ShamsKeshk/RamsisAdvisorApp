@@ -2,13 +2,15 @@ package com.udicity.shams.tourinsuez.hotel;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.squareup.picasso.Picasso;
 import com.udicity.shams.tourinsuez.R;
 
 import java.util.ArrayList;
@@ -50,7 +52,9 @@ public class HotelCategoryAdapter extends ArrayAdapter<HotelCategory> {
         String hotelReview = currentHotel.getmFinalReview() + "\t" + context.getString(R.string.reviews);
         viewHolder.getHotelReview().setText(hotelReview);
 
-        viewHolder.getHotelImage().setImageResource(currentHotel.getmHotelImageResource());
+        Picasso.get()
+                .load(currentHotel.getmHotelImageResource())
+                .into(viewHolder.getHotelImage());
 
         viewHolder.getHotelPhone().setText(currentHotel.getmHotelPhoneNumber());
 

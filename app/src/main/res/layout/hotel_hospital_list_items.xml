@@ -8,7 +8,7 @@
         <ImageView
             android:id="@+id/hotel_hospital_image_view_id"
             style="@style/image_hotel_hospital_card_style"
-            android:src="@drawable/hotel_try_up" />
+            android:src="@drawable/hotel_static" />
 
         <LinearLayout style="@style/main_hotel_hospital_linear_layout_card_discription_style">
 

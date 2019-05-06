@@ -162,7 +162,6 @@
     <string name="suez_police_supply_investigation_address">0623331070</string>
     <string name="suez_traffic_management_address">0623331082</string>
     <string name="reviews"> Reviews</string>
-    <string name="category_id">categoryId</string>
 
     "Suez Police Station", "0623331075", R.drawable.police, "Address Not Provided", -33.2541,
     -87.254));

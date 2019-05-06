@@ -2,9 +2,9 @@ package com.udicity.shams.tourinsuez.GoogleMap;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,12 +13,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.udicity.shams.tourinsuez.Hospital.HospitalCategory;
 import com.udicity.shams.tourinsuez.NavigationDrawerPackage.ScrollingActivity;
 import com.udicity.shams.tourinsuez.R;
-import com.udicity.shams.tourinsuez.Restaurant.RestaurantCategory;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
 import com.udicity.shams.tourinsuez.hotel.HotelCategory;
+import com.udicity.shams.tourinsuez.restaurant.RestaurantCategory;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab_map);
+        FloatingActionButton floatingActionButton = findViewById(R.id.fab_map);
         floatingActionButton.setVisibility(View.VISIBLE);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

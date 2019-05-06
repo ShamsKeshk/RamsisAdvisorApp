@@ -19,11 +19,11 @@ public class HospitalViewHolder {
     private TextView hospitalAddress;
 
     public HospitalViewHolder(View view) {
-        this.hospitalImage = (ImageView) view.findViewById(R.id.hotel_hospital_image_view_id);
-        this.hospitalName = (TextView) view.findViewById(R.id.hotel_hospital_name_text_view_id);
-        this.hospitalReview = (TextView) view.findViewById(R.id.hotel_hospital_number_review_text_view_id);
-        this.hospitalPhone = (TextView) view.findViewById(R.id.hotel_hospital_phone_number_text_view_id);
-        this.hospitalAddress = (TextView) view.findViewById(R.id.hotel_hospital_address_text_view_id);
+        this.hospitalImage = view.findViewById(R.id.hotel_hospital_image_view_id);
+        this.hospitalName = view.findViewById(R.id.hotel_hospital_name_text_view_id);
+        this.hospitalReview = view.findViewById(R.id.hotel_hospital_number_review_text_view_id);
+        this.hospitalPhone = view.findViewById(R.id.hotel_hospital_phone_number_text_view_id);
+        this.hospitalAddress = view.findViewById(R.id.hotel_hospital_address_text_view_id);
     }
 
     public ImageView getHospitalImage() {

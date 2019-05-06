@@ -9,10 +9,10 @@ import com.udicity.shams.tourinsuez.Events.EventsCategory;
 import com.udicity.shams.tourinsuez.Help.HelpCategory;
 import com.udicity.shams.tourinsuez.Hospital.HospitalCategory;
 import com.udicity.shams.tourinsuez.R;
-import com.udicity.shams.tourinsuez.Restaurant.RestaurantCategory;
 import com.udicity.shams.tourinsuez.Shopping.ShoppingCategory;
 import com.udicity.shams.tourinsuez.TourismPlaces.TourismCategory;
 import com.udicity.shams.tourinsuez.hotel.HotelCategory;
+import com.udicity.shams.tourinsuez.restaurant.RestaurantCategory;
 
 import java.util.ArrayList;
 
@@ -66,13 +66,13 @@ public class DataSourcer {
 
         ArrayList<HotelCategory> hotelCategoryArrayList = new ArrayList<HotelCategory>();
 
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.summer_palace_hotel), 1500, R.drawable.hotel_try_up, context.getString(R.string.summer_palace_phone_number), context.getString(R.string.summer_palace_address), 29.946409, 32.565380));
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.red_sea), 1500, R.drawable.hotel_try_up, context.getString(R.string.red_sea_phone_number), context.getString(R.string.red_sea_hotel_address), 29.947334, 32.570883));
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.green_house), 1500, R.drawable.hotel_try_up, context.getString(R.string.green_house_phone_number), context.getString(R.string.green_house_address), 29.960441, 32.560020));
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.bonita_hotel), 1500, R.drawable.hotel_try_up, context.getString(R.string.bonita_hotel_phone_number), context.getString(R.string.bonita_hotel_address), 29.966706, 32.549742));
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.victory_hotel), 1500, R.drawable.hotel_try_up, context.getString(R.string.victory_hotel_phone_number), context.getString(R.string.victory_hotel_address), 29.977887, 32.542414));
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.le_printemps_el_sokhna), 1500, R.drawable.hotel_try_up, context.getString(R.string.le_printemps_el_sokhna_phone_number), context.getString(R.string.le_printemps_el_sokhna_address), 29.905610, 32.455479));
-        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.horizon_el_wady_hotel), 1500, R.drawable.hotel_try_up, context.getString(R.string.horizon_el_wady_hotel_phone_number), context.getString(R.string.horizon_el_wady_hotel_address), 29.667351, 32.356301));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.summer_palace_hotel), 1500, R.drawable.hotel_static, context.getString(R.string.summer_palace_phone_number), context.getString(R.string.summer_palace_address), 29.946409, 32.565380));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.red_sea), 1500, R.drawable.hotel_static, context.getString(R.string.red_sea_phone_number), context.getString(R.string.red_sea_hotel_address), 29.947334, 32.570883));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.green_house), 1500, R.drawable.hotel_static, context.getString(R.string.green_house_phone_number), context.getString(R.string.green_house_address), 29.960441, 32.560020));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.bonita_hotel), 1500, R.drawable.hotel_static, context.getString(R.string.bonita_hotel_phone_number), context.getString(R.string.bonita_hotel_address), 29.966706, 32.549742));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.victory_hotel), 1500, R.drawable.hotel_static, context.getString(R.string.victory_hotel_phone_number), context.getString(R.string.victory_hotel_address), 29.977887, 32.542414));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.le_printemps_el_sokhna), 1500, R.drawable.hotel_static, context.getString(R.string.le_printemps_el_sokhna_phone_number), context.getString(R.string.le_printemps_el_sokhna_address), 29.905610, 32.455479));
+        hotelCategoryArrayList.add(new HotelCategory(context.getString(R.string.horizon_el_wady_hotel), 1500, R.drawable.hotel_static, context.getString(R.string.horizon_el_wady_hotel_phone_number), context.getString(R.string.horizon_el_wady_hotel_address), 29.667351, 32.356301));
 
         return hotelCategoryArrayList;
     }
@@ -80,18 +80,18 @@ public class DataSourcer {
     public static ArrayList<RestaurantCategory> getRestaurant(Context context) {
 
         ArrayList<RestaurantCategory> restaurantCategoryArrayList = new ArrayList<RestaurantCategory>();
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.el_masry_restaurant_name), context.getString(R.string.el_masry_phone_number), 1422, 9, 22, context.getString(R.string.el_masry_address), 29.965445, 32.553419));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.new_dolphin), context.getString(R.string.new_dolphin_phone_number), 1220, 9, 23, context.getString(R.string.new_dolphin_address), 29.961058, 32.547325));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.career_builder_pizza), context.getString(R.string.career_builder_pizaa_phone_number), 1422, 9, 21, context.getString(R.string.career_builder_pizaa_address), 30.000076, 32.490196));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.fares_seafood), context.getString(R.string.fares_seefood), 1422, 9, 1, context.getString(R.string.fares_seefood_address), 29.960793, 32.545023));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.sea_side), context.getString(R.string.sea_side_phone_number), 1422, 9, 23, context.getString(R.string.sea_side_address), 29.956671, 32.544100));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.el_haty), context.getString(R.string.el_haty_phone_number), 1422, 9, 2, context.getString(R.string.el_haty_address), 29.961924, 32.549155));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.cook_door), context.getString(R.string.cook_door_phone_number), 1422, 9, 21, context.getString(R.string.cook_door_address), 29.966407, 32.554101));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.castello), context.getString(R.string.castello_phone_number), 1422, 9, 1, context.getString(R.string.castello_address), 29.966575, 32.554290));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.el_gaser_sea_food), context.getString(R.string.el_gaser_sea_food_phone_number), 1422, 9, 22, context.getString(R.string.el_gaser_sea_food_address), 29.964299, 32.557682));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.awlad_wares), context.getString(R.string.awlad_wares_phone_number), 1422, 9, 3, context.getString(R.string.awlad_wares_address), 29.965966, 32.554887));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.le_gusto_restaurant), context.getString(R.string.le_gusto_phone_number), 1422, 9, 22, context.getString(R.string.le_gusto_address), 29.964283, 32.534114));
-        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant_img, context.getString(R.string.shakshook_restaurant), context.getString(R.string.shakshook_phone_number), 1422, 9, 1, context.getString(R.string.shakshook_address), 29.964745, 32.557194));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.el_masry_restaurant_name), context.getString(R.string.el_masry_phone_number), 1422, 9, 22, context.getString(R.string.el_masry_address), 29.965445, 32.553419));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.new_dolphin), context.getString(R.string.new_dolphin_phone_number), 1220, 9, 23, context.getString(R.string.new_dolphin_address), 29.961058, 32.547325));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.career_builder_pizza), context.getString(R.string.career_builder_pizaa_phone_number), 1422, 9, 21, context.getString(R.string.career_builder_pizaa_address), 30.000076, 32.490196));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.fares_seafood), context.getString(R.string.fares_seefood), 1422, 9, 1, context.getString(R.string.fares_seefood_address), 29.960793, 32.545023));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.sea_side), context.getString(R.string.sea_side_phone_number), 1422, 9, 23, context.getString(R.string.sea_side_address), 29.956671, 32.544100));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.el_haty), context.getString(R.string.el_haty_phone_number), 1422, 9, 2, context.getString(R.string.el_haty_address), 29.961924, 32.549155));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.cook_door), context.getString(R.string.cook_door_phone_number), 1422, 9, 21, context.getString(R.string.cook_door_address), 29.966407, 32.554101));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.castello), context.getString(R.string.castello_phone_number), 1422, 9, 1, context.getString(R.string.castello_address), 29.966575, 32.554290));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.el_gaser_sea_food), context.getString(R.string.el_gaser_sea_food_phone_number), 1422, 9, 22, context.getString(R.string.el_gaser_sea_food_address), 29.964299, 32.557682));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.awlad_wares), context.getString(R.string.awlad_wares_phone_number), 1422, 9, 3, context.getString(R.string.awlad_wares_address), 29.965966, 32.554887));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.le_gusto_restaurant), context.getString(R.string.le_gusto_phone_number), 1422, 9, 22, context.getString(R.string.le_gusto_address), 29.964283, 32.534114));
+        restaurantCategoryArrayList.add(new RestaurantCategory(R.drawable.restaurant, context.getString(R.string.shakshook_restaurant), context.getString(R.string.shakshook_phone_number), 1422, 9, 1, context.getString(R.string.shakshook_address), 29.964745, 32.557194));
 
         return restaurantCategoryArrayList;
     }
@@ -100,16 +100,16 @@ public class DataSourcer {
 
         ArrayList<TourismCategory> tourismCategoryArrayList = new ArrayList<TourismCategory>();
 
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
-        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_try_up, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
+        tourismCategoryArrayList.add(new TourismCategory(R.drawable.hotel_static, context.getString(R.string.el_sokhna), context.getString(R.string.muesum), context.getString(R.string.address_of_sokhna), 8764));
 
         return tourismCategoryArrayList;
     }
@@ -117,14 +117,14 @@ public class DataSourcer {
     public static ArrayList<EventsCategory> getEvents(Context context) {
 
         ArrayList<EventsCategory> eventsCategoryArrayList = new ArrayList<EventsCategory>();
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
-        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_try_up, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
+        eventsCategoryArrayList.add(new EventsCategory(R.drawable.hotel_static, context.getString(R.string.google_i_o), context.getString(R.string.google_event_date), context.getString(R.string.google_event_address)));
 
         return eventsCategoryArrayList;
 
@@ -134,14 +134,14 @@ public class DataSourcer {
 
         ArrayList<ShoppingCategory> shoppingCategoryArrayList = new ArrayList<ShoppingCategory>();
 
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        shoppingCategoryArrayList.add(new ShoppingCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
 
 
         return shoppingCategoryArrayList;
@@ -151,14 +151,14 @@ public class DataSourcer {
 
         ArrayList<CafeCategory> cafeCategoryArrayList = new ArrayList<CafeCategory>();
 
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
-        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_try_up, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
+        cafeCategoryArrayList.add(new CafeCategory(R.drawable.hotel_static, context.getString(R.string.awlad_ragab), 678, 10, 2, context.getString(R.string.awlad_ragab_address)));
 
         return cafeCategoryArrayList;
     }
@@ -167,11 +167,11 @@ public class DataSourcer {
 
         ArrayList<HospitalCategory> hospitalCategoryArrayList = new ArrayList<HospitalCategory>();
 
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital, context.getString(R.string.suez_military_hospital), 9561, context.getString(R.string.suez_military_hospital_phone), context.getString(R.string.suez_military_hospital_address), 29.998252, 32.488599));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital, context.getString(R.string.general_suez_hospital), 9561, context.getString(R.string.general_suez_hospital_phone), context.getString(R.string.general_suez_hospital_address), 29.968206, 32.547674));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital, context.getString(R.string.suez_hospital_for_health_insurance), 9561, context.getString(R.string.suez_hospital_for_health_insurance_phone), context.getString(R.string.suez_hospital_for_health_insurance_address), 29.956762, 32.566829));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital, context.getString(R.string.al_amal), 9561, context.getString(R.string.al_amal_phone), context.getString(R.string.al_amal_address), 29.968355, 32.549737));
-        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital, context.getString(R.string.al_obour), 9561, context.getString(R.string.al_obour_phone), context.getString(R.string.al_obour_address), 29.970926, 32.531277));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital_static, context.getString(R.string.suez_military_hospital), 9561, context.getString(R.string.suez_military_hospital_phone), context.getString(R.string.suez_military_hospital_address), 29.998252, 32.488599));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital_static, context.getString(R.string.general_suez_hospital), 9561, context.getString(R.string.general_suez_hospital_phone), context.getString(R.string.general_suez_hospital_address), 29.968206, 32.547674));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital_static, context.getString(R.string.suez_hospital_for_health_insurance), 9561, context.getString(R.string.suez_hospital_for_health_insurance_phone), context.getString(R.string.suez_hospital_for_health_insurance_address), 29.956762, 32.566829));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital_static, context.getString(R.string.al_amal), 9561, context.getString(R.string.al_amal_phone), context.getString(R.string.al_amal_address), 29.968355, 32.549737));
+        hospitalCategoryArrayList.add(new HospitalCategory(R.drawable.hospital_static, context.getString(R.string.al_obour), 9561, context.getString(R.string.al_obour_phone), context.getString(R.string.al_obour_address), 29.970926, 32.531277));
 
 
         return hospitalCategoryArrayList;

@@ -1,10 +1,10 @@
-package com.udicity.shams.tourinsuez.Restaurant;
+package com.udicity.shams.tourinsuez.restaurant;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,6 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.udicity.shams.tourinsuez.NavigationDrawerPackage.NavigationDrawerActivity;
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -51,16 +52,16 @@ public class RestaurantActivity extends NavigationDrawerActivity implements OnMa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.navigation_drawer_content_frame_layout_id);
+        FrameLayout frameLayout = findViewById(R.id.navigation_drawer_content_frame_layout_id);
         getLayoutInflater().inflate(R.layout.restaurant_activity, frameLayout);
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         supportMapFragment.getMapAsync(this);
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab_map);
+        FloatingActionButton floatingActionButton = findViewById(R.id.fab_map);
         floatingActionButton.setVisibility(View.GONE);
 
-        restViewPager = (ViewPager) findViewById(R.id.rest_view_pager);
+        restViewPager = findViewById(R.id.rest_view_pager);
         restaurantFragmentAdapter = new RestaurantFragmentAdapter(getSupportFragmentManager(), this);
         restViewPager.setAdapter(restaurantFragmentAdapter);
         restViewPager.setVisibility(View.VISIBLE);

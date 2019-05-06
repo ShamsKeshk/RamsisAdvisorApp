@@ -3,15 +3,16 @@ package com.udicity.shams.tourinsuez.NavigationDrawerPackage;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.udicity.shams.tourinsuez.AboutSuez.AboutSuezActivity;
 import com.udicity.shams.tourinsuez.CafeShops.CafeActivity;
 import com.udicity.shams.tourinsuez.CategoryPackage.Category;
@@ -21,24 +22,38 @@ import com.udicity.shams.tourinsuez.GoogleMap.MapsActivity;
 import com.udicity.shams.tourinsuez.Help.HelpActivity;
 import com.udicity.shams.tourinsuez.Hospital.HospitalActivity;
 import com.udicity.shams.tourinsuez.R;
-import com.udicity.shams.tourinsuez.Restaurant.RestaurantActivity;
 import com.udicity.shams.tourinsuez.Shopping.ShoppingActivity;
 import com.udicity.shams.tourinsuez.TourismPlaces.TourismActivity;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
 import com.udicity.shams.tourinsuez.hotel.HotelActivity;
+import com.udicity.shams.tourinsuez.restaurant.RestaurantActivity;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ScrollingActivity extends AppCompatActivity {
+
+    private static final String CATEGORY_ID = "categoryId";
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+    @BindView(R.id.fab)
+    FloatingActionButton fab;
+
+    @BindView(R.id.grid_view_categories)
+    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scrolling_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
+
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +65,6 @@ public class ScrollingActivity extends AppCompatActivity {
 
         final ArrayList<Category> categoryArrayList = DataSourcer.getCategories(getApplicationContext());
 
-        GridView gridView = (GridView) findViewById(R.id.grid_view_categories);
         CategoryAdapter categoryAdapter = new CategoryAdapter(this, categoryArrayList);
         gridView.setAdapter(categoryAdapter);
 
@@ -58,60 +72,41 @@ public class ScrollingActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Category currentCategory = categoryArrayList.get(position);
-                sendToIntent(currentCategory);
+                openCategory(currentCategory);
             }
         });
     }
 
-    public void sendToIntent(Category category) {
-        Intent intent;
-        String CATEGORY_ID = getString(R.string.category_id);
+    public void openCategory(Category category) {
+        int categoryId = category.getmCategoryId();
 
         switch (category.getmCategoryId()) {
             case 1:
-                intent = new Intent(ScrollingActivity.this, AboutSuezActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(NavigationDrawerActivity.class, categoryId);
                 break;
             case 2:
-                intent = new Intent(ScrollingActivity.this, HotelActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(HotelActivity.class, categoryId);
                 break;
             case 3:
-                intent = new Intent(ScrollingActivity.this, RestaurantActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(RestaurantActivity.class, categoryId);
                 break;
             case 4:
-                intent = new Intent(ScrollingActivity.this, TourismActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(TourismActivity.class, categoryId);
                 break;
             case 5:
-                intent = new Intent(ScrollingActivity.this, EventsActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(EventsActivity.class, categoryId);
                 break;
             case 6:
-                intent = new Intent(ScrollingActivity.this, ShoppingActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(ShoppingActivity.class, categoryId);
                 break;
             case 7:
-                intent = new Intent(ScrollingActivity.this, CafeActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(NavigationDrawerActivity.class, categoryId);
                 break;
             case 8:
-                intent = new Intent(ScrollingActivity.this, HospitalActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(HospitalActivity.class, categoryId);
                 break;
             case 9:
-                intent = new Intent(ScrollingActivity.this, HelpActivity.class);
-                intent.putExtra(CATEGORY_ID, String.valueOf(category.getmCategoryId()));
-                startActivity(intent);
+                startCategoryActivity(HelpActivity.class, categoryId);
                 break;
             default:
                 break;
@@ -137,5 +132,13 @@ public class ScrollingActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void startCategoryActivity(Class activityClass, int categoryNumber) {
+        Intent intent = new Intent(this, activityClass);
+        intent.putExtra(CATEGORY_ID, categoryNumber);
+        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
     }
 }

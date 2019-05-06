@@ -18,10 +18,10 @@ public class EventsViewHolder {
     private TextView eventAddress;
 
     public EventsViewHolder(View view) {
-        this.eventImage = (ImageView) view.findViewById(R.id.event_image_view_id);
-        this.eventName = (TextView) view.findViewById(R.id.event_name_text_view_id);
-        this.eventStartDate = (TextView) view.findViewById(R.id.event_start_date_info_text_view_id);
-        this.eventAddress = (TextView) view.findViewById(R.id.event_address_text_view_id);
+        this.eventImage = view.findViewById(R.id.event_image_view_id);
+        this.eventName = view.findViewById(R.id.event_name_text_view_id);
+        this.eventStartDate = view.findViewById(R.id.event_start_date_info_text_view_id);
+        this.eventAddress = view.findViewById(R.id.event_address_text_view_id);
     }
 
     public ImageView getEventImage() {

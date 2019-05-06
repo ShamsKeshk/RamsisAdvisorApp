@@ -1,9 +1,10 @@
 package com.udicity.shams.tourinsuez.Events;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -19,8 +20,8 @@ public class EventsFragmentAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
-    public EventsFragmentAdapter(FragmentManager fm, Context context) {
-        super(fm);
+    public EventsFragmentAdapter(FragmentManager fragmentManager, Context context) {
+        super(fragmentManager);
         mContext = context;
     }
 

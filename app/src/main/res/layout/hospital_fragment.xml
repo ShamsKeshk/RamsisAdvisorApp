@@ -1,9 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/fragment_frame_layout_style"
-    tools:context="com.udicity.shams.tourinsuez.Hospital.HospitalFragment">
-
-    <ListView
-        android:id="@+id/hospital_list_view_id"
-        style="@style/list_view_style" />
-</FrameLayout>
+    android:id="@+id/hospital_list_view_id"
+    style="@style/list_view_style"
+    tools:context="com.udicity.shams.tourinsuez.Hospital.HospitalFragment" />

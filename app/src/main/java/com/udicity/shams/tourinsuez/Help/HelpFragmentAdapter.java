@@ -1,9 +1,10 @@
 package com.udicity.shams.tourinsuez.Help;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -20,8 +21,8 @@ public class HelpFragmentAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
-    public HelpFragmentAdapter(FragmentManager fm, Context context) {
-        super(fm);
+    public HelpFragmentAdapter(FragmentManager fragmentManager, Context context) {
+        super(fragmentManager);
         mContext = context;
     }
 

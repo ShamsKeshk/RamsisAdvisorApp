@@ -1,12 +1,13 @@
 package com.udicity.shams.tourinsuez.Hospital;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -25,7 +26,7 @@ public class HospitalFragment extends Fragment {
         ArrayList<HospitalCategory> hospitalCategoryArrayList = DataSourcer.getHospital(getContext());
 
         HospitalCategoryAdapter hospitalCategoryAdapter = new HospitalCategoryAdapter(getActivity(), hospitalCategoryArrayList);
-        ListView listView = (ListView) rootView.findViewById(R.id.hospital_list_view_id);
+        ListView listView = rootView.findViewById(R.id.hospital_list_view_id);
         listView.setAdapter(hospitalCategoryAdapter);
         Toast.makeText(getContext(), R.string.hospital_category, Toast.LENGTH_SHORT).show();
         return rootView;

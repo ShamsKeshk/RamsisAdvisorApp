@@ -1,4 +1,4 @@
-package com.udicity.shams.tourinsuez.Restaurant;
+package com.udicity.shams.tourinsuez.restaurant;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -20,12 +20,12 @@ public class RestaurantViewHolder {
     private TextView restaurantAddress;
 
     public RestaurantViewHolder(View view) {
-        this.restaurantImage = (ImageView) view.findViewById(R.id.cafe_shopping_restaurant_image_view_id);
-        this.restaurantName = (TextView) view.findViewById(R.id.cafe_shopping_restaurant_name_text_view_id);
-        this.restaurantTotalReview = (TextView) view.findViewById(R.id.cafe_shopping_restaurant_review_number_text_view_id);
-        this.restaurantOpenTime = (TextView) view.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
-        this.restaurantCloseTime = (TextView) view.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
-        this.restaurantAddress = (TextView) view.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
+        this.restaurantImage = view.findViewById(R.id.cafe_shopping_restaurant_image_view_id);
+        this.restaurantName = view.findViewById(R.id.cafe_shopping_restaurant_name_text_view_id);
+        this.restaurantTotalReview = view.findViewById(R.id.cafe_shopping_restaurant_review_number_text_view_id);
+        this.restaurantOpenTime = view.findViewById(R.id.cafe_shopping_restaurant_open_time_text_view);
+        this.restaurantCloseTime = view.findViewById(R.id.cafe_shopping_restaurant_close_time_text_view);
+        this.restaurantAddress = view.findViewById(R.id.cafe_shopping_restaurant_address_text_view_id);
     }
 
     public ImageView getRestaurantImage() {

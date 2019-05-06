@@ -1,9 +1,10 @@
 package com.udicity.shams.tourinsuez.Shopping;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -15,8 +16,8 @@ public class ShoppingFragmentAdapter extends FragmentPagerAdapter {
 
     private Context context;
 
-    public ShoppingFragmentAdapter(FragmentManager fm, Context context) {
-        super(fm);
+    public ShoppingFragmentAdapter(FragmentManager fragmentManager, Context context) {
+        super(fragmentManager);
         this.context = context;
     }
 

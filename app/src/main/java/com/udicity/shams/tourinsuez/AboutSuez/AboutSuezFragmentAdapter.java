@@ -1,9 +1,10 @@
 package com.udicity.shams.tourinsuez.AboutSuez;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.udicity.shams.tourinsuez.R;
 
@@ -15,19 +16,20 @@ public class AboutSuezFragmentAdapter extends FragmentPagerAdapter {
 
     private Context context;
 
-    public AboutSuezFragmentAdapter(FragmentManager fm, Context context) {
-        super(fm);
+    public AboutSuezFragmentAdapter(FragmentManager fragmentManager, Context context) {
+        super(fragmentManager);
         this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new AboutSuezFragment();
-        } else if (position == 1) {
-            return new AboutSuezDistrictFragment();
-        } else {
-            return null;
+        switch (position) {
+            case 0:
+                return new AboutSuezFragment();
+            case 1:
+                return new AboutSuezDistrictFragment();
+            default:
+                return null;
         }
     }
 
@@ -39,12 +41,13 @@ public class AboutSuezFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
 
-        if (position == 0) {
-            return context.getString(R.string.about_suez_category);
-        } else if (position == 1) {
-            return context.getString(R.string.district_fragment_title);
-        } else {
-            return context.getString(R.string.no_title_found);
+        switch (position) {
+            case 0:
+                return context.getString(R.string.about_suez_category);
+            case 1:
+                return context.getString(R.string.district_fragment_title);
+            default:
+                return context.getString(R.string.no_title_found);
         }
     }
 }

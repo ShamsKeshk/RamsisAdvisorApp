@@ -1,13 +1,15 @@
 package com.udicity.shams.tourinsuez.TourismPlaces;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.squareup.picasso.Picasso;
 import com.udicity.shams.tourinsuez.R;
 
 import java.util.ArrayList;
@@ -39,8 +41,9 @@ public class TourismCategoryAdapter extends ArrayAdapter<TourismCategory> {
 
         assert currentTourismPlace != null;
 
-
-        viewHolder.getPlaceImage().setImageResource(currentTourismPlace.getmPlaceImageResource());
+        Picasso.get()
+                .load(currentTourismPlace.getmPlaceImageResource())
+                .into(viewHolder.getPlaceImage());
 
         viewHolder.getPlaceName().setText(currentTourismPlace.getmPlaceName());
 

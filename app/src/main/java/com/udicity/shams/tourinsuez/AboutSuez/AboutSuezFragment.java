@@ -2,12 +2,13 @@ package com.udicity.shams.tourinsuez.AboutSuez;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -27,7 +28,7 @@ public class AboutSuezFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.about_suez_fragment, container, false);
 
         ArrayList<AboutSuezCategory> aboutSuezCategoryArrayList = DataSourcer.getAboutSuez(getContext());
-        ListView listView = (ListView) rootView.findViewById(R.id.about_suez_list_view);
+        ListView listView = rootView.findViewById(R.id.about_suez_list_view);
         AboutSuezCategoryAdapter aboutSuezCategoryAdapter = new AboutSuezCategoryAdapter(getActivity(), aboutSuezCategoryArrayList);
         listView.setAdapter(aboutSuezCategoryAdapter);
         Toast.makeText(getActivity(), R.string.about_suez_category, Toast.LENGTH_SHORT).show();

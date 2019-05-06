@@ -1,11 +1,12 @@
 package com.udicity.shams.tourinsuez.TourismPlaces;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import androidx.fragment.app.Fragment;
 
 import com.udicity.shams.tourinsuez.R;
 import com.udicity.shams.tourinsuez.data.DataSourcer;
@@ -27,7 +28,7 @@ public class TourismFragment extends Fragment {
         ArrayList<TourismCategory> tourismCategoryArrayList = DataSourcer.getTourismPlaces(getContext());
         TourismCategoryAdapter tourismCategoryAdapter = new TourismCategoryAdapter(getActivity(), tourismCategoryArrayList);
 
-        ListView listView = (ListView) rootView.findViewById(R.id.tourism_list_view);
+        ListView listView = rootView.findViewById(R.id.tourism_list_view);
         listView.setAdapter(tourismCategoryAdapter);
 
         return rootView;

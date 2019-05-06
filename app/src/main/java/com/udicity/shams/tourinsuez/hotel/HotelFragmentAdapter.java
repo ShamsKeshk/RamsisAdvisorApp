@@ -1,12 +1,13 @@
 package com.udicity.shams.tourinsuez.hotel;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.udicity.shams.tourinsuez.R;
-import com.udicity.shams.tourinsuez.Restaurant.RestaurantMainFragment;
+import com.udicity.shams.tourinsuez.restaurant.RestaurantMainFragment;
 
 /**
  * Created by shams on 26/06/17.
@@ -21,9 +22,9 @@ public class HotelFragmentAdapter extends FragmentPagerAdapter {
 
     private Context context;
 
-    public HotelFragmentAdapter(FragmentManager fm, Context contextP) {
+    public HotelFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
-        context = contextP;
+        this.context = context;
     }
 
     @Override

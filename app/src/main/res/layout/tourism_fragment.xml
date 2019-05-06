@@ -1,10 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/fragment_frame_layout_style"
-    tools:context="com.udicity.shams.tourinsuez.TourismPlaces.TourismFragment">
-
-    <ListView
-        android:id="@+id/tourism_list_view"
-        style="@style/list_view_style" />
-
-</FrameLayout>
+    android:id="@+id/tourism_list_view"
+    style="@style/list_view_style"
+    tools:context="com.udicity.shams.tourinsuez.TourismPlaces.TourismFragment" />

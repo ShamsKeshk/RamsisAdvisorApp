@@ -19,11 +19,11 @@ public class TourismViewHolder {
     private TextView placeAddress;
 
     public TourismViewHolder(View view) {
-        this.placeImage = (ImageView) view.findViewById(R.id.tourism_place_image_view);
-        this.placeName = (TextView) view.findViewById(R.id.tourism_place_name_text_view_id);
-        this.placeReview = (TextView) view.findViewById(R.id.tourism_place_review_number_text_view_id);
-        this.placeType = (TextView) view.findViewById(R.id.tourism_place_type_text_view);
-        this.placeAddress = (TextView) view.findViewById(R.id.tourism_place_address_text_view);
+        this.placeImage = view.findViewById(R.id.tourism_place_image_view);
+        this.placeName = view.findViewById(R.id.tourism_place_name_text_view_id);
+        this.placeReview = view.findViewById(R.id.tourism_place_review_number_text_view_id);
+        this.placeType = view.findViewById(R.id.tourism_place_type_text_view);
+        this.placeAddress = view.findViewById(R.id.tourism_place_address_text_view);
     }
 
     public ImageView getPlaceImage() {
